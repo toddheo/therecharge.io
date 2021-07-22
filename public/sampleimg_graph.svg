@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1089" height="418" viewBox="0 0 1089 418">
+    <defs>
+        <style>
+            .cls-1{fill:#fff;font-size:20px;font-family:Roboto-Black,Roboto;font-weight:800}.cls-4{fill:none;stroke:#fff}.cls-5{fill:#9314b2}
+        </style>
+    </defs>
+    <g id="sampleimg_graph" transform="translate(-416 -1971)">
+        <text id="_100" class="cls-1" transform="translate(898 2144)">
+            <tspan x="-17.373" y="0">100</tspan>
+        </text>
+        <text id="_200" class="cls-1" transform="translate(1170 2060)">
+            <tspan x="-17.373" y="0">200</tspan>
+        </text>
+        <text id="_300" class="cls-1" transform="translate(1439 1992)">
+            <tspan x="-17.373" y="0">300</tspan>
+        </text>
+        <text id="_Day_" fill="#ccc" font-family="Roboto-Regular, Roboto" font-size="16px" transform="translate(1486 2385)">
+            <tspan x="-18.898" y="0">(Day)</tspan>
+        </text>
+        <path id="패스_469" fill="none" stroke="#9314b2" stroke-width="2px" d="M-10794-5484.264l50.65-21.506h158.416l48.57-12.733 19.458-6.479 173.792-63.239 65.867 31.43s93.063 24.665 94.542 19.819 23-71.336 23-71.336l96.129-72.28 27 112.771 73.668-20.4 74.008-92.368 40.978 174.818 43.239-239.28h61.244" transform="translate(11240 7751)"/>
+        <g id="그룹_134">
+            <path id="선_466" d="M0 0L0 382" class="cls-4" transform="translate(416.5 1971)"/>
+            <path id="선_467" d="M1088 0L0 0" class="cls-4" transform="translate(416.5 2353)"/>
+        </g>
+        <circle id="타원_41" cx="3" cy="3" r="3" class="cls-5" transform="translate(894 2160)"/>
+        <circle id="타원_42" cx="3" cy="3" r="3" class="cls-5" transform="translate(1053 2211)"/>
+        <circle id="타원_43" cx="3" cy="3" r="3" class="cls-5" transform="translate(1078 2140)"/>
+        <circle id="타원_44" cx="3" cy="3" r="3" class="cls-5" transform="translate(1173 2067)"/>
+        <circle id="타원_45" cx="3" cy="3" r="3" class="cls-5" transform="translate(1201 2181)"/>
+        <circle id="타원_46" cx="3" cy="3" r="3" class="cls-5" transform="translate(1274 2159)"/>
+        <circle id="타원_47" cx="3" cy="3" r="3" class="cls-5" transform="translate(1348 2067)"/>
+        <circle id="타원_48" cx="3" cy="3" r="3" class="cls-5" transform="translate(1389 2242)"/>
+        <circle id="타원_49" cx="3" cy="3" r="3" class="cls-5" transform="translate(1433 2003)"/>
+    </g>
+</svg>

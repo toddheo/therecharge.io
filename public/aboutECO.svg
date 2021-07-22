@@ -1,0 +1,399 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1104.5" height="1144" viewBox="0 0 1104.5 1144">
+    <defs>
+        <filter id="사각형_315" width="274" height="67" x="2.5" y="135.181" filterUnits="userSpaceOnUse">
+            <feOffset/>
+            <feGaussianBlur result="blur" stdDeviation="2.5"/>
+            <feFlood flood-color="#fff" flood-opacity=".725"/>
+            <feComposite in2="blur" operator="in"/>
+            <feComposite in="SourceGraphic"/>
+        </filter>
+        <filter id="사각형_354" width="273" height="67" x="278.5" y="135.181" filterUnits="userSpaceOnUse">
+            <feOffset/>
+            <feGaussianBlur result="blur-2" stdDeviation="2.5"/>
+            <feFlood flood-color="#fff" flood-opacity=".725"/>
+            <feComposite in2="blur-2" operator="in"/>
+            <feComposite in="SourceGraphic"/>
+        </filter>
+        <filter id="사각형_355" width="274" height="67" x="554.5" y="135.181" filterUnits="userSpaceOnUse">
+            <feOffset/>
+            <feGaussianBlur result="blur-3" stdDeviation="2.5"/>
+            <feFlood flood-color="#fff" flood-opacity=".725"/>
+            <feComposite in2="blur-3" operator="in"/>
+            <feComposite in="SourceGraphic"/>
+        </filter>
+        <filter id="사각형_356" width="274" height="67" x="830.5" y="135.681" filterUnits="userSpaceOnUse">
+            <feOffset/>
+            <feGaussianBlur result="blur-4" stdDeviation="2.5"/>
+            <feFlood flood-color="#fff" flood-opacity=".725"/>
+            <feComposite in2="blur-4" operator="in"/>
+            <feComposite in="SourceGraphic"/>
+        </filter>
+        <filter id="BRIDGE" width="226" height="159" x="439" y="482.681" filterUnits="userSpaceOnUse">
+            <feOffset/>
+            <feGaussianBlur result="blur-5" stdDeviation="20"/>
+            <feFlood flood-color="#fff" flood-opacity=".647"/>
+            <feComposite in2="blur-5" operator="in"/>
+            <feComposite in="SourceGraphic"/>
+        </filter>
+        <filter id="사각형_613" width="328" height="163" x="44.5" y="480.181" filterUnits="userSpaceOnUse">
+            <feOffset/>
+            <feGaussianBlur result="blur-6" stdDeviation="2.5"/>
+            <feFlood flood-color="#fff" flood-opacity=".725"/>
+            <feComposite in2="blur-6" operator="in"/>
+            <feComposite in="SourceGraphic"/>
+        </filter>
+        <filter id="사각형_614" width="328" height="163" x="731.5" y="480.181" filterUnits="userSpaceOnUse">
+            <feOffset/>
+            <feGaussianBlur result="blur-7" stdDeviation="2.5"/>
+            <feFlood flood-color="#fff" flood-opacity=".725"/>
+            <feComposite in2="blur-7" operator="in"/>
+            <feComposite in="SourceGraphic"/>
+        </filter>
+        <filter id="사각형_617" width="172" height="82" x="0" y="984.68" filterUnits="userSpaceOnUse">
+            <feOffset/>
+            <feGaussianBlur result="blur-8" stdDeviation="2.5"/>
+            <feFlood flood-color="#fff" flood-opacity=".725"/>
+            <feComposite in2="blur-8" operator="in"/>
+            <feComposite in="SourceGraphic"/>
+        </filter>
+        <filter id="사각형_622" width="172" height="82" x="600" y="984.68" filterUnits="userSpaceOnUse">
+            <feOffset/>
+            <feGaussianBlur result="blur-9" stdDeviation="2.5"/>
+            <feFlood flood-color="#fff" flood-opacity=".725"/>
+            <feComposite in2="blur-9" operator="in"/>
+            <feComposite in="SourceGraphic"/>
+        </filter>
+        <filter id="사각형_618" width="172" height="82" x="166" y="984.68" filterUnits="userSpaceOnUse">
+            <feOffset/>
+            <feGaussianBlur result="blur-10" stdDeviation="2.5"/>
+            <feFlood flood-color="#fff" flood-opacity=".725"/>
+            <feComposite in2="blur-10" operator="in"/>
+            <feComposite in="SourceGraphic"/>
+        </filter>
+        <filter id="사각형_620" width="172" height="82" x="766" y="984.68" filterUnits="userSpaceOnUse">
+            <feOffset/>
+            <feGaussianBlur result="blur-11" stdDeviation="2.5"/>
+            <feFlood flood-color="#fff" flood-opacity=".725"/>
+            <feComposite in2="blur-11" operator="in"/>
+            <feComposite in="SourceGraphic"/>
+        </filter>
+        <filter id="사각형_619" width="172" height="82" x="332" y="984.68" filterUnits="userSpaceOnUse">
+            <feOffset/>
+            <feGaussianBlur result="blur-12" stdDeviation="2.5"/>
+            <feFlood flood-color="#fff" flood-opacity=".725"/>
+            <feComposite in2="blur-12" operator="in"/>
+            <feComposite in="SourceGraphic"/>
+        </filter>
+        <filter id="사각형_621" width="172" height="82" x="932" y="984.68" filterUnits="userSpaceOnUse">
+            <feOffset/>
+            <feGaussianBlur result="blur-13" stdDeviation="2.5"/>
+            <feFlood flood-color="#fff" flood-opacity=".725"/>
+            <feComposite in2="blur-13" operator="in"/>
+            <feComposite in="SourceGraphic"/>
+        </filter>
+        <filter id="사각형_612" width="287" height="163" x="408.5" y="695.181" filterUnits="userSpaceOnUse">
+            <feOffset/>
+            <feGaussianBlur result="blur-14" stdDeviation="2.5"/>
+            <feFlood flood-color="#fff" flood-opacity=".725"/>
+            <feComposite in2="blur-14" operator="in"/>
+            <feComposite in="SourceGraphic"/>
+        </filter>
+        <filter id="사각형_615" width="328" height="163" x="44.5" y="695.181" filterUnits="userSpaceOnUse">
+            <feOffset/>
+            <feGaussianBlur result="blur-15" stdDeviation="2.5"/>
+            <feFlood flood-color="#fff" flood-opacity=".725"/>
+            <feComposite in2="blur-15" operator="in"/>
+            <feComposite in="SourceGraphic"/>
+        </filter>
+        <filter id="사각형_616" width="328" height="163" x="731.5" y="695.181" filterUnits="userSpaceOnUse">
+            <feOffset/>
+            <feGaussianBlur result="blur-16" stdDeviation="2.5"/>
+            <feFlood flood-color="#fff" flood-opacity=".725"/>
+            <feComposite in2="blur-16" operator="in"/>
+            <feComposite in="SourceGraphic"/>
+        </filter>
+        <filter id="사각형_610" width="287" height="163" x="408.5" y="480.181" filterUnits="userSpaceOnUse">
+            <feOffset/>
+            <feGaussianBlur result="blur-17" stdDeviation="2.5"/>
+            <feFlood flood-color="#fff" flood-opacity=".725"/>
+            <feComposite in2="blur-17" operator="in"/>
+            <feComposite in="SourceGraphic"/>
+        </filter>
+        <style>
+            .cls-1,.cls-13,.cls-3,.cls-7,.cls-9{fill:#fff}.cls-1,.cls-16,.cls-17{font-size:15px}.cls-1,.cls-13,.cls-16,.cls-17{font-family:Roboto-Regular,Roboto}.cls-12,.cls-14,.cls-18,.cls-2,.cls-4{fill:none}.cls-2,.cls-4{stroke:#fff}.cls-12,.cls-18,.cls-2{stroke-linecap:round;stroke-miterlimit:10}.cls-12,.cls-18,.cls-2,.cls-4{stroke-width:2px}.cls-13,.cls-3,.cls-9{font-size:20px}.cls-3{font-family:Roboto-Black,Roboto;font-weight:800}.cls-9{font-family:Roboto-Bold,Roboto;font-weight:700}.cls-12,.cls-18{stroke-dasharray:5 5}.cls-12{stroke:#9314b2}.cls-14{stroke:#a5a5a5}.cls-15,.cls-16{fill:#9314b2}.cls-17,.cls-19{fill:#0eef6d}.cls-18{stroke:#0eef6d}
+        </style>
+    </defs>
+    <g id="img_ecosystem" transform="translate(-408 -1300.319)">
+        <text id="RCG_HT_:_API_integration_with_Mdex_RCG_ETH_:_API_integration_with_Uniswap_RCG_BNB_:_API_integration_with_Mdex" class="cls-1" transform="translate(481 1845)">
+            <tspan x="-118.282" y="16">RCG/HT : API integration with Mdex</tspan><tspan x="-133.015" y="41">RCG/ETH : API integration with Uniswap</tspan><tspan x="-123.398" y="66">RCG/BNB : API integration with Mdex</tspan>
+        </text>
+        <text id="Service_Payment_Plus_Membership_Promotion_Participation" class="cls-1" transform="translate(437 1301.319)">
+            <tspan x="0" y="16">Service Payment</tspan><tspan x="0" y="41">Plus Membership</tspan><tspan x="0" y="66">Promotion Participation</tspan>
+        </text>
+        <text id="Quick_charging_services_for_EV_Charging_phone_Car_care_Vip_access" class="cls-1" transform="translate(718 1301.319)">
+            <tspan x="0" y="16">Quick charging services for EV</tspan><tspan x="0" y="41">Charging phone</tspan><tspan x="0" y="66">Car care</tspan><tspan x="0" y="91">Vip access</tspan>
+        </text>
+        <text id="Parking_sharing_EV_bike_sharing_EV_scooter" class="cls-1" transform="translate(989 1301.319)">
+            <tspan x="0" y="16">Parking sharing</tspan><tspan x="0" y="41">EV bike sharing</tspan><tspan x="0" y="66">EV scooter</tspan>
+        </text>
+        <text id="Service_Payment_Daily_Regular_Group_Membership_Join_Point_Gift_Coupon" class="cls-1" transform="translate(1267 1301.319)">
+            <tspan x="0" y="16">Service Payment</tspan><tspan x="0" y="41">(Daily/Regular/Group)</tspan><tspan x="0" y="66">Membership Join</tspan><tspan x="0" y="91">Point Gift</tspan><tspan x="0" y="116">Coupon</tspan>
+        </text>
+        <text id="RCG_HT:_Integration_with_Mdex_RCG_ETH:_Integration_with_Uniswap_RCG_BNB:_Integration_with_Pancake" class="cls-1" transform="translate(1168 1845)">
+            <tspan x="-103.271" y="16">RCG/HT: Integration with Mdex</tspan><tspan x="-117.858" y="41">RCG/ETH: Integration with Uniswap</tspan><tspan x="-118.462" y="66">RCG/BNB: Integration with Pancake</tspan>
+        </text>
+        <path id="선_205" d="M0 62.5L0 0" class="cls-2" transform="translate(547.5 1494)"/>
+        <path id="선_590" d="M0 122.18L0 0" class="cls-2" transform="translate(419 1301.319)"/>
+        <path id="선_591" d="M0 122.18L0 0" class="cls-2" transform="translate(700 1301.319)"/>
+        <path id="선_592" d="M0 122.18L0 0" class="cls-2" transform="translate(971 1301.319)"/>
+        <path id="선_593" d="M0 122.18L0 0" class="cls-2" transform="translate(1249 1301.319)"/>
+        <path id="선_206" d="M0 62.5L0 0" class="cls-2" transform="translate(823 1494)"/>
+        <path id="선_207" d="M0 62.5L0 0" class="cls-2" transform="translate(1099.5 1494)"/>
+        <path id="선_208" d="M0 86.5L0 0" class="cls-2" transform="translate(1375.5 1494)"/>
+        <path id="선_209" d="M0 0L828 0" class="cls-2" transform="translate(547.5 1556.5)"/>
+        <text id="Piggycell" class="cls-3" transform="translate(547.5 1477)">
+            <tspan x="-42.08" y="0">Piggycell</tspan>
+        </text>
+        <g filter="url(#사각형_315)" transform="matrix(1, 0, 0, 1, 408, 1300.32)">
+            <rect id="사각형_315-2" width="257" height="50" class="cls-4" rx="2" transform="translate(11 143.68)"/>
+        </g>
+        <text id="EV_Charging_Complex" class="cls-3" transform="translate(822.5 1477)">
+            <tspan x="-98.14" y="0">EV Charging Complex</tspan>
+        </text>
+        <g filter="url(#사각형_354)" transform="matrix(1, 0, 0, 1, 408, 1300.32)">
+            <rect id="사각형_354-2" width="256" height="50" class="cls-4" rx="2" transform="translate(287 143.68)"/>
+        </g>
+        <text id="Bike_Sharing" class="cls-3" transform="translate(1099.5 1477)">
+            <tspan x="-57.744" y="0">Bike Sharing</tspan>
+        </text>
+        <g filter="url(#사각형_355)" transform="matrix(1, 0, 0, 1, 408, 1300.32)">
+            <rect id="사각형_355-2" width="257" height="50" class="cls-4" rx="2" transform="translate(563 143.68)"/>
+        </g>
+        <text id="_4th_Eco_Partner" class="cls-3" transform="translate(1375.5 1477)">
+            <tspan x="-66.481" y="0">4</tspan><tspan y="0" baseline-shift="6.666000209254424" font-size="11.666px">th</tspan><tspan y="0"> Eco Partner</tspan>
+        </text>
+        <text id="_Other_Sevice" class="cls-3" transform="translate(1375.5 1613)">
+            <tspan x="-65.732" y="0">+ Other Sevice</tspan>
+        </text>
+        <g filter="url(#사각형_356)" transform="matrix(1, 0, 0, 1, 408, 1300.32)">
+            <rect id="사각형_356-2" width="257" height="50" class="cls-4" rx="2" transform="translate(839 144.18)"/>
+        </g>
+        <rect id="사각형_623" width="257" height="50" fill="rgba(255,255,255,0.24)" rx="2" transform="translate(1247 1580.5)"/>
+        <path id="선_210" d="M0 56L0 0" class="cls-2" transform="translate(960 1556.5)"/>
+        <path id="선_578" d="M53 0L0 0" class="cls-2" transform="translate(1095 1863)"/>
+        <path id="선_579" d="M53 0L0 0" class="cls-2" transform="translate(772 1863)"/>
+        <g id="그룹_194" transform="translate(916 1612.5)">
+            <path id="패스_168" d="M374.44 6360.045a3.644 3.644 0 0 0-5 5.306 36.93 36.93 0 1 1-50.717 0 3.644 3.644 0 0 0-5-5.306 44.2 44.2 0 1 0 60.707 0z" class="cls-7" transform="translate(-299.885 -6346.675)"/>
+            <path id="패스_169" d="M336.922 6388.885a3.548 3.548 0 0 0 3.548-3.549v-30.614a3.548 3.548 0 1 0-7.1 0v30.614a3.548 3.548 0 0 0 3.552 3.549z" class="cls-7" transform="translate(-279.348 -6351.173)"/>
+            <path id="패스_170" d="M320.383 6388.885a3.548 3.548 0 0 0 3.548-3.549v-30.614a3.548 3.548 0 1 0-7.1 0v30.614a3.548 3.548 0 0 0 3.552 3.549z" class="cls-7" transform="translate(-289.491 -6351.173)"/>
+        </g>
+        <g filter="url(#BRIDGE)" transform="matrix(1, 0, 0, 1, 408, 1300.32)">
+            <text id="BRIDGE-2" fill="#fff" font-family="Roboto-Black, Roboto" font-size="30px" font-weight="800" transform="translate(552 573.68)">
+                <tspan x="-52.302" y="0">BRIDGE</tspan>
+            </text>
+        </g>
+        <g filter="url(#사각형_613)" transform="matrix(1, 0, 0, 1, 408, 1300.32)">
+            <rect id="사각형_613-2" width="311" height="146" class="cls-4" rx="2" transform="translate(53 488.68)"/>
+        </g>
+        <g filter="url(#사각형_614)" transform="matrix(1, 0, 0, 1, 408, 1300.32)">
+            <rect id="사각형_614-2" width="311" height="146" class="cls-4" rx="2" transform="translate(740 488.68)"/>
+        </g>
+        <text id="Liquidity_Swap" class="cls-9" transform="translate(617 1830)">
+            <tspan x="-65.625" y="0">Liquidity Swap</tspan>
+        </text>
+        <text id="Smart_Contract_Control_Zone" fill="#ffb900" font-family="Roboto-Bold, Roboto" font-size="20px" font-weight="700" transform="translate(624 1743)">
+            <tspan x="-129.111" y="0">Smart Contract Control Zone</tspan>
+        </text>
+        <text id="Liquidity_Contribution" class="cls-9" transform="translate(1304 1830)">
+            <tspan x="-97.124" y="0">Liquidity Contribution</tspan>
+        </text>
+        <path id="패스_512" fill="none" stroke="#ffb900" stroke-dasharray="5 5" stroke-width="2px" d="M13306.123-13449h702.036v456.18h-1044.915V-13449h35.071" transform="translate(-12525.693 15184)"/>
+        <path id="선_551" d="M0 0L476 0" class="cls-12" transform="translate(1028 1657)"/>
+        <path id="선_552" d="M0 0L476.346 0" class="cls-12" transform="translate(416 1657)"/>
+        <path id="선_555" d="M0 0L244 0" class="cls-12" transform="translate(416 2218)"/>
+        <path id="선_559" d="M0 0L332 0" class="cls-12" transform="translate(494 2234)"/>
+        <path id="선_562" d="M0 0L332 0" class="cls-12" transform="translate(1094 2234)"/>
+        <path id="선_573" d="M0 0L932 0" class="cls-12" transform="translate(494 2384)"/>
+        <path id="선_556" d="M0 0L244 0" class="cls-12" transform="translate(1260 2218)"/>
+        <path id="선_553" d="M0 561L0 0" class="cls-12" transform="translate(1504 1657)"/>
+        <path id="선_554" d="M0 561L0 0" class="cls-12" transform="translate(416 1657)"/>
+        <path id="선_557" d="M0 61L0 0" class="cls-12" transform="translate(660 2218)"/>
+        <path id="선_564" d="M0 61L0 0" class="cls-12" transform="translate(1260 2218)"/>
+        <path id="선_560" d="M0 45L0 0" class="cls-12" transform="translate(494 2234)"/>
+        <path id="선_563" d="M0 45L0 0" class="cls-12" transform="translate(1094 2234)"/>
+        <path id="선_568" d="M0 20L0 0" class="cls-12" transform="translate(1094 2359)"/>
+        <path id="선_572" d="M0 20L0 0" class="cls-12" transform="translate(494 2359)"/>
+        <path id="선_569" d="M0 20L0 0" class="cls-12" transform="translate(1260 2359)"/>
+        <path id="선_570" d="M0 20L0 0" class="cls-12" transform="translate(660 2359)"/>
+        <path id="선_561" d="M0 45L0 0" class="cls-12" transform="translate(826 2234)"/>
+        <path id="선_565" d="M0 45L0 0" class="cls-12" transform="translate(1426 2234)"/>
+        <path id="선_566" d="M0 20L0 0" class="cls-12" transform="translate(1426 2359)"/>
+        <path id="선_571" d="M0 20L0 0" class="cls-12" transform="translate(826 2359)"/>
+        <path id="선_574" d="M0 215L0 0" class="cls-12" transform="translate(960 2164)"/>
+        <text id="DEX_Uniswap_" class="cls-13" transform="translate(494 2323.499)">
+            <tspan x="-18.511" y="0">DEX</tspan><tspan x="-45.044" y="20">(Uniswap)</tspan>
+        </text>
+        <text id="CEX" class="cls-13" transform="translate(1094 2333.499)">
+            <tspan x="-18.462" y="0">CEX</tspan>
+        </text>
+        <text id="DEX_Mdex_" class="cls-13" transform="translate(660 2323.499)">
+            <tspan x="-18.511" y="0">DEX</tspan><tspan x="-31.519" y="20">(Mdex)</tspan>
+        </text>
+        <text id="CEX-2" class="cls-13" transform="translate(1260 2333.499)">
+            <tspan x="-18.462" y="0">CEX</tspan>
+        </text>
+        <text id="DEX_Pancake_Swap_" class="cls-13" transform="translate(826 2323.499)">
+            <tspan x="-18.511" y="0">DEX</tspan><tspan x="-72.119" y="20">(Pancake Swap)</tspan>
+        </text>
+        <text id="CEX-3" class="cls-13" transform="translate(1426 2333.499)">
+            <tspan x="-18.462" y="0">CEX</tspan>
+        </text>
+        <g filter="url(#사각형_617)" transform="matrix(1, 0, 0, 1, 408, 1300.32)">
+            <rect id="사각형_617-2" width="156" height="66" class="cls-14" rx="2" transform="translate(8 992.68)"/>
+        </g>
+        <g filter="url(#사각형_622)" transform="matrix(1, 0, 0, 1, 408, 1300.32)">
+            <rect id="사각형_622-2" width="156" height="66" class="cls-14" rx="2" transform="translate(608 992.68)"/>
+        </g>
+        <g filter="url(#사각형_618)" transform="matrix(1, 0, 0, 1, 408, 1300.32)">
+            <rect id="사각형_618-2" width="156" height="66" class="cls-14" rx="2" transform="translate(174 992.68)"/>
+        </g>
+        <g filter="url(#사각형_620)" transform="matrix(1, 0, 0, 1, 408, 1300.32)">
+            <rect id="사각형_620-2" width="156" height="66" class="cls-14" rx="2" transform="translate(774 992.68)"/>
+        </g>
+        <g filter="url(#사각형_619)" transform="matrix(1, 0, 0, 1, 408, 1300.32)">
+            <rect id="사각형_619-2" width="156" height="66" class="cls-14" rx="2" transform="translate(340 992.68)"/>
+        </g>
+        <g filter="url(#사각형_621)" transform="matrix(1, 0, 0, 1, 408, 1300.32)">
+            <rect id="사각형_621-2" width="156" height="66" class="cls-14" rx="2" transform="translate(940 992.68)"/>
+        </g>
+        <g id="icon" transform="translate(502 2279) rotate(90)">
+            <path id="패스_114" d="M1 16a1 1 0 0 1-.707-1.707L6.585 8 .293 1.707A1 1 0 0 1 1.707.293l7 7a1 1 0 0 1 0 1.416l-7 7A1 1 0 0 1 1 16z" class="cls-15"/>
+        </g>
+        <g id="icon-2" transform="translate(1102 2279) rotate(90)">
+            <path id="패스_114-2" d="M1 16a1 1 0 0 1-.707-1.707L6.585 8 .293 1.707A1 1 0 0 1 1.707.293l7 7a1 1 0 0 1 0 1.416l-7 7A1 1 0 0 1 1 16z" class="cls-15"/>
+        </g>
+        <g id="icon-3" transform="translate(668 2279) rotate(90)">
+            <path id="패스_114-3" d="M1 16a1 1 0 0 1-.707-1.707L6.585 8 .293 1.707A1 1 0 0 1 1.707.293l7 7a1 1 0 0 1 0 1.416l-7 7A1 1 0 0 1 1 16z" class="cls-15"/>
+        </g>
+        <g id="icon-4" transform="translate(1268 2279) rotate(90)">
+            <path id="패스_114-4" d="M1 16a1 1 0 0 1-.707-1.707L6.585 8 .293 1.707A1 1 0 0 1 1.707.293l7 7a1 1 0 0 1 0 1.416l-7 7A1 1 0 0 1 1 16z" class="cls-15"/>
+        </g>
+        <g id="icon-5" transform="translate(834 2279) rotate(90)">
+            <path id="패스_114-5" d="M1 16a1 1 0 0 1-.707-1.707L6.585 8 .293 1.707A1 1 0 0 1 1.707.293l7 7a1 1 0 0 1 0 1.416l-7 7A1 1 0 0 1 1 16z" class="cls-15"/>
+        </g>
+        <g id="icon-6" transform="translate(1434 2279) rotate(90)">
+            <path id="패스_114-6" d="M1 16a1 1 0 0 1-.707-1.707L6.585 8 .293 1.707A1 1 0 0 1 1.707.293l7 7a1 1 0 0 1 0 1.416l-7 7A1 1 0 0 1 1 16z" class="cls-15"/>
+        </g>
+        <text id="ERC-20" class="cls-1" transform="translate(505 2266)">
+            <tspan x="0" y="0">ERC-20</tspan>
+        </text>
+        <text id="HRC-20" class="cls-1" transform="translate(668 2266)">
+            <tspan x="0" y="0">HRC-20</tspan>
+        </text>
+        <text id="BEP-20" class="cls-1" transform="translate(834 2266)">
+            <tspan x="0" y="0">BEP-20</tspan>
+        </text>
+        <text id="CRE_" class="cls-16" transform="translate(980 2234)">
+            <tspan x="0" y="0">CRE(%)</tspan>
+        </text>
+        <text id="CRE_2" class="cls-16" transform="translate(980 1761)">
+            <tspan x="0" y="0">CRE(%)</tspan>
+        </text>
+        <text id="CRE" class="cls-16" transform="translate(1106 2043)">
+            <tspan x="0" y="0">CRE</tspan>
+        </text>
+        <text id="_10_" class="cls-17" transform="translate(1106 2121)">
+            <tspan x="0" y="0">10%</tspan>
+        </text>
+        <text id="CRE-2" class="cls-16" transform="translate(786 2043)">
+            <tspan x="0" y="0">CRE</tspan>
+        </text>
+        <text id="_90_" class="cls-17" transform="translate(786 2121)">
+            <tspan x="0" y="0">90%</tspan>
+        </text>
+        <text id="CRE_3" class="cls-16" transform="translate(980 1976)">
+            <tspan x="0" y="0">CRE(%)</tspan>
+        </text>
+        <path id="선_575" d="M0 69L0 0" class="cls-2" transform="translate(952 1720)"/>
+        <path id="선_583" d="M0 69L0 0" class="cls-2" transform="translate(952 1935)"/>
+        <path id="선_581" d="M0 55L0 0" class="cls-12" transform="translate(970 1720)"/>
+        <path id="선_582" d="M0 55L0 0" class="cls-12" transform="translate(970 1935)"/>
+        <path id="선_585" d="M0 0L39 0" class="cls-12" transform="translate(771.75 2059)"/>
+        <path id="선_595" d="M0 0L51 0" class="cls-12" transform="translate(960 2434.319)"/>
+        <path id="선_588" d="M0 0L39 0" class="cls-18" transform="translate(1095 2095)"/>
+        <path id="선_596" d="M0 0L51 0" class="cls-18" transform="translate(1292.5 2434.319)"/>
+        <path id="선_586" d="M0 0L39 0" class="cls-12" transform="translate(1148 2059) rotate(180)"/>
+        <path id="선_589" d="M0 0L39 0" class="cls-18" transform="translate(825 2095) rotate(180)"/>
+        <path id="선_587" d="M41.5 0L0 0" class="cls-12" transform="translate(1106.5 1873)"/>
+        <path id="선_599" d="M41.5 0L0 0" class="cls-12" transform="translate(773.25 1873)"/>
+        <path id="선_597" d="M291 0L0 0" class="cls-12" transform="translate(814.5 1950)"/>
+        <g id="icon-7" transform="translate(978 1775) rotate(90)">
+            <path id="패스_114-7" d="M1 16a1 1 0 0 1-.707-1.707L6.585 8 .293 1.707A1 1 0 0 1 1.707.293l7 7a1 1 0 0 1 0 1.416l-7 7A1 1 0 0 1 1 16z" class="cls-15"/>
+        </g>
+        <g id="icon-8" transform="translate(978 1990) rotate(90)">
+            <path id="패스_114-8" d="M1 16a1 1 0 0 1-.707-1.707L6.585 8 .293 1.707A1 1 0 0 1 1.707.293l7 7a1 1 0 0 1 0 1.416l-7 7A1 1 0 0 1 1 16z" class="cls-15"/>
+        </g>
+        <g id="icon-9" transform="translate(810.25 2051)">
+            <path id="패스_114-9" d="M1 16a1 1 0 0 1-.707-1.707L6.585 8 .293 1.707A1 1 0 0 1 1.707.293l7 7a1 1 0 0 1 0 1.416l-7 7A1 1 0 0 1 1 16z" class="cls-15"/>
+        </g>
+        <g id="icon-10" transform="translate(1133.5 2087)">
+            <path id="패스_114-10" d="M1 16a1 1 0 0 1-.707-1.707L6.585 8 .293 1.707A1 1 0 0 1 1.707.293l7 7a1 1 0 0 1 0 1.416l-7 7A1 1 0 0 1 1 16z" class="cls-19"/>
+        </g>
+        <g id="icon-11" transform="translate(1109.5 2067) rotate(180)">
+            <path id="패스_114-11" d="M1 16a1 1 0 0 1-.707-1.707L6.585 8 .293 1.707A1 1 0 0 1 1.707.293l7 7a1 1 0 0 1 0 1.416l-7 7A1 1 0 0 1 1 16z" class="cls-15"/>
+        </g>
+        <g id="icon-12" transform="translate(786.5 2103) rotate(180)">
+            <path id="패스_114-12" d="M1 16a1 1 0 0 1-.707-1.707L6.585 8 .293 1.707A1 1 0 0 1 1.707.293l7 7a1 1 0 0 1 0 1.416l-7 7A1 1 0 0 1 1 16z" class="cls-19"/>
+        </g>
+        <text id="Carbon_Redemption_Accumulated_Governance_Staking_Reward_Reserve" class="cls-1" transform="translate(845 2060)">
+            <tspan x="-112.236" y="16">Carbon Redemption Accumulated </tspan><tspan x="-39.73" y="41">Governance</tspan><tspan x="-80.376" y="66">Staking Reward Reserve</tspan>
+        </text>
+        <text id="Staking_Lock_Unlock_Yield_Farming:_Real_Time_Farming_LP_Farming:_Highest_Incentive_Offered" class="cls-1" transform="translate(481 2060)">
+            <tspan x="-74.044" y="16">Staking Lock &amp; Unlock</tspan><tspan x="-111.533" y="41">Yield Farming: Real Time Farming</tspan><tspan x="-126.354" y="66">LP Farming: Highest Incentive Offered</tspan>
+        </text>
+        <text id="Annual_Purchase_and_Burn" class="cls-1" transform="translate(1168 2060)">
+            <tspan x="-88.011" y="16">Annual Purchase and Burn</tspan>
+        </text>
+        <path id="선_577" d="M53 0L0 0" class="cls-2" transform="translate(1095 2077)"/>
+        <path id="선_594" d="M51 0L0 0" class="cls-2" transform="translate(680.5 2434.319)"/>
+        <path id="선_580" d="M53 0L0 0" class="cls-2" transform="translate(772 2077)"/>
+        <g filter="url(#사각형_612)" transform="matrix(1, 0, 0, 1, 408, 1300.32)">
+            <rect id="사각형_612-2" width="270" height="146" fill="none" stroke="#00c3ee" stroke-width="2px" rx="2" transform="translate(417 703.68)"/>
+        </g>
+        <g filter="url(#사각형_615)" transform="matrix(1, 0, 0, 1, 408, 1300.32)">
+            <rect id="사각형_615-2" width="311" height="146" class="cls-4" rx="2" transform="translate(53 703.68)"/>
+        </g>
+        <g filter="url(#사각형_616)" transform="matrix(1, 0, 0, 1, 408, 1300.32)">
+            <rect id="사각형_616-2" width="311" height="146" class="cls-4" rx="2" transform="translate(740 703.68)"/>
+        </g>
+        <text id="Incentive_Hub" fill="#00c3ee" font-family="Roboto-Bold, Roboto" font-size="20px" font-weight="700" transform="translate(960 2045)">
+            <tspan x="-62.007" y="0">Incentive Hub</tspan>
+        </text>
+        <text id="De-Fi" class="cls-9" transform="translate(617 2045)">
+            <tspan x="-23.911" y="0">De-Fi</tspan>
+        </text>
+        <text id="Carbon_Credit" class="cls-9" transform="translate(1304 2045)">
+            <tspan x="-62.188" y="0">Carbon Credit</tspan>
+        </text>
+        <g id="icon-13" transform="translate(952 2163.999) rotate(-90)">
+            <path id="패스_114-13" d="M1 16a1 1 0 0 1-.707-1.707L6.585 8 .293 1.707A1 1 0 0 1 1.707.293l7 7a1 1 0 0 1 0 1.416l-7 7A1 1 0 0 1 1 16z" class="cls-15"/>
+        </g>
+        <g filter="url(#사각형_610)" transform="matrix(1, 0, 0, 1, 408, 1300.32)">
+            <rect id="사각형_610-2" width="270" height="146" class="cls-4" rx="2.277" transform="translate(417 488.68)"/>
+        </g>
+        <text id="Recharge_Service_Flow" class="cls-1" transform="translate(823 2440.319)">
+            <tspan x="-75.417" y="0">Recharge Service Flow</tspan>
+        </text>
+        <text id="Automated_Carbon_Redemption" class="cls-1" transform="translate(1132.5 2440.319)">
+            <tspan x="-105.044" y="0">Automated Carbon Redemption</tspan>
+        </text>
+        <text id="Recharge_Distribution" class="cls-1" transform="translate(1432 2440.319)">
+            <tspan x="-71.744" y="0">Recharge Distribution</tspan>
+        </text>
+        <text id="_CRE_Carbon_Redemption" class="cls-16" transform="translate(523.5 2440.319)">
+            <tspan x="-101.726" y="0">*CRE(%) = Carbon Redemption</tspan>
+        </text>
+        <path id="선_598" d="M0 0L0 76.819" class="cls-12" transform="translate(1106 1873)"/>
+        <path id="선_600" d="M0 0L0 76.819" class="cls-12" transform="translate(814.75 1873)"/>
+    </g>
+</svg>

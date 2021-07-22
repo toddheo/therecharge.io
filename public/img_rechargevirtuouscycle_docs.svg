@@ -1,0 +1,128 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="767" height="407.5" viewBox="0 0 767 407.5">
+    <defs>
+        <filter id="사각형_315" width="194.65" height="51.563" x="0" y="0" filterUnits="userSpaceOnUse">
+            <feOffset/>
+            <feGaussianBlur result="blur" stdDeviation="2.5"/>
+            <feFlood flood-color="#fff" flood-opacity=".725"/>
+            <feComposite in2="blur" operator="in"/>
+            <feComposite in="SourceGraphic"/>
+        </filter>
+        <filter id="사각형_354" width="193.959" height="51.563" x="190.783" y="0" filterUnits="userSpaceOnUse">
+            <feOffset/>
+            <feGaussianBlur result="blur-2" stdDeviation="2.5"/>
+            <feFlood flood-color="#fff" flood-opacity=".725"/>
+            <feComposite in2="blur-2" operator="in"/>
+            <feComposite in="SourceGraphic"/>
+        </filter>
+        <filter id="사각형_355" width="194.65" height="51.563" x="381.567" y="0" filterUnits="userSpaceOnUse">
+            <feOffset/>
+            <feGaussianBlur result="blur-3" stdDeviation="2.5"/>
+            <feFlood flood-color="#fff" flood-opacity=".725"/>
+            <feComposite in2="blur-3" operator="in"/>
+            <feComposite in="SourceGraphic"/>
+        </filter>
+        <filter id="사각형_356" width="194.65" height="51.563" x="572.35" y="0" filterUnits="userSpaceOnUse">
+            <feOffset/>
+            <feGaussianBlur result="blur-4" stdDeviation="2.5"/>
+            <feFlood flood-color="#fff" flood-opacity=".725"/>
+            <feComposite in2="blur-4" operator="in"/>
+            <feComposite in="SourceGraphic"/>
+        </filter>
+        <filter id="사각형_357" width="258.936" height="51.563" x="252.995" y="190.25" filterUnits="userSpaceOnUse">
+            <feOffset/>
+            <feGaussianBlur result="blur-5" stdDeviation="2.5"/>
+            <feFlood flood-color="#fff" flood-opacity=".725"/>
+            <feComposite in2="blur-5" operator="in"/>
+            <feComposite in="SourceGraphic"/>
+        </filter>
+        <filter id="사각형_358" width="197.493" height="54.499" x="508.371" y="314.751" filterUnits="userSpaceOnUse">
+            <feOffset/>
+            <feGaussianBlur result="blur-6" stdDeviation="2.5"/>
+            <feFlood flood-color="#fff" flood-opacity=".725"/>
+            <feComposite in2="blur-6" operator="in"/>
+            <feComposite in="SourceGraphic"/>
+        </filter>
+        <filter id="사각형_359" width="197.493" height="54.499" x="58.371" y="314.751" filterUnits="userSpaceOnUse">
+            <feOffset/>
+            <feGaussianBlur result="blur-7" stdDeviation="2.5"/>
+            <feFlood flood-color="#fff" flood-opacity=".725"/>
+            <feComposite in2="blur-7" operator="in"/>
+            <feComposite in="SourceGraphic"/>
+        </filter>
+        <style>
+            .cls-4,.cls-5{fill:#fff}.cls-5{font-size:20px}.cls-11,.cls-2,.cls-3,.cls-6{fill:none}.cls-2,.cls-6{stroke:#fff}.cls-2,.cls-3{stroke-linecap:round;stroke-miterlimit:10}.cls-2,.cls-3,.cls-6{stroke-width:2px}.cls-3{stroke:#9314b2;stroke-dasharray:5 5}.cls-4{font-size:13px;font-family:Roboto-Bold,Roboto;font-weight:700}.cls-5{font-family:Roboto-Black,Roboto;font-weight:800}.cls-10{fill:#9314b2}.cls-11{stroke:#a5a5a5;stroke-width:.5px}
+        </style>
+    </defs>
+    <g id="img_rechargevirtuouscycle_docs" transform="translate(-745.5 -9491.187)">
+        <text id="_Figure_8._Recharge_Virtuous_Cycle_" fill="#fff" font-family="Roboto-Regular, Roboto" font-size="20px" transform="translate(754 9872.687)">
+            <tspan x="-159.912" y="21">&lt;Figure 8. Recharge Virtuous Cycle&gt;</tspan>
+        </text>
+        <g id="img_rechargevirtuouscycle" transform="translate(754 9499.687)">
+            <path id="선_205" d="M0 43.203L0 0" class="cls-2" transform="translate(88.825 34.562)"/>
+            <path id="선_206" d="M0 43.203L0 0" class="cls-2" transform="translate(279.263 34.562)"/>
+            <path id="선_207" d="M0 43.203L0 0" class="cls-2" transform="translate(470.392 34.562)"/>
+            <path id="선_208" d="M0 43.203L0 0" class="cls-2" transform="translate(661.175 34.562)"/>
+            <path id="선_209" d="M0 0L572.35 0" class="cls-2" transform="translate(88.825 77.696)"/>
+            <path id="선_211" d="M0 0L103.341 0" class="cls-3" transform="translate(495.276 207.535)"/>
+            <path id="선_212" d="M0 0L95.392 0" class="cls-3" transform="translate(146.198 207.535)"/>
+            <path id="선_214" d="M0 96.774L0 0" class="cls-3" transform="translate(598.617 207.405)"/>
+            <path id="선_215" d="M0 106.452L0 0" class="cls-3" transform="translate(146.198 207.405)"/>
+            <path id="선_213" d="M0 0L257.736 0" class="cls-3" transform="translate(249.885 333.557)"/>
+            <text id="Increased_contribution_on_the_ecosystem" class="cls-4" transform="translate(144.728 332.005)">
+                <tspan x="-67.577" y="0">Increased contribution </tspan><tspan x="-51.762" y="13">on the ecosystem</tspan>
+            </text>
+            <text id="Increased_distributed_rewards" class="cls-4" transform="translate(534.684 314.602)">
+                <tspan x="-62.118" y="14">Increased distributed </tspan><tspan x="-23.521" y="34">rewards</tspan>
+            </text>
+            <text id="Piggycell" class="cls-5" transform="translate(87.276 25.147)">
+                <tspan x="-42.08" y="0">Piggycell</tspan>
+            </text>
+            <g filter="url(#사각형_315)" transform="translate(-8.5 -8.5)">
+                <rect id="사각형_315-2" width="177.65" height="34.562" class="cls-6" rx="2.277" transform="translate(8.5 8.5)"/>
+            </g>
+            <text id="AD-EYE" class="cls-5" transform="translate(277.281 25.147)">
+                <tspan x="-35.244" y="0">AD-EYE</tspan>
+            </text>
+            <g filter="url(#사각형_354)" transform="translate(-8.5 -8.5)">
+                <rect id="사각형_354-2" width="176.959" height="34.562" class="cls-6" rx="2.277" transform="translate(199.28 8.5)"/>
+            </g>
+            <text id="Panda_Trust" class="cls-5" transform="translate(468.71 25.147)">
+                <tspan x="-54.502" y="0">Panda Trust</tspan>
+            </text>
+            <g filter="url(#사각형_355)" transform="translate(-8.5 -8.5)">
+                <rect id="사각형_355-2" width="177.65" height="34.562" class="cls-6" rx="2.277" transform="translate(390.07 8.5)"/>
+            </g>
+            <text id="External_Service" class="cls-5" transform="translate(658.447 25.147)">
+                <tspan x="-73.73" y="0">External Service</tspan>
+            </text>
+            <g filter="url(#사각형_356)" transform="translate(-8.5 -8.5)">
+                <rect id="사각형_356-2" width="177.65" height="34.562" class="cls-6" rx="2.277" transform="translate(580.85 8.5)"/>
+            </g>
+            <g filter="url(#사각형_357)" transform="translate(-8.5 -8.5)">
+                <rect id="사각형_357-2" width="241.935" height="34.562" fill="none" stroke="#00c3ee" stroke-width="2px" rx="2.277" transform="translate(261.5 198.75)"/>
+            </g>
+            <path id="선_210" d="M0 102.995L0 0" class="cls-2" transform="translate(373.963 77.668)"/>
+            <text id="Carbon_Redemption" fill="#00c3ee" font-family="Roboto-Bold, Roboto" font-size="20px" font-weight="700" transform="translate(370.682 215.054)">
+                <tspan x="-89.326" y="0">Carbon Redemption</tspan>
+            </text>
+            <g id="icon" transform="rotate(90 99.793 280.046)">
+                <path id="패스_114" fill="#fff" d="M.691 11.06A.691.691 0 0 1 .2 9.88l4.35-4.35L.2 1.18A.691.691 0 0 1 1.18.2l4.838 4.84a.692.692 0 0 1 0 .979L1.18 10.857a.69.69 0 0 1-.489.203z"/>
+            </g>
+            <g id="icon-2" transform="rotate(90 150.156 453.99)">
+                <path id="패스_114-2" d="M.691 11.06A.691.691 0 0 1 .2 9.88l4.35-4.35L.2 1.18A.691.691 0 0 1 1.18.2l4.838 4.84a.692.692 0 0 1 0 .979L1.18 10.857a.69.69 0 0 1-.489.203z" class="cls-10"/>
+            </g>
+            <g id="icon-3" transform="rotate(180 124.77 169.516)">
+                <path id="패스_114-3" d="M.691 11.06A.691.691 0 0 1 .2 9.88l4.35-4.35L.2 1.18A.691.691 0 0 1 1.18.2l4.838 4.84a.692.692 0 0 1 0 .979L1.18 10.857a.69.69 0 0 1-.489.203z" class="cls-10"/>
+            </g>
+            <g id="icon-4" transform="translate(241.59 202.004)">
+                <path id="패스_114-4" d="M978.686 3375.644a.691.691 0 0 1-.489-1.18l4.35-4.35-4.35-4.35a.691.691 0 0 1 .977-.977l4.838 4.837a.692.692 0 0 1 0 .979l-4.839 4.839a.69.69 0 0 1-.487.202z" class="cls-10" transform="translate(-977.995 -3364.584)"/>
+            </g>
+            <g filter="url(#사각형_358)" transform="translate(-8.5 -8.5)">
+                <rect id="사각형_358-2" width="181.993" height="38.999" class="cls-11" rx="2.277" transform="translate(516.12 322.5)"/>
+            </g>
+            <g filter="url(#사각형_359)" transform="translate(-8.5 -8.5)">
+                <rect id="사각형_359-2" width="181.993" height="38.999" class="cls-11" rx="2.277" transform="translate(66.12 322.5)"/>
+            </g>
+        </g>
+    </g>
+</svg>

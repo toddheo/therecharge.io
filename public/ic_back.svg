@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="80.414" height="32.828" viewBox="0 0 80.414 32.828">
+    <defs>
+        <style>
+            .cls-1{fill:none;stroke:#fff;stroke-linecap:round;stroke-miterlimit:10;stroke-width:2px}
+        </style>
+    </defs>
+    <g id="ic_back" transform="translate(-414.586 -1413.444)">
+        <path id="선_464" d="M20 0L0 0" class="cls-1" transform="translate(431 1428.5)"/>
+        <g id="그룹_146" transform="translate(-1075.216 941.515)">
+            <path id="선_463" d="M15.379 14.47L0 0" class="cls-1" transform="translate(1491.216 488.873)"/>
+            <path id="선_465" d="M15.38 0L0 15.53" class="cls-1" transform="translate(1491.216 473.343)"/>
+        </g>
+        <text id="Back" fill="#fff" font-family="Roboto-Regular, Roboto" font-size="16px" transform="translate(459 1418)">
+            <tspan x="-17.574" y="17">Back</tspan>
+        </text>
+    </g>
+</svg>

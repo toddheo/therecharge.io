@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1411" viewBox="0 0 1920 1411">
+    <defs>
+        <linearGradient id="fcsxp90caa" x1=".5" x2=".5" y2="1" gradientUnits="objectBoundingBox">
+            <stop offset="0" stop-color="#02051c" stop-opacity="0"/>
+            <stop offset="1" stop-color="#9314b2" stop-opacity=".255"/>
+        </linearGradient>
+    </defs>
+    <path fill="url(#fcsxp90caa)" d="M0 0H1920V1411H0z"/>
+</svg>

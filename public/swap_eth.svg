@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 80 80">
+    <defs>
+        <style>
+            .cls-2{fill:#232423}.cls-4{fill:#6f7071}
+        </style>
+    </defs>
+    <g id="img_eth_80px" transform="translate(-792 -944.125)">
+        <circle id="타원_50" cx="40" cy="40" r="40" fill="#fff" transform="translate(792 944.125)"/>
+        <g id="img_erc20" transform="translate(817.413 959.125)">
+            <path id="패스_211" d="M464.038 319.313v12.519l15.367-21.585z" class="cls-2" transform="translate(-448.671 -281.832)"/>
+            <path id="패스_212" fill="#030504" d="M464.038 219.982v16.069l15.367-9.09z" transform="translate(-448.671 -201.466)"/>
+            <path id="패스_213" d="M464.038 51.13v18.517l15.362 6.979z" class="cls-2" transform="translate(-448.671 -51.13)"/>
+            <path id="패스_214" d="M339.275 319.313v12.519l-15.367-21.585z" class="cls-4" transform="translate(-323.908 -281.832)"/>
+            <path id="패스_215" fill="#272828" d="M339.278 219.982v16.069l-15.367-9.09z" transform="translate(-323.911 -201.466)"/>
+            <path id="패스_216" d="M339.278 51.13v18.517l-15.367 6.979z" class="cls-4" transform="translate(-323.911 -51.13)"/>
+        </g>
+    </g>
+</svg>

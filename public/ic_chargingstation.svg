@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="70.354" height="82.011" viewBox="0 0 70.354 82.011">
+    <defs>
+        <filter id="패스_459" width="57.539" height="54.088" x="6.406" y="6.364" filterUnits="userSpaceOnUse">
+            <feOffset/>
+            <feGaussianBlur result="blur" stdDeviation="5"/>
+            <feFlood flood-color="#fff" flood-opacity=".424"/>
+            <feComposite in2="blur" operator="in"/>
+            <feComposite in="SourceGraphic"/>
+        </filter>
+        <filter id="패스_460" width="11.265" height="21.038" x="33.7" y="12.915" filterUnits="userSpaceOnUse">
+            <feOffset/>
+            <feGaussianBlur result="blur-2" stdDeviation="1.5"/>
+            <feFlood flood-color="#fff" flood-opacity=".584"/>
+            <feComposite in2="blur-2" operator="in"/>
+            <feComposite in="SourceGraphic"/>
+        </filter>
+        <filter id="패스_461" width="11.265" height="21.038" x="25.406" y="12.915" filterUnits="userSpaceOnUse">
+            <feOffset/>
+            <feGaussianBlur result="blur-3" stdDeviation="1.5"/>
+            <feFlood flood-color="#fff" flood-opacity=".584"/>
+            <feComposite in2="blur-3" operator="in"/>
+            <feComposite in="SourceGraphic"/>
+        </filter>
+        <style>
+            .cls-4{fill:#0eef6d}
+        </style>
+    </defs>
+    <g id="ic_chargingstation" transform="translate(187.351 -652.603)">
+        <path id="패스_458" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2px" d="M-152.176 697.764v8.588a12.062 12.062 0 0 0 18.727 10.03 34.151 34.151 0 0 0 15.365-31.017 34.29 34.29 0 0 0-31.668-31.665 34.179 34.179 0 0 0-36.6 34.092 34.183 34.183 0 0 0 20.5 31.328" transform="translate(0 0)"/>
+        <path id="패스_456" fill="none" stroke="#ffb900" stroke-linecap="round" stroke-linejoin="round" stroke-width="2px" d="M-157.677 724.115h-3.859l2.713-9.97-9.816 11.779h3.859l-2.713 9.97z" transform="translate(-0.667 -2.28)"/>
+        <g id="그룹_127">
+            <g filter="url(#패스_459)" transform="translate(-165.945 670.018) matrix(1, 0, 0, 1, -21.41, -17.42)">
+                <path id="패스_459-2" d="M-141.921 675.073a1.134 1.134 0 0 0-1.6.045 1.134 1.134 0 0 0 .045 1.6 11.4 11.4 0 0 1 3.6 8.363 11.518 11.518 0 0 1-11.5 11.5 11.517 11.517 0 0 1-11.5-11.5 11.4 11.4 0 0 1 3.6-8.363 1.132 1.132 0 0 0 .045-1.6 1.133 1.133 0 0 0-1.6-.045 13.646 13.646 0 0 0-4.313 10.009 13.785 13.785 0 0 0 13.769 13.77 13.786 13.786 0 0 0 13.77-13.77 13.644 13.644 0 0 0-4.316-10.009z" class="cls-4" transform="translate(186.55 -653.4)"/>
+            </g>
+            <g filter="url(#패스_460)" transform="translate(-165.945 670.018) matrix(1, 0, 0, 1, -21.41, -17.42)">
+                <path id="패스_460-2" d="M-146.562 682.7a1.133 1.133 0 0 0 1.133-1.133v-9.772a1.133 1.133 0 0 0-1.133-1.133 1.133 1.133 0 0 0-1.133 1.133v9.772a1.133 1.133 0 0 0 1.133 1.133z" class="cls-4" transform="translate(185.89 -653.24)"/>
+            </g>
+            <g filter="url(#패스_461)" transform="translate(-165.945 670.018) matrix(1, 0, 0, 1, -21.41, -17.42)">
+                <path id="패스_461-2" d="M-155.181 682.7a1.133 1.133 0 0 0 1.133-1.133v-9.772a1.133 1.133 0 0 0-1.133-1.133 1.133 1.133 0 0 0-1.133 1.133v9.772a1.133 1.133 0 0 0 1.133 1.133z" class="cls-4" transform="translate(186.22 -653.24)"/>
+            </g>
+        </g>
+    </g>
+</svg>

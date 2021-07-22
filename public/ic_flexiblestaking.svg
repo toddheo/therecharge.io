@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="101.352" height="82" viewBox="0 0 101.352 82">
+    <defs>
+        <filter id="패스_475" width="38.945" height="35.192" x="21.527" y="25.551" filterUnits="userSpaceOnUse">
+            <feOffset/>
+            <feGaussianBlur result="blur" stdDeviation="1.5"/>
+            <feFlood flood-color="#fff" flood-opacity=".412"/>
+            <feComposite in2="blur" operator="in"/>
+            <feComposite in="SourceGraphic"/>
+        </filter>
+        <filter id="패스_476" width="11.463" height="22.089" x="39.788" y="21.257" filterUnits="userSpaceOnUse">
+            <feOffset/>
+            <feGaussianBlur result="blur-2" stdDeviation="1.5"/>
+            <feFlood flood-color="#fff" flood-opacity=".412"/>
+            <feComposite in2="blur-2" operator="in"/>
+            <feComposite in="SourceGraphic"/>
+        </filter>
+        <filter id="패스_477" width="11.463" height="22.089" x="30.769" y="21.257" filterUnits="userSpaceOnUse">
+            <feOffset/>
+            <feGaussianBlur result="blur-3" stdDeviation="1.5"/>
+            <feFlood flood-color="#fff" flood-opacity=".412"/>
+            <feComposite in2="blur-3" operator="in"/>
+            <feComposite in="SourceGraphic"/>
+        </filter>
+        <style>
+            .cls-1{fill:#0eef6d}.cls-2{fill:none;stroke:#fff;stroke-linecap:square;stroke-miterlimit:10;stroke-width:2px}
+        </style>
+    </defs>
+    <g id="ic_flexiblestaking" transform="translate(220.831 -778.923)">
+        <g id="그룹_140">
+            <g filter="url(#패스_475)" transform="translate(-194.804 804.68) matrix(1, 0, 0, 1, -26.03, -25.76)">
+                <path id="패스_475-2" d="M-170.659 808.024a1.231 1.231 0 0 0-1.741.049 1.233 1.233 0 0 0 .049 1.741 12.394 12.394 0 0 1 3.92 9.092 12.523 12.523 0 0 1-12.509 12.509 12.523 12.523 0 0 1-12.509-12.509 12.394 12.394 0 0 1 3.92-9.092 1.233 1.233 0 0 0 .049-1.741 1.231 1.231 0 0 0-1.741-.049 14.831 14.831 0 0 0-4.691 10.882 14.989 14.989 0 0 0 14.972 14.972 14.989 14.989 0 0 0 14.972-14.972 14.831 14.831 0 0 0-4.691-10.882z" class="cls-1" transform="translate(221.94 -777.64)"/>
+            </g>
+            <g filter="url(#패스_476)" transform="translate(-194.804 804.68) matrix(1, 0, 0, 1, -26.03, -25.76)">
+                <path id="패스_476-2" d="M-177.229 816.672A1.232 1.232 0 0 0-176 815.44v-10.625a1.232 1.232 0 0 0-1.232-1.232 1.231 1.231 0 0 0-1.232 1.232v10.625a1.231 1.231 0 0 0 1.235 1.232z" class="cls-1" transform="translate(222.75 -777.83)"/>
+            </g>
+            <g filter="url(#패스_477)" transform="translate(-194.804 804.68) matrix(1, 0, 0, 1, -26.03, -25.76)">
+                <path id="패스_477-2" d="M-185.848 816.672a1.232 1.232 0 0 0 1.232-1.232v-10.625a1.232 1.232 0 0 0-1.232-1.232 1.232 1.232 0 0 0-1.232 1.232v10.625a1.232 1.232 0 0 0 1.232 1.232z" class="cls-1" transform="translate(222.35 -777.83)"/>
+            </g>
+        </g>
+        <path id="패스_478" d="M-147.991 795.708a39.825 39.825 0 0 1 8.16 24.215 40 40 0 0 1-40 40 40 40 0 0 1-40-40 40 40 0 0 1 40-40 39.827 39.827 0 0 1 24.541 8.411" class="cls-2"/>
+        <path id="패스_479" d="M-199.666 793.951a32.052 32.052 0 0 1 19.489-6.567 32.193 32.193 0 0 1 32.192 32.194 32.192 32.192 0 0 1-32.192 32.192 32.192 32.192 0 0 1-32.192-32.192 32.05 32.05 0 0 1 6.769-19.751" class="cls-2" transform="translate(0.346 0.346)"/>
+        <path id="선_474" d="M0 0L13.63 0" class="cls-2" transform="translate(-134.109 817.769)"/>
+        <path id="선_475" d="M0 0L13.63 0" class="cls-2" transform="translate(-134.109 826.2)"/>
+        <path id="선_476" d="M0 0L15.75 0" class="cls-2" transform="translate(-136.228 834.631)"/>
+        <path id="선_477" d="M0 0L19.353 0" class="cls-2" transform="translate(-139.832 843.061)"/>
+        <path id="선_478" d="M0 0L27.16 0" class="cls-2" transform="translate(-147.639 851.492)"/>
+        <path id="선_479" d="M0 0L39.828 0" class="cls-2" transform="translate(-160.307 859.923)"/>
+    </g>
+</svg>

@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1364.004" height="390" viewBox="0 0 1364.004 390">
+    <defs>
+        <filter id="motion_volt" width="209" height="12" x="893.5" y="0" filterUnits="userSpaceOnUse">
+            <feOffset/>
+            <feGaussianBlur result="blur" stdDeviation="1.5"/>
+            <feFlood flood-color="#fff"/>
+            <feComposite in2="blur" operator="in"/>
+            <feComposite in="SourceGraphic"/>
+        </filter>
+        <filter id="motion_volt-2" width="103.195" height="146.64" x="621.359" y="138.18" filterUnits="userSpaceOnUse">
+            <feOffset/>
+            <feGaussianBlur result="blur-2" stdDeviation="1.5"/>
+            <feFlood flood-color="#fff"/>
+            <feComposite in2="blur-2" operator="in"/>
+            <feComposite in="SourceGraphic"/>
+        </filter>
+        <linearGradient id="linear-gradient" x1="-1.471" x2="1" y1=".5" y2=".5" gradientUnits="objectBoundingBox">
+            <stop offset="0" stop-color="#fff" stop-opacity="0"/>
+            <stop offset=".618" stop-color="#fff" stop-opacity=".012"/>
+            <stop offset="1" stop-color="#fff"/>
+        </linearGradient>
+        <style>
+            .cls-2{fill:url(#linear-gradient)}
+        </style>
+    </defs>
+    <g id="img_main_visioning" transform="translate(-278 -2565.5)">
+        <path id="패스_488" fill="none" stroke="#ffb900" stroke-width="3px" d="M15981.5-5269.866h552l260-382.5 552-1.5" transform="translate(-15703.5 8223.866)"/>
+        <g filter="url(#motion_volt)" transform="matrix(1, 0, 0, 1, 278, 2565.5)">
+            <rect id="motion_volt-3" width="200" height="3" class="cls-2" rx="1.5" transform="translate(898 4.5)"/>
+        </g>
+        <g filter="url(#motion_volt-2)" transform="matrix(1, 0, 0, 1, 278, 2565.5)">
+            <rect id="motion_volt-4" width="164" height="3" class="cls-2" rx="1.5" transform="matrix(0.56, -0.83, 0.83, 0.56, 625.86, 278.64)"/>
+        </g>
+    </g>
+</svg>

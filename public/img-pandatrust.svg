@@ -1,0 +1,130 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="494" height="512.3" viewBox="0 0 494 512.3">
+    <defs>
+        <filter id="사각형_226" width="261" height="66" x="116.25" y="102.708" filterUnits="userSpaceOnUse">
+            <feOffset/>
+            <feGaussianBlur result="blur" stdDeviation="2.5"/>
+            <feFlood flood-color="#fff" flood-opacity=".725"/>
+            <feComposite in2="blur" operator="in"/>
+            <feComposite in="SourceGraphic"/>
+        </filter>
+        <filter id="사각형_271" width="215.5" height="50.5" x="278.5" y="297.958" filterUnits="userSpaceOnUse">
+            <feOffset/>
+            <feGaussianBlur result="blur-2" stdDeviation="2.5"/>
+            <feFlood flood-color="#fff" flood-opacity=".725"/>
+            <feComposite in2="blur-2" operator="in"/>
+            <feComposite in="SourceGraphic"/>
+        </filter>
+        <filter id="사각형_482" width="215.5" height="73.305" x="278.5" y="358.976" filterUnits="userSpaceOnUse">
+            <feOffset/>
+            <feGaussianBlur result="blur-3" stdDeviation="2.5"/>
+            <feFlood flood-color="#fff" flood-opacity=".725"/>
+            <feComposite in2="blur-3" operator="in"/>
+            <feComposite in="SourceGraphic"/>
+        </filter>
+        <filter id="사각형_484" width="215.5" height="73.305" x="278.5" y="438.995" filterUnits="userSpaceOnUse">
+            <feOffset/>
+            <feGaussianBlur result="blur-4" stdDeviation="2.5"/>
+            <feFlood flood-color="#fff" flood-opacity=".725"/>
+            <feComposite in2="blur-4" operator="in"/>
+            <feComposite in="SourceGraphic"/>
+        </filter>
+        <filter id="사각형_481" width="215.5" height="50.5" x="0" y="297.958" filterUnits="userSpaceOnUse">
+            <feOffset/>
+            <feGaussianBlur result="blur-5" stdDeviation="2.5"/>
+            <feFlood flood-color="#fff" flood-opacity=".725"/>
+            <feComposite in2="blur-5" operator="in"/>
+            <feComposite in="SourceGraphic"/>
+        </filter>
+        <filter id="사각형_483" width="215.5" height="73.305" x="0" y="358.976" filterUnits="userSpaceOnUse">
+            <feOffset/>
+            <feGaussianBlur result="blur-6" stdDeviation="2.5"/>
+            <feFlood flood-color="#fff" flood-opacity=".725"/>
+            <feComposite in2="blur-6" operator="in"/>
+            <feComposite in="SourceGraphic"/>
+        </filter>
+        <filter id="사각형_485" width="215.5" height="73.305" x="0" y="438.995" filterUnits="userSpaceOnUse">
+            <feOffset/>
+            <feGaussianBlur result="blur-7" stdDeviation="2.5"/>
+            <feFlood flood-color="#fff" flood-opacity=".725"/>
+            <feComposite in2="blur-7" operator="in"/>
+            <feComposite in="SourceGraphic"/>
+        </filter>
+        <style>
+            .cls-6,.cls-7{fill:none}.cls-6{stroke-linecap:round;stroke-width:2px;stroke:#fff}.cls-3,.cls-5{fill:#fff}.cls-5{font-size:20px;font-family:Roboto-Bold,Roboto;font-weight:700}.cls-7{stroke:#b5b5b5;stroke-width:.5px}.cls-8{font-size:15px;font-family:Roboto-Regular,Roboto;font-weight:400}
+        </style>
+    </defs>
+    <g id="img_pandatrust" transform="translate(-113.25 -3646.792)">
+        <path id="패스_268" fill="none" stroke="#ffb900" stroke-linecap="round" stroke-width="2px" d="M497.265 5850.69H374.243v162h372v-162H617.015" transform="translate(-199.743 -2160.69)"/>
+        <g filter="url(#사각형_226)" transform="translate(113.25 3646.79)">
+            <rect id="사각형_226-2" width="245" height="50" fill="none" stroke="#fff" rx="2.277" transform="translate(124.25 110.71)"/>
+        </g>
+        <path id="패스_168" d="M372.648 6360.018a3.549 3.549 0 0 0-4.875 5.158 35.712 35.712 0 0 1 11.293 26.2 36.042 36.042 0 1 1-72.084 0 35.712 35.712 0 0 1 11.293-26.2 3.549 3.549 0 0 0-4.875-5.158 42.744 42.744 0 0 0-13.515 31.356 43.139 43.139 0 0 0 86.279 0 42.74 42.74 0 0 0-13.516-31.356z" class="cls-3" transform="translate(17.115 -2699.884)"/>
+        <path id="패스_169" d="M336.922 6388.885a3.548 3.548 0 0 0 3.548-3.549v-30.614a3.548 3.548 0 1 0-7.1 0v30.614a3.548 3.548 0 0 0 3.552 3.549z" class="cls-3" transform="translate(36.24 -2704.381)"/>
+        <path id="패스_170" d="M320.383 6388.885a3.548 3.548 0 0 0 3.548-3.549v-30.614a3.548 3.548 0 1 0-7.1 0v30.614a3.548 3.548 0 0 0 3.552 3.549z" class="cls-3" transform="translate(26.795 -2704.381)"/>
+        <text id="Panda_Trust" fill="#fff" font-family="Roboto-Black, Roboto" font-size="30px" font-weight="800" transform="translate(278 3794)">
+            <tspan x="0" y="0">Panda Trust</tspan>
+        </text>
+        <path id="패스_114" d="M978.995 3380.584a1 1 0 0 1-.707-1.707l6.293-6.293-6.293-6.293a1 1 0 0 1 1.414-1.414l7 7a1 1 0 0 1 0 1.416l-7 7a1 1 0 0 1-.707.291z" class="cls-3" transform="rotate(-90 895.965 3908.548)"/>
+        <text id="Data" class="cls-5" transform="translate(393 3909.384)">
+            <tspan x="-20.601" y="0">Data</tspan>
+        </text>
+        <path id="패스_433" d="M0 295.923V0" class="cls-6" transform="translate(360.5 3826.517)"/>
+        <g filter="url(#사각형_271)" transform="translate(113.25 3646.79)">
+            <rect id="사각형_271-2" width="200" height="35" class="cls-7" rx="2.277" transform="translate(286.25 305.71)"/>
+        </g>
+        <g filter="url(#사각형_482)" transform="translate(113.25 3646.79)">
+            <rect id="사각형_482-2" width="200" height="57.805" class="cls-7" rx="2.277" transform="translate(286.25 366.73)"/>
+        </g>
+        <g filter="url(#사각형_484)" transform="translate(113.25 3646.79)">
+            <rect id="사각형_484-2" width="200" height="57.805" class="cls-7" rx="2.277" transform="translate(286.25 446.74)"/>
+        </g>
+        <g filter="url(#사각형_481)" transform="translate(113.25 3646.79)">
+            <rect id="사각형_481-2" width="200" height="35" class="cls-7" rx="2.277" transform="translate(7.75 305.71)"/>
+        </g>
+        <g filter="url(#사각형_483)" transform="translate(113.25 3646.79)">
+            <rect id="사각형_483-2" width="200" height="57.805" class="cls-7" rx="2.277" transform="translate(7.75 366.73)"/>
+        </g>
+        <g filter="url(#사각형_485)" transform="translate(113.25 3646.79)">
+            <rect id="사각형_485-2" width="200" height="57.805" class="cls-7" rx="2.277" transform="translate(7.75 446.74)"/>
+        </g>
+        <text id="Forwarder" class="cls-5" transform="translate(220.5 3978)">
+            <tspan x="-45.806" y="0">Forwarder</tspan>
+        </text>
+        <text id="Local_Logistics" class="cls-5" transform="translate(220.5 4050.421)">
+            <tspan x="-67.744" y="0">Local Logistics</tspan>
+        </text>
+        <text id="Buyer_from_Alibaba" class="cls-5" transform="translate(500 3978)">
+            <tspan x="-86.411" y="0">Buyer from Alibaba</tspan>
+        </text>
+        <text id="Individual_Buyer_Channel_" class="cls-5" transform="translate(500 4039.019)">
+            <tspan x="-72.29" y="0">Individual Buyer</tspan><tspan class="cls-8"><tspan x="-32.333" y="20">(Channel)</tspan></tspan>
+        </text>
+        <text id="Individual_Buyer_Panda_" class="cls-5" transform="translate(500 4119.037)">
+            <tspan x="-72.29" y="0">Individual Buyer</tspan><tspan class="cls-8"><tspan x="-26.389" y="20">(Panda)</tspan></tspan>
+        </text>
+        <text id="B2B_Buyer_Panda_" class="cls-5" transform="translate(220.5 4119.037)">
+            <tspan x="-47.041" y="0">B2B Buyer</tspan><tspan class="cls-8"><tspan x="-26.389" y="20">(Panda)</tspan></tspan>
+        </text>
+        <g id="icon" transform="rotate(180 656.747 3671.292)">
+            <path id="패스_114-2" d="M978.995 3380.584a1 1 0 0 1-.707-1.707l6.293-6.293-6.293-6.293a1 1 0 0 1 1.414-1.414l7 7a1 1 0 0 1 0 1.416l-7 7a1 1 0 0 1-.707.291z" class="cls-3"/>
+        </g>
+        <g id="icon-2" transform="rotate(180 656.747 3707.503)">
+            <path id="패스_114-3" d="M978.995 3380.584a1 1 0 0 1-.707-1.707l6.293-6.293-6.293-6.293a1 1 0 0 1 1.414-1.414l7 7a1 1 0 0 1 0 1.416l-7 7a1 1 0 0 1-.707.291z" class="cls-3"/>
+        </g>
+        <g id="icon-3" transform="rotate(180 656.747 3747.512)">
+            <path id="패스_114-4" d="M978.995 3380.584a1 1 0 0 1-.707-1.707l6.293-6.293-6.293-6.293a1 1 0 0 1 1.414-1.414l7 7a1 1 0 0 1 0 1.416l-7 7a1 1 0 0 1-.707.291z" class="cls-3"/>
+        </g>
+        <g id="icon-4" transform="translate(-592.495 597.416)">
+            <path id="패스_114-5" d="M978.995 3380.584a1 1 0 0 1-.707-1.707l6.293-6.293-6.293-6.293a1 1 0 0 1 1.414-1.414l7 7a1 1 0 0 1 0 1.416l-7 7a1 1 0 0 1-.707.291z" class="cls-3"/>
+        </g>
+        <g id="icon-5" transform="translate(-592.495 669.837)">
+            <path id="패스_114-6" d="M978.995 3380.584a1 1 0 0 1-.707-1.707l6.293-6.293-6.293-6.293a1 1 0 0 1 1.414-1.414l7 7a1 1 0 0 1 0 1.416l-7 7a1 1 0 0 1-.707.291z" class="cls-3"/>
+        </g>
+        <g id="icon-6" transform="translate(-592.495 749.856)">
+            <path id="패스_114-7" d="M978.995 3380.584a1 1 0 0 1-.707-1.707l6.293-6.293-6.293-6.293a1 1 0 0 1 1.414-1.414l7 7a1 1 0 0 1 0 1.416l-7 7a1 1 0 0 1-.707.291z" class="cls-3"/>
+        </g>
+        <path id="패스_434" d="M0 50V0" class="cls-6" transform="rotate(90 -1792.25 2177.75)"/>
+        <path id="패스_435" d="M0 50V0" class="cls-6" transform="rotate(90 -1828.46 2213.96)"/>
+        <path id="패스_436" d="M0 50V0" class="cls-6" transform="rotate(90 -1868.47 2253.97)"/>
+    </g>
+</svg>

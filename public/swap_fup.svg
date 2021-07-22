@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50">
+    <g>
+        <g transform="translate(-1093 -744) translate(5 19)">
+            <circle cx="25" cy="25" r="25" fill="#fff" transform="translate(1088 725)"/>
+        </g>
+        <text font-family="Roboto-Medium, Roboto" font-size="20px" font-weight="500" transform="translate(-1093 -744) translate(1100 777)">
+            <tspan x="0" y="0">FUP</tspan>
+        </text>
+    </g>
+</svg>

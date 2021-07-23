@@ -263,7 +263,7 @@ function Defi({
           {!account ? (
             <div className="contents">
               <div className="content Roboto_30pt_Medium">
-                {t("De-Fi/MyPool/ask-connect")}
+                {t("De-Fi/Station/MyPool/ask-connect")}
               </div>
               <div
                 className="walletConnect Roboto_20pt_Regular"

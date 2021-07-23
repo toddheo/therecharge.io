@@ -50,7 +50,7 @@
     "RechargeToken/Features/4/content": "더리차지는 ERC-20, HRC-20, BEP-20 간의 스왑을 지원하며 각각의 메인넷 토큰으로 전환이 가능합니다.",
     "RechargeToken/Distribution/name": "이름",
     "RechargeToken/Distribution/ticker": "티커",
-    "RechargeToken/Distribution/total-supply": "총발행량",
+    "RechargeToken/Distribution/total-supply": "총 발행량",
     "RechargeToken/Distribution/ecosystem": "에코시스템",
     "RechargeToken/Distribution/development": "개발",
     "RechargeToken/Distribution/exchanges/decentralized": "거래소 (탈중앙화)",

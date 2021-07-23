@@ -2,6 +2,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
+import { withTranslation } from "react-i18next";
 
 import Web3 from "web3";
 import { fromWei, toWei } from "web3-utils";
@@ -22,13 +23,14 @@ const weiToEther = (wei) => {
   return fromWei(wei, "ether");
 };
 
-export default function ModalSwap({
+function ModalSwap({
   web3,
   connectWallet,
   onDisconnect,
   account,
   chainId,
   toast,
+  t,
 }) {
   const [modalSwapOpen, setModalSwapOpen] = useRecoilState(modalSwapOpenState);
   const [recipe, setRecipe] = useState({
@@ -524,10 +526,7 @@ export default function ModalSwap({
               />
               <div className="theme Roboto_50pt_Black">Recharging Swap</div>
               <div className="desc Roboto_25pt_Regular_Mobile3">
-                Recharging Swap is a cross chain gateway for Frequent Use Point
-                as well as major blockchain protocols. We aim to provide a
-                simple and easy swap experience for Recharge token. Recharge
-                swap is compatible with ERC20, HRC20, and BEP20.{" "}
+                {t("De-Fi/Station/Recharge/content")}
               </div>
             </div>
             <div
@@ -1283,3 +1282,4 @@ const ExitBtn = styled.div`
 //   }
 //   return true;
 // })
+export default withTranslation()(ModalSwap);

@@ -1,7 +1,8 @@
 import { useState, useEffect } from "react";
 import styled from "styled-components";
+import { withTranslation } from "react-i18next";
 
-function About() {
+function About({ t }) {
   const [firstVideo, setFirstVideo] = useState(false);
   const [secondVideo, setSecondVideo] = useState(false);
   const disableVideoStyle = {
@@ -57,11 +58,7 @@ function About() {
               Sorry, your browser doesn't support embedded videos.
             </video>
           </div>
-          <div className="text Roboto_20pt_Regular">
-            The recharge is a electric power baesd ecosystem using blockchain
-            technology to provide the best resources to Piggycell, Charging
-            Station.
-          </div>
+          <div className="text Roboto_20pt_Regular">{t("About/Ecosystem")}</div>
         </div>
       </Content>
       <Content id="aboutSection2">
@@ -99,8 +96,7 @@ function About() {
             </video>
           </div>
           <div className="text Roboto_20pt_Regular">
-            The Recharge is creating a new value by the carbon redemption point
-            while performing a token transaction
+            {t("About/Recharge-Virtuous-Cycle")}
           </div>
         </div>
       </Content>
@@ -109,35 +105,29 @@ function About() {
           <div className="theme Roboto_50pt_Black">Team members</div>
           <div className="members">
             <div className="member">
-              <div className="name Roboto_20pt_Black_L">Jay Lee | CEO</div>
+              <div className="name Roboto_20pt_Black_L">
+                {t("About/Member/jayLee/title")}
+              </div>
               <div className="desc Roboto_19pt_Regular_L">
-                <div>{"- Founder at Panda Korea & 100 Percent"}</div>
-                <div>- Vice President at NS Studio (IT, Game)</div>
-                <div>- Lead at Presidential Committee on Young Generation</div>
-                <div>- Journalist at Dong-A Daily News, Channel A</div>
+                {t("About/Member/jayLee/content")}
               </div>
             </div>
           </div>
           <div className="members">
             <div className="member">
               <div className="name Roboto_20pt_Black_L">
-                Jake Kim | Chief Technical Officer
+                {t("About/Member/jakeKim/title")}
               </div>
               <div className="desc Roboto_20pt_Regular_L">
-                <div>- CTO at 100 Percent</div>
-                <div>- Software Developer at TMON</div>
-                <div>- Application Developer at Kakao Corp</div>
-                <div>- Lead at Kakao Enterprise AI Development Team</div>
+                {t("About/Member/jakeKim/content")}
               </div>
             </div>
             <div className="member">
               <div className="name Roboto_20pt_Black_L">
-                Ethan Kang | Chief Marketing Officer
+                {t("About/Member/ethanKang/title")}
               </div>
               <div className="desc Roboto_20pt_Regular_L">
-                <div>- CSO/CMO at 100 Percent</div>
-                <div>- CSO at Thinkingwolf (Marketing)</div>
-                <div>- CMO at Zipdoc (Interior O2O)</div>
+                {t("About/Member/ethanKang/content")}
               </div>
             </div>
           </div>
@@ -162,8 +152,7 @@ function About() {
                   />
                 </div>
                 <div className="desc Roboto_20pt_Regular">
-                  <div>A fully decentralized</div>
-                  <div>finance protocol</div>
+                  {t("About/Recharge-is-on/1")}
                 </div>
               </div>
               <div
@@ -178,8 +167,7 @@ function About() {
                   />
                 </div>
                 <div className="desc Roboto_20pt_Regular">
-                  <div>Price-tracking website for crypto</div>
-                  <div>assets of cryptocurrency</div>
+                  {t("About/Recharge-is-on/2")}
                 </div>
               </div>
               <div
@@ -194,8 +182,7 @@ function About() {
                   />
                 </div>
                 <div className="desc Roboto_20pt_Regular">
-                  <div>Provides disclosure practices of the</div>
-                  <div>crypto industry</div>
+                  {t("About/Recharge-is-on/3")}
                 </div>
               </div>
             </div>
@@ -217,7 +204,7 @@ function About() {
                   />
                 </div>
                 <div className="desc Roboto_20pt_Regular">
-                  <div>No.1 Crypto community in Korea</div>
+                  {t("About/Recharge-is-on/4")}
                 </div>
               </div>
               <div
@@ -232,8 +219,7 @@ function About() {
                   />
                 </div>
                 <div className="desc Roboto_16pt_Regular">
-                  <div>Provides a off-chain, gasless, multi-</div>
-                  <div>governance community polling dashboard</div>
+                  {t("About/Recharge-is-on/5")}
                 </div>
               </div>
             </div>
@@ -315,7 +301,9 @@ const Container = styled.div`
 `;
 const Content = styled.div`
   display: flex;
-  
+  .desc{
+    white-space: pre-line;
+  }
   .first {
     display: flex;
     flex-direction: column;
@@ -514,4 +502,4 @@ const Footer = styled.div`
   }
 `;
 
-export default About;
+export default withTranslation()(About);

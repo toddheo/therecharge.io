@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import styled from "styled-components";
+import { withTranslation } from "react-i18next";
 
 function randomNum() {
   let min = Math.ceil(1);
@@ -7,7 +8,7 @@ function randomNum() {
   return Math.floor(Math.random() * (max - min)) + min;
 }
 
-function Home() {
+function Home({ t }) {
   const [hiwNum, setHiwtNum] = useState(1);
   const [startVideo, setStartVideo] = useState(randomNum());
   const [firstVideo, setFirstVideo] = useState(false);
@@ -40,15 +41,11 @@ function Home() {
       <Content>
         <div className="first">
           <div className="left">
-            <div className="theme Roboto_80pt_Black">The Recharge</div>
+            <div className="theme Roboto_80pt_Black">
+              {t("Home/text/title")}
+            </div>
             <div className="text Roboto_20pt_Regular_L">
-              Decentralized Incentive Hub for Electric Power Based Ecosystem.
-              The Recharge provides All-In-one incentive solution to recharge
-              holders on various major protocols.
-              <br />
-              <br />
-              We aim to provide a long-term sustainable eco-system that helps
-              accelerate a electricity system to reduce carbon emissions.
+              {t("Home/text/info")}
             </div>
           </div>
           <div className="right">
@@ -64,14 +61,16 @@ function Home() {
                 src={"/logo/" + `${startVideo}` + ".mp4"}
                 type="video/mp4"
               />
-              Sorry, your browser doesn't support embedded videos.
+              {t("Home/text/if-cannot-embed-videos")}
             </video>
           </div>
         </div>
       </Content>
       <Content>
         <div className="second">
-          <div className="theme Roboto_50pt_Black">How it works</div>
+          <div className="theme Roboto_50pt_Black">
+            {t("Home/text/how-it-works")}
+          </div>
           <Nav>
             <div className="nav">
               <div
@@ -80,7 +79,7 @@ function Home() {
                 }
                 onClick={() => setHiwtNum(1)}
               >
-                Charging Station
+                {t("Home/text/charging-station")}
               </div>
               <div
                 className={
@@ -88,7 +87,7 @@ function Home() {
                 }
                 onClick={() => setHiwtNum(2)}
               >
-                Recharging Swap
+                {t("Home/text/recharging-swap")}
               </div>
             </div>
           </Nav>
@@ -108,7 +107,7 @@ function Home() {
                       src="/open/w1o.mp4"
                       type="video/mp4"
                     />
-                    Sorry, your browser doesn't support embedded videos.
+                    {t("Home/text/if-cannot-embed-videos")}
                   </video>
                 )}
                 <video
@@ -125,15 +124,11 @@ function Home() {
                     src="/roll/w1r.mp4"
                     type="video/mp4"
                   />
-                  Sorry, your browser doesn't support embedded videos.
+                  {t("Home/text/if-cannot-embed-videos")}
                 </video>
               </div>
               <div className="text Roboto_20pt_Regular">
-                Fully Decentralized Incentive Hub for Recharge Ecosystem.
-                Charging Station is built to offer full range of De-Fi services
-                for Recharge Labs. Automated Incentive circulation is fueled by
-                carbon redemption and it stimulates Recharge Virtuous Cycle as
-                well as electric power-based services.
+                {t("Home/text/info-charging-station")}
               </div>
             </div>
             <div className={"desc " + (hiwNum === 2 ? "active" : "hide")}>
@@ -151,7 +146,7 @@ function Home() {
                       src="/open/w2o.mp4"
                       type="video/mp4"
                     />
-                    Sorry, your browser doesn't support embedded videos.
+                    {t("Home/text/if-cannot-embed-videos")}
                   </video>
                 )}
                 <video
@@ -168,14 +163,11 @@ function Home() {
                     src="/roll/w2r.mp4"
                     type="video/mp4"
                   />
-                  Sorry, your browser doesn't support embedded videos.
+                  {t("Home/text/if-cannot-embed-videos")}
                 </video>
               </div>
               <div className="text Roboto_20pt_Regular">
-                Recharge Swap is a cross chain gateway for Frequent Use Point as
-                well as major blockchain protocols. We aim to provide a simple
-                and easy swap experience for Recharge token. Recharge swap is
-                compatible with ERC20, HRC20, and BEP20.{" "}
+                {t("Home/text/info-recharging-swap")}
               </div>
             </div>
           </div>
@@ -188,7 +180,7 @@ function Home() {
             <div className="image">
               <video autoPlay loop muted preload="metadata" width="1088px">
                 <source src="/roll/w5r.mp4" type="video/mp4" />
-                Sorry, your browser doesn't support embedded videos.
+                {t("Home/text/if-cannot-embed-videos")}
               </video>
             </div>
             <div className="left">
@@ -196,21 +188,17 @@ function Home() {
               <div className="text Roboto_20pt_Regular_L">
                 Q2
                 <br />
-                - Recharge issued on Huobi Eco Chain
-                <br />- Recharge issued on Ethereum Network and Binance Smart
-                Chain
+                {t("Home/Visioning/text/21Q2")}
               </div>
               <div className="text Roboto_20pt_Regular_L">
                 Q3
                 <br />
-                - Charging Station (De-Fi) launched
-                <br />- Initial Liquidity Offering on DEX
+                {t("Home/Visioning/text/21Q3")}
               </div>
               <div className="text Roboto_20pt_Regular_L">
                 Q4
                 <br />
-                - Integration of Point to Token system
-                <br />- Recharge Swap (Cross-Chain Bridge) Launched 2022
+                {t("Home/Visioning/text/21Q4")}
               </div>
             </div>
             <div className="right">
@@ -218,15 +206,12 @@ function Home() {
               <div className="text Roboto_20pt_Regular_L">
                 Q1
                 <br />
-                - EV Charging Complex 1st unveiling
-                <br />- Adoption of EV Charging Complex into Recharge Ecosystem
+                {t("Home/Visioning/text/22Q1")}
               </div>
-              <div className="Roboto_20pt_Regular_L">
+              <div className="text Roboto_20pt_Regular_L">
                 Q2
                 <br />
-                - EV Charging Complex Opening
-                <br />- 3<span style={{ fontSize: "12px" }}>rd</span> Recharge
-                Ecosystem Partner Service Unveiling
+                {t("Home/Visioning/text/22Q2")}
               </div>
             </div>
           </div>
@@ -234,7 +219,9 @@ function Home() {
       </Content>
       <Content>
         <div className="fourth">
-          <div className="theme Roboto_50pt_Black">Platforms and Verifiers</div>
+          <div className="theme Roboto_50pt_Black">
+            {t("Home/Platforms/text/title")}
+          </div>
           <div className="partners">
             <div className="tier">
               <div
@@ -254,8 +241,8 @@ function Home() {
               <div
                 className="partner"
                 onClick={() =>
-                (window.location =
-                  "https://www.certik.org/projects/therecharge")
+                  (window.location =
+                    "https://www.certik.org/projects/therecharge")
                 }
               >
                 <img src="/ic_certick.svg" />
@@ -341,8 +328,8 @@ function Home() {
             <div
               className="logo"
               onClick={() =>
-              (window.location =
-                "https://etherscan.io/token/0xe74bE071f3b62f6A4aC23cA68E5E2A39797A3c30")
+                (window.location =
+                  "https://etherscan.io/token/0xe74bE071f3b62f6A4aC23cA68E5E2A39797A3c30")
               }
             >
               <img src="/footer5.png" />
@@ -350,8 +337,8 @@ function Home() {
             <div
               className="logo"
               onClick={() =>
-              (window.location =
-                "https://hecoinfo.com/token/0xbddC276CACC18E9177B2f5CFb3BFb6eef491799b")
+                (window.location =
+                  "https://hecoinfo.com/token/0xbddC276CACC18E9177B2f5CFb3BFb6eef491799b")
               }
             >
               <img src="/footer6.png" />
@@ -400,6 +387,7 @@ const Content = styled.div`
       }
       .text {
         width: 597px;
+        white-space: pre-line;
         // max-width: 36vw;
       }
     }
@@ -436,6 +424,7 @@ const Content = styled.div`
         height: 86px;
         margin: 60px auto;
         text-align: center;
+        white-space: pre-line;
       }
     }
     .desc .active {
@@ -478,6 +467,7 @@ const Content = styled.div`
       }
       .text {
         margin-bottom: 20px;
+        white-space: pre-line;
       }
       .image {
         position: absolute;
@@ -610,4 +600,4 @@ const Footer = styled.div`
   }
 `;
 
-export default Home;
+export default withTranslation()(Home);

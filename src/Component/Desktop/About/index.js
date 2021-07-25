@@ -30,7 +30,7 @@ function About({ t }) {
     <Container>
       <Content id="aboutSection1">
         <div className="first">
-          <div className="theme Roboto_50pt_Black">Ecosystem</div>
+          <div className="theme text Roboto_50pt_Black">Ecosystem</div>
           <div className="content">
             {!firstVideo && (
               <video
@@ -58,12 +58,16 @@ function About({ t }) {
               Sorry, your browser doesn't support embedded videos.
             </video>
           </div>
-          <div className="text Roboto_20pt_Regular">{t("About/Ecosystem")}</div>
+          <div className="text text Roboto_20pt_Regular">
+            {t("About/Ecosystem")}
+          </div>
         </div>
       </Content>
       <Content id="aboutSection2">
         <div className="second">
-          <div className="theme Roboto_50pt_Black">Recharge Virtuous Cycle</div>
+          <div className="theme text Roboto_50pt_Black">
+            Recharge Virtuous Cycle
+          </div>
           <div className="content">
             {!secondVideo && (
               <video
@@ -95,38 +99,38 @@ function About({ t }) {
               Sorry, your browser doesn't support embedded videos.
             </video>
           </div>
-          <div className="text Roboto_20pt_Regular">
+          <div className="text text Roboto_20pt_Regular">
             {t("About/Recharge-Virtuous-Cycle")}
           </div>
         </div>
       </Content>
       <Content id="aboutSection3">
         <div className="third">
-          <div className="theme Roboto_50pt_Black">Team members</div>
+          <div className="theme text Roboto_50pt_Black">Team members</div>
           <div className="members">
             <div className="member">
-              <div className="name Roboto_20pt_Black_L">
+              <div className="name text Roboto_20pt_Black_L">
                 {t("About/Member/jayLee/title")}
               </div>
-              <div className="desc Roboto_19pt_Regular_L">
+              <div className="desc text Roboto_19pt_Regular_L">
                 {t("About/Member/jayLee/content")}
               </div>
             </div>
           </div>
           <div className="members">
             <div className="member">
-              <div className="name Roboto_20pt_Black_L">
+              <div className="name text Roboto_20pt_Black_L">
                 {t("About/Member/jakeKim/title")}
               </div>
-              <div className="desc Roboto_20pt_Regular_L">
+              <div className="desc text Roboto_20pt_Regular_L">
                 {t("About/Member/jakeKim/content")}
               </div>
             </div>
             <div className="member">
-              <div className="name Roboto_20pt_Black_L">
+              <div className="name text Roboto_20pt_Black_L">
                 {t("About/Member/ethanKang/title")}
               </div>
-              <div className="desc Roboto_20pt_Regular_L">
+              <div className="desc text Roboto_20pt_Regular_L">
                 {t("About/Member/ethanKang/content")}
               </div>
             </div>
@@ -135,7 +139,7 @@ function About({ t }) {
       </Content>
       <Content id="aboutSection4">
         <div className="fourth">
-          <div className="theme Roboto_50pt_Black">Recharge is on</div>
+          <div className="theme text Roboto_50pt_Black">Recharge is on</div>
           <div className="partners">
             <div className="tier">
               <div
@@ -151,7 +155,7 @@ function About({ t }) {
                     style={{ height: "78px", width: "67.7px" }}
                   />
                 </div>
-                <div className="desc Roboto_20pt_Regular">
+                <div className="desc text Roboto_20pt_Regular">
                   {t("About/Recharge-is-on/1")}
                 </div>
               </div>
@@ -166,7 +170,7 @@ function About({ t }) {
                     style={{ height: "78px", width: "76.8px" }}
                   />
                 </div>
-                <div className="desc Roboto_20pt_Regular">
+                <div className="desc text Roboto_20pt_Regular">
                   {t("About/Recharge-is-on/2")}
                 </div>
               </div>
@@ -181,7 +185,7 @@ function About({ t }) {
                     style={{ height: "78px", width: "74px" }}
                   />
                 </div>
-                <div className="desc Roboto_20pt_Regular">
+                <div className="desc text Roboto_20pt_Regular">
                   {t("About/Recharge-is-on/3")}
                 </div>
               </div>
@@ -203,7 +207,7 @@ function About({ t }) {
                     }}
                   />
                 </div>
-                <div className="desc Roboto_20pt_Regular">
+                <div className="desc text Roboto_20pt_Regular">
                   {t("About/Recharge-is-on/4")}
                 </div>
               </div>
@@ -218,7 +222,7 @@ function About({ t }) {
                     style={{ height: "78px", width: "65.2px" }}
                   />
                 </div>
-                <div className="desc Roboto_20pt_Regular">
+                <div className="desc text Roboto_20pt_Regular">
                   {t("About/Recharge-is-on/5")}
                 </div>
               </div>
@@ -227,7 +231,7 @@ function About({ t }) {
         </div>
       </Content>
       <Footer>
-        <div className="footer Roboto_20pt_Regular">
+        <div className="footer text Roboto_20pt_Regular">
           <div className="header">
             <a href="mailto:info@therecharge.io">
               info@therecharge.io<span>〉</span>
@@ -301,7 +305,11 @@ const Container = styled.div`
 `;
 const Content = styled.div`
   display: flex;
-  .desc{
+
+  .text {
+    white-space: pre-line;
+  }
+    .desc{
     white-space: pre-line;
   }
   .first {

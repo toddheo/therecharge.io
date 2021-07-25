@@ -11,6 +11,7 @@
     "axios": "^0.21.1",
     "decimal.js": "^10.2.1",
     "i18next": "^20.3.4",
+    "i18next-browser-languagedetector": "^6.1.2",
     "nuka-carousel": "4.7.8",
     "react": "^17.0.2",
     "react-countup": "^4.3.3",

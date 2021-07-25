@@ -2,8 +2,10 @@ import styled from "styled-components";
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { ToastHub, Toast } from "@aragon/ui";
+import { useTranslation } from "react-i18next";
 
 function Gnb({ connectWallet, account, onDisconnect }) {
+  const { t, i18n } = useTranslation();
   const [black, setBlack] = useState(false);
   const listener = (e) => {
     if (window.scrollY > 0) {
@@ -147,6 +149,15 @@ function Gnb({ connectWallet, account, onDisconnect }) {
             </div>
           </div>
         </Nav>
+        <div
+          className="lang"
+          onClick={() => {
+            i18n.changeLanguage(i18n.language != "en" ? "en" : "ko");
+            console.log("change language to " + i18n.language);
+          }}
+        >
+          <a>{i18n.language.toUpperCase()}</a>
+        </div>
         <ConnectWallet
           onClick={
             account
@@ -183,6 +194,14 @@ const Section = styled.div`
   display: flex;
   width: 1080px;
   margin: auto auto;
+  .lang {
+    margin: auto;
+    margin-left: 0px;
+    margin-right: 0px;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+  }
 `;
 
 const Logo = styled.div`

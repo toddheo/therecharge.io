@@ -1,5 +1,6 @@
 import i18n from "i18next";
 import { initReactI18next } from "react-i18next";
+import LanguageDetector from "i18next-browser-languagedetector";
 
 import translationEn from "./en";
 import translationKo from "./ko";
@@ -15,10 +16,12 @@ const resource = {
 
 i18n
   .use(initReactI18next) // passes i18n down to react-i18next
+  .use(LanguageDetector)
   .init({
+    detection: { order: ["path", "navigator"] },
     resources: resource,
-    lng: "ko",
-    fallbackLng: "ko",
+    lng: "en",
+    fallbackLng: "en",
     // ns: ['translation'],
     // defaultNS: "translation",
     debug: true,

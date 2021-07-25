@@ -5,6 +5,7 @@ import { useSortBy, useTable } from "react-table";
 import styled from "styled-components";
 import axios from "axios";
 import { RotateCircleLoading } from "react-loadingg";
+import { withTranslation } from "react-i18next";
 /* Components */
 import ModalPool from "./modal_pool";
 import ModalSwap from "./modal_swap";
@@ -42,13 +43,13 @@ function Defi({
   toast,
   params,
   setParams,
+  t,
 }) {
   const [onLoading, setOnLoading] = useState(true);
   const [modalPoolOpen, setModalPoolOpen] = useRecoilState(modalPoolOpenState);
   const [modalSwapOpen, setModalSwapOpen] = useRecoilState(modalSwapOpenState);
-  const [modalPool2Open, setModalPool2Open] = useRecoilState(
-    modalPool2OpenState
-  );
+  const [modalPool2Open, setModalPool2Open] =
+    useRecoilState(modalPool2OpenState);
   // const [modalPoolOpen, setModalPoolOpen] = useState(false);
   // const [modalSwapOpen, setModalSwapOpen] = useState(false);
   const [sel, setSelCharger] = useState(0);
@@ -90,9 +91,10 @@ function Defi({
     general: {},
   });
 
-  const data = React.useMemo(() => (myPools === null ? [] : myPools), [
-    myPools,
-  ]);
+  const data = React.useMemo(
+    () => (myPools === null ? [] : myPools),
+    [myPools]
+  );
   const columns = React.useMemo(
     () => [
       {
@@ -128,13 +130,8 @@ function Defi({
     ],
   };
 
-  const {
-    getTableProps,
-    getTableBodyProps,
-    headerGroups,
-    rows,
-    prepareRow,
-  } = useTable({ columns, data, initialState }, useSortBy);
+  const { getTableProps, getTableBodyProps, headerGroups, rows, prepareRow } =
+    useTable({ columns, data, initialState }, useSortBy);
 
   const handleModalPool = () => {
     setModalPoolOpen(!modalPoolOpen);
@@ -245,8 +242,7 @@ function Defi({
                 <div className="name Roboto_40pt_Black">Charging Station</div>
               </div>
               <div className="text Roboto_20pt_Regular">
-                All in one staking tool to maximize your incentives on The
-                Recharge Ecosystem
+                {t("De-Fi/Station/charging-station")}
               </div>
             </div>
             <div className="content">
@@ -255,8 +251,7 @@ function Defi({
                 <div className="name Roboto_40pt_Black">Recharging Swap</div>
               </div>
               <div className="text Roboto_20pt_Regular">
-                Scalability through connectivity solution. One click swap
-                experience between the different mainnets
+                {t("De-Fi/Station/recharge-swap")}
               </div>
             </div>
           </div>
@@ -268,7 +263,7 @@ function Defi({
           {!account ? (
             <div className="contents">
               <div className="content Roboto_30pt_Medium">
-                Connect to Wallet
+                {t("De-Fi/Station/MyPool/ask-connect")}
               </div>
               <div
                 className="walletConnect Roboto_20pt_Regular"
@@ -292,7 +287,7 @@ function Defi({
           ) : myPools.length === 0 ? (
             <div className="contents">
               <div className="content Roboto_30pt_Medium">
-                There is no staking pool participated
+                {t("De-Fi/MyPool/no-pool")}
               </div>
             </div>
           ) : (
@@ -963,4 +958,4 @@ const Loading = styled.div`
   }
 `;
 
-export default Defi;
+export default withTranslation()(Defi);

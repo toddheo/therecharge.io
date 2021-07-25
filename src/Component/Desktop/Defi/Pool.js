@@ -265,13 +265,8 @@ function Pool({
       },
     ],
   };
-  const {
-    getTableProps,
-    getTableBodyProps,
-    headerGroups,
-    rows,
-    prepareRow,
-  } = useTable({ columns, data /*initialState*/ }, useSortBy);
+  const { getTableProps, getTableBodyProps, headerGroups, rows, prepareRow } =
+    useTable({ columns, data /*initialState*/ }, useSortBy);
 
   useEffect(() => {
     loadChargerList();

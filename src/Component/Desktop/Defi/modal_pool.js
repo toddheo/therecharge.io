@@ -6,8 +6,9 @@ import Pool from "./Pool";
 import { useRecoilState } from "recoil";
 import { modalPoolOpenState, modalPool2OpenState } from "../../../store/modal";
 import { selState } from "../../../store/pool";
+import { withTranslation } from "react-i18next";
 
-export default function ModalPool({
+function ModalPool({
   web3,
   // modalPoolOpen,
   // handleModalPool,
@@ -16,11 +17,11 @@ export default function ModalPool({
   account,
   params,
   setParams,
+  t,
 }) {
   const [modalPoolOpen, setModalPoolOpen] = useRecoilState(modalPoolOpenState);
-  const [modalPool2Open, setModalPool2Open] = useRecoilState(
-    modalPool2OpenState
-  );
+  const [modalPool2Open, setModalPool2Open] =
+    useRecoilState(modalPool2OpenState);
   const [sel, setSelCharger] = useRecoilState(selState);
   // const [modal2Open, setModal2Open] = useState(false);
   // const [params, setParams] = useState({
@@ -78,9 +79,7 @@ export default function ModalPool({
               <div className="stations">
                 <div className="theme Roboto_50pt_Black">Charging Station</div>
                 <div className="desc Roboto_20pt_Regular">
-                  Maximize your RCG by choosing a right charger Locked options
-                  generally provide higher yield than the other options due to
-                  its inflexibility
+                  {t("De-Fi/Station/Charger/content")}
                 </div>
                 <div className="boxes">
                   <div className="tier">
@@ -330,3 +329,5 @@ const Container = styled.div`
 //   }
 //   return true;
 // })
+
+export default withTranslation()(ModalPool);

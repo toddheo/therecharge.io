@@ -4,6 +4,7 @@ import styled from "styled-components";
 import { Helmet } from "react-helmet";
 import Modal1 from "./modal1";
 import Modal2 from "./modal2";
+import { withTranslation } from "react-i18next";
 
 function randomNum() {
   let min = Math.ceil(1);
@@ -11,7 +12,7 @@ function randomNum() {
   return Math.floor(Math.random() * (max - min)) + min;
 }
 
-function Home() {
+function Home({ t }) {
   const [hiwNum, setHiwtNum] = useState(1);
   const [sliderIndex, setSliderIndex] = useState([0, 0]);
   const [modal1Open, setModal1Open] = useState(false);
@@ -45,11 +46,10 @@ function Home() {
       // videoPlayer.play();
     } else if (type == "fifVi") {
       let videoPlayer = document.getElementById(type);
-      let nextVideo = "/roll/m5r.mp4"
+      let nextVideo = "/roll/m5r.mp4";
       videoPlayer.src = nextVideo;
       videoPlayer.play();
-    }
-    else if (type == "mainVideo") {
+    } else if (type == "mainVideo") {
       let videoPlayer = document.getElementById(type);
       setStartVideo(randomNum());
       let nextVideo = "/logo/" + `${startVideo}` + ".mp4";
@@ -132,16 +132,12 @@ function Home() {
                 </video>
               </div>
             </div>
-            <p className="Roboto_30pt_Regular_Mobile">
-              Fully Decentralized Incentive Hub for Recharge Ecosystem. Charging
-              Station is built to offer full range of De-Fi services for
-              Recharge Labs. Automated Incentive circulation is fueled by carbon
-              redemption and it stimulates Recharge Virtuous Cycle as well as
-              electric power-based services.
+            <p className="text Roboto_30pt_Regular_Mobile">
+              {t("Home/text/info-charging-station")}
             </p>
 
             <div
-              className="moreDetails Roboto_30pt_Regular_Detail"
+              className="moreDetails text Roboto_30pt_Regular_Detail"
               onClick={() => handleModal1()}
             >
               More Details <span>〉</span>
@@ -185,15 +181,12 @@ function Home() {
                 Sorry, your browser doesn't support embedded videos.
               </video>
             </div>
-            <p className="Roboto_30pt_Regular_Mobile">
-              Recharge Swap is a cross chain gateway for Frequent Use Point as
-              well as major blockchain protocols. We aim to provide a simple and
-              easy swap experience for Recharge token. Recharge swap is
-              compatible with ERC20, HRC20, and BEP20.
+            <p className="text Roboto_30pt_Regular_Mobile">
+              {t("Home/text/info-recharging-swap")}
             </p>
 
             <div
-              className="moreDetails Roboto_30pt_Regular_Detail"
+              className="moreDetails text Roboto_30pt_Regular_Detail"
               onClick={() => handleModal2()}
             >
               More Details <span>〉</span>
@@ -271,19 +264,15 @@ function Home() {
             </video>
           </div>
           <div className="left">
-            <div className="theme Roboto_80pt_Black_Mobile">The Recharge</div>
-            <div className="text Roboto_30pt_Regular_Mobile">
+            <div className="theme text Roboto_80pt_Black_Mobile">
+              {t("Home/text/title")}
+            </div>
+            <div className="text text Roboto_30pt_Regular_Mobile">
               <div
-                className="Roboto_30pt_Regular_Mobile"
+                className="text Roboto_30pt_Regular_Mobile"
                 style={{ marginBottom: "40px" }}
               >
-                Decentralized Incentive Hub for Electric Power Based Ecosystem.
-                The Recharge provides All-In-one incentive solution to recharge
-                holders on various major protocols.
-              </div>
-              <div className="Roboto_30pt_Regular_Mobile">
-                We aim to provide a long-term sustainable eco-system that helps
-                accelerate a electricity system to reduce carbon emissions.
+                {t("Home/text/info")}
               </div>
             </div>
           </div>
@@ -291,12 +280,14 @@ function Home() {
       </Content>
       <Content>
         <div className="second">
-          <div className="theme Roboto_50pt_Black_Mobile">How it works</div>
+          <div className="theme text Roboto_50pt_Black_Mobile">
+            {t("Home/text/how-it-works")}
+          </div>
           <DefaultSlider setSliderIndex={setSliderIndex}>
-            <div className="topic Roboto_40pt_Black">Charging Station</div>
-            <div className="topic Roboto_40pt_Black">Recharging Swap</div>
-            {/* <div className="Roboto_40pt_Black">AD Station</div>
-            <div className="Roboto_40pt_Black">Panda Trust</div> */}
+            <div className="topic text Roboto_40pt_Black">Charging Station</div>
+            <div className="topic text Roboto_40pt_Black">Recharging Swap</div>
+            {/* <div className="text Roboto_40pt_Black">AD Station</div>
+            <div className="text Roboto_40pt_Black">Panda Trust</div> */}
           </DefaultSlider>
           {renderSliderContent()}
         </div>
@@ -310,7 +301,7 @@ function Home() {
         }}
       >
         <div className="third">
-          <div className="theme Roboto_50pt_Black">Visioning</div>
+          <div className="theme text Roboto_50pt_Black">Visioning</div>
           <div className="desc">
             <div className="desc_left">
               <video
@@ -332,56 +323,43 @@ function Home() {
             </div>
             <div className="desc_right">
               <div className="info" style={{ marginBottom: "80px" }}>
-                <div className="year Roboto_30pt_Black_Mobile">2021</div>
+                <div className="year text Roboto_30pt_Black_Mobile">2021</div>
                 <div className="quater" style={{ marginBottom: "20px" }}>
-                  <div className="Roboto_25pt_Regular_Mobile">Q2</div>
-                  <div className="Roboto_25pt_Regular_Mobile">
-                    - Recharge issued on Huobi Eco Chain
-                  </div>
-                  <div className="Roboto_25pt_Regular_Mobile">
-                    - Recharge issued on Ethereum Network and Binance Smart Chain
+                  <div className="text Roboto_25pt_Regular_Mobile">Q2</div>
+                  <div className="text Roboto_25pt_Regular_Mobile">
+                    {t("Home/Visioning/text/21Q2")}
                   </div>
                 </div>
                 <div className="quater" style={{ marginBottom: "20px" }}>
-                  <div className="Roboto_25pt_Regular_Mobile">Q3</div>
-                  <div className="Roboto_25pt_Regular_Mobile">
-                    - Charging Station (De-Fi) launched
-                  </div>
-                  <div className="Roboto_25pt_Regular_Mobile">
-                    - Initial Liquidity Offering on DEX
+                  <div className="text Roboto_25pt_Regular_Mobile">Q3</div>
+                  <div className="text Roboto_25pt_Regular_Mobile">
+                    {t("Home/Visioning/text/21Q3")}
                   </div>
                 </div>
                 <div className="quater" style={{ marginBottom: "20px" }}>
-                  <div className="Roboto_25pt_Regular_Mobile">Q4</div>
-                  <div className="Roboto_25pt_Regular_Mobile">
-                    - Integration of Point to Token system
-                  </div>
-                  <div className="Roboto_25pt_Regular_Mobile">
-                    - Recharge Swap (Cross-Chain Bridge) Launched 2022
+                  <div className="text Roboto_25pt_Regular_Mobile">Q4</div>
+                  <div className="text Roboto_25pt_Regular_Mobile">
+                    {t("Home/Visioning/text/21Q4")}
                   </div>
                 </div>
               </div>
               <div className="info">
                 <div
-                  className="year Roboto_30pt_Black_Mobile"
+                  className="year text Roboto_30pt_Black_Mobile"
                   style={{ marginTop: "40px" }}
                 >
                   2022
                 </div>
                 <div className="quater" style={{ marginBottom: "20px" }}>
-                  <div className="Roboto_25pt_Regular_Mobile">Q1</div>
-                  <div className="Roboto_25pt_Regular_Mobile">
-                    - EV Charging Complex 1st unveiling
-                  </div>
-                  <div className="Roboto_25pt_Regular_Mobile">
-                    - Adoption of EV Charging Complex into Recharge Ecosystem
+                  <div className="text Roboto_25pt_Regular_Mobile">Q1</div>
+                  <div className="text Roboto_25pt_Regular_Mobile">
+                    {t("Home/Visioning/text/22Q1")}
                   </div>
                 </div>
                 <div className="quater" style={{ marginBottom: "20px" }}>
-                  <div className="Roboto_25pt_Regular_Mobile">Q2</div>
-                  <div className="Roboto_25pt_Regular_Mobile">
-                    - EV Charging Complex Opening<br />
-                    - 3<span style={{ fontSize: "12px" }}>rd</span> Recharge Ecosystem Partner Service Unveiling
+                  <div className="text Roboto_25pt_Regular_Mobile">Q2</div>
+                  <div className="text Roboto_25pt_Regular_Mobile">
+                    {t("Home/Visioning/text/22Q2")}
                   </div>
                 </div>
               </div>
@@ -391,7 +369,9 @@ function Home() {
       </Content>
       <Content>
         <div className="fourth">
-          <div className="theme Roboto_50pt_Black">Platforms and Verifiers</div>
+          <div className="theme text Roboto_50pt_Black">
+            {t("Home/Platforms/text/title")}
+          </div>
           <div className="partners">
             <div className="tier">
               <div
@@ -524,6 +504,9 @@ const Content = styled.div`
   flex-direction: column;
   color: #ffffff;
   border-radius: 10px;
+  .text {
+    white-space: pre-line;
+  }
 
   .first {
     display: flex;
@@ -674,4 +657,4 @@ const Background1 = styled.div`
   background-position: right 0px;
 `;
 
-export default Home;
+export default withTranslation()(Home);

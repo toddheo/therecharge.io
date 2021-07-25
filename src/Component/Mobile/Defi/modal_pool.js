@@ -5,8 +5,9 @@ import { Link } from "react-router-dom";
 import Pool from "./Pool";
 import { useRecoilState } from "recoil";
 import { modalPoolOpenState, modalPool2OpenState } from "../../../store/modal";
+import { withTranslation } from "react-i18next";
 
-export default function ModalPool({
+function ModalPool({
   web3,
   connectWallet,
   onDisconnect,
@@ -19,6 +20,7 @@ export default function ModalPool({
   setModalPool2Open,
   params,
   setParams,
+  t,
 }) {
   // const [modalPoolOpen, setModalPoolOpen] = useRecoilState(modalPoolOpenState);
   // const [modalPool2Open, setModalPool2Open] =
@@ -67,9 +69,7 @@ export default function ModalPool({
               <div className="stations">
                 <div className="theme Roboto_50pt_Black">Charging Station</div>
                 <div className="desc Roboto_25pt_Regular">
-                  Maximize your RCG by choosing a right charger Locked options
-                  generally provide higher yield than the other options due to
-                  its inflexibility
+                  {t("De-Fi/Station/Charger/content")}
                 </div>
                 <div className="boxes">
                   <div className="tier">
@@ -310,3 +310,5 @@ const Container = styled.div`
 //   }
 //   return true;
 // })
+
+export default withTranslation()(ModalPool);

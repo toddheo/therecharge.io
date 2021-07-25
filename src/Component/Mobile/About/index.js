@@ -1,8 +1,9 @@
 import { useEffect, useState } from "react";
 import styled from "styled-components";
 import Modal from "./modal";
+import { withTranslation } from "react-i18next";
 
-function About() {
+function About({ t }) {
   const [modalOpen, setModalOpen] = useState(false);
   const [firstVideo, setFirstVideo] = useState(false);
   const [secondVideo, setSecondVideo] = useState(false);
@@ -51,7 +52,7 @@ function About() {
     >
       <Content id="aboutSection1">
         <div className="first">
-          <div className="theme Roboto_50pt_Black_Mobile">Ecosystem</div>
+          <div className="theme text Roboto_50pt_Black_Mobile">Ecosystem</div>
           <div className="content">
             {!firstVideo && (
               <video
@@ -88,15 +89,13 @@ function About() {
             /> */}
           </div>
           <div
-            className="text Roboto_30pt_Regular_Mobile"
+            className="text text Roboto_30pt_Regular_Mobile"
             style={{ margin: "40px 50px" }}
           >
-            The recharge is a electric power baesd ecosystem using blockchain
-            technology to provide the best resources to Panda Trust, Piggycell,
-            AD-EYE, Charging Station.
+            {t("About/Ecosystem")}
           </div>
           <div
-            className="moreDetails Roboto_30pt_Regular_Detail"
+            className="moreDetails text Roboto_30pt_Regular_Detail"
             onClick={() => handleModal()}
           >
             More details<span>〉</span>
@@ -105,7 +104,7 @@ function About() {
       </Content>
       <Content id="aboutSection2">
         <div className="second">
-          <div className="theme Roboto_50pt_Black_Mobile">
+          <div className="theme text Roboto_50pt_Black_Mobile">
             Recharge Virtuous Cycle
           </div>
           <div className="content">
@@ -148,67 +147,46 @@ function About() {
             /> */}
           </div>
           <div
-            className="text Roboto_30pt_Regular_Mobile"
+            className="text text Roboto_30pt_Regular_Mobile"
             style={{ margin: "0 50px", marginBottom: "180px" }}
           >
-            The Recharge is creating a new value by the carbon redemption point
-            while performing a token transaction
+            {t("About/Recharge-Virtuous-Cycle")}
           </div>
         </div>
       </Content>
       <Content id="aboutSection3">
         <div className="third">
-          <div className="theme Roboto_50pt_Black_Mobile">Team members</div>
+          <div className="theme text Roboto_50pt_Black_Mobile">
+            Team members
+          </div>
           <div className="members">
             <div className="member">
-              <div className="name Roboto_30pt_Black_L">Jay Lee | CEO</div>
+              <div className="name text Roboto_30pt_Black_L">
+                {t("About/Member/jayLee/title")}
+              </div>
               <div className="desc">
-                <div className="Roboto_25pt_Regular_Mobile2">
-                  - Founder at Panda Korea & 100 Percent
-                </div>
-                <div className="Roboto_25pt_Regular_Mobile2">
-                  - Vice President at NS Studio (IT, Game)
-                </div>
-                <div className="Roboto_25pt_Regular_Mobile2">
-                  - Lead at Presidential Committee on Young Generation
-                </div>
-                <div className="Roboto_25pt_Regular_Mobile2">
-                  - Journalist at Dong-A Daily News, Channel A
+                <div className="text Roboto_25pt_Regular_Mobile2">
+                  {t("About/Member/jayLee/content")}
                 </div>
               </div>
             </div>
             <div className="member">
-              <div className="name Roboto_30pt_Black_L">
-                Jake Kim | Chief Technical Officer
+              <div className="name text Roboto_30pt_Black_L">
+                {t("About/Member/jakeKim/title")}
               </div>
               <div className="desc">
-                <div className="Roboto_25pt_Regular_Mobile2">
-                  - CTO at 100 Percent
-                </div>
-                <div className="Roboto_25pt_Regular_Mobile2">
-                  - Software Developer at TMON
-                </div>
-                <div className="Roboto_25pt_Regular_Mobile2">
-                  - Application Developer at Kakao Corp
-                </div>
-                <div className="Roboto_25pt_Regular_Mobile2">
-                  - Lead at Kakao Enterprise AI Dev Team
+                <div className="text Roboto_25pt_Regular_Mobile2">
+                  {t("About/Member/jakeKim/content")}
                 </div>
               </div>
             </div>
             <div className="member">
-              <div className="name Roboto_30pt_Black_L">
-                Ethan Kang | Chief Marketing Officer
+              <div className="name text Roboto_30pt_Black_L">
+                {t("About/Member/ethanKang/title")}
               </div>
               <div className="desc">
-                <div className="Roboto_25pt_Regular_Mobile2">
-                  - CSO/CMO at 100 Percent
-                </div>
-                <div className="Roboto_25pt_Regular_Mobile2">
-                  - CSO at Thinkingwolf (Marketing)
-                </div>
-                <div className="Roboto_25pt_Regular_Mobile2">
-                  - CMO at Zipdoc (Interior O2O)
+                <div className="text Roboto_25pt_Regular_Mobile2">
+                  {t("About/Member/ethanKang/content")}
                 </div>
               </div>
             </div>
@@ -217,7 +195,9 @@ function About() {
       </Content>
       <Content id="aboutSection4">
         <div className="fourth">
-          <div className="theme Roboto_50pt_Black_Mobile">Recharge is on</div>
+          <div className="theme text Roboto_50pt_Black_Mobile">
+            Recharge is on
+          </div>
           <div className="partners">
             <div className="tier">
               <div
@@ -233,11 +213,8 @@ function About() {
                   />
                 </div>
                 <div className="desc">
-                  <div className="Roboto_20pt_Regular_Mobile">
-                    A fully decentralized
-                  </div>
-                  <div className="Roboto_20pt_Regular_Mobile">
-                    finance protocol
+                  <div className="text Roboto_20pt_Regular_Mobile">
+                    {t("About/Recharge-is-on/1")}
                   </div>
                 </div>
               </div>
@@ -251,12 +228,9 @@ function About() {
                     style={{ height: "70px", width: "68.9px" }}
                   />
                 </div>
-                <div className="desc Roboto_20pt_Regular">
-                  <div className="text  Roboto_20pt_Regular_Mobile">
-                    Price-tracking website for crypto
-                  </div>
-                  <div className="Roboto_20pt_Regular_Mobile">
-                    assets of cryptocurrency
+                <div className="desc text Roboto_20pt_Regular">
+                  <div className="text  text Roboto_20pt_Regular_Mobile">
+                    {t("About/Recharge-is-on/2")}
                   </div>
                 </div>
               </div>
@@ -272,12 +246,9 @@ function About() {
                     style={{ height: "70px", width: "66.4px" }}
                   />
                 </div>
-                <div className="desc Roboto_20pt_Regular">
-                  <div className="Roboto_20pt_Regular_Mobile">
-                    Provides disclosure practices
-                  </div>
-                  <div className="Roboto_20pt_Regular_Mobile">
-                    of the crypto industry
+                <div className="desc text Roboto_20pt_Regular">
+                  <div className="text Roboto_20pt_Regular_Mobile">
+                    {t("About/Recharge-is-on/3")}
                   </div>
                 </div>
               </div>
@@ -296,10 +267,9 @@ function About() {
                     }}
                   />
                 </div>
-                <div className="desc Roboto_20pt_Regular">
-                  <div className="Roboto_20pt_Regular_Mobile">No.1 Crypto</div>
-                  <div className="Roboto_20pt_Regular_Mobile">
-                    community in Korea
+                <div className="desc text Roboto_20pt_Regular">
+                  <div className="text Roboto_20pt_Regular_Mobile">
+                    {t("About/Recharge-is-on/4")}
                   </div>
                 </div>
               </div>
@@ -315,15 +285,9 @@ function About() {
                     style={{ height: "70px", width: "58.5px" }}
                   />
                 </div>
-                <div className="desc Roboto_16pt_Regular">
-                  <div className="Roboto_20pt_Regular_Mobile">
-                    Provides a off-chain, gasless,
-                  </div>
-                  <div className="Roboto_20pt_Regular_Mobile">
-                    multi-governance community
-                  </div>
-                  <div className="Roboto_20pt_Regular_Mobile">
-                    mpolling dashboard
+                <div className="desc text Roboto_16pt_Regular">
+                  <div className="text Roboto_20pt_Regular_Mobile">
+                    {t("About/Recharge-is-on/5")}
                   </div>
                 </div>
               </div>
@@ -345,6 +309,9 @@ const Container = styled.div`
 const Content = styled.div`
   display: flex;
 
+  .text {
+    white-space: pre-line;
+  }
   .first {
     display: flex;
     flex-direction: column;
@@ -483,4 +450,4 @@ const Content = styled.div`
   }
 `;
 
-export default About;
+export default withTranslation()(About);

@@ -1,6 +1,7 @@
 import styled from "styled-components";
+import { withTranslation } from "react-i18next";
 
-function Recharge() {
+function Recharge({ t }) {
   return (
     <Container>
       <Content id="rechargeSection1">
@@ -16,14 +17,10 @@ function Recharge() {
             </div>
             <div className="right">
               <div className="topic Roboto_30pt_Black_L">
-                Frequent Use Point
+                {t("RechargeToken/Features/1/title")}
               </div>
               <div className="text Roboto_20pt_Regular_L">
-                Frequent Use Point (FUP) is designed to reward regular users on
-                the Recharge Ecosystem. Any payment made in the Recharge
-                connected services will provide Frequent User Point on a pro
-                rata basis. FUP is switchable with Recharge Token on a station
-                in Recharge Ecosystem.
+                {t("RechargeToken/Features/1/content")}
               </div>
             </div>
           </div>
@@ -36,13 +33,10 @@ function Recharge() {
             </div>
             <div className="right">
               <div className="topic Roboto_30pt_Black_L">
-                Automated Carbon Redemption
+                {t("RechargeToken/Features/2/title")}
               </div>
               <div className="text Roboto_20pt_Regular_L">
-                Every transaction of Recharge token regardless of mainnet will
-                trigger Automated Carbon Redemption (ACR) to incentive center.
-                Accumulated Carbon Redemption will be distributed to boost
-                Recharge Virtuous Cycle and to purchase Carbon Credit.
+                {t("RechargeToken/Features/2/content")}
               </div>
             </div>
           </div>
@@ -55,13 +49,10 @@ function Recharge() {
             </div>
             <div className="right">
               <div className="topic Roboto_30pt_Black_L">
-                Recharge Governance
+                {t("RechargeToken/Features/3/title")}
               </div>
               <div className="text Roboto_20pt_Regular_L">
-                Recharge Governance is designed for Recharge Ecosystem
-                Contributors to shape the future of the protocols. Recharge
-                holders can influence decision concerning the Recharge Ecosystem
-                such as proposals and decision makings on shaping the ecosystem.
+                {t("RechargeToken/Features/3/content")}
               </div>
             </div>
           </div>
@@ -74,12 +65,10 @@ function Recharge() {
             </div>
             <div className="right">
               <div className="topic Roboto_30pt_Black_L">
-                Cross Chain Compatibility
+                {t("RechargeToken/Features/4/title")}
               </div>
               <div className="text Roboto_20pt_Regular_L">
-                Recharge is deployed on various major protocols to help boost
-                its ecosystem Recharge Swap(Cross Chain Bridge) in the first
-                phase, supports ERC-20, HRC-20 and BEP-20.
+                {t("RechargeToken/Features/4/content")}
               </div>
             </div>
           </div>
@@ -171,9 +160,9 @@ function Recharge() {
             <div className="left">
               <div className="header">
                 <div className="object Roboto_30pt_Black_L">
-                  <div>Name</div>
-                  <div>Ticker</div>
-                  <div>Total Supply</div>
+                  <div>{t("RechargeToken/Distribution/name")}</div>
+                  <div>{t("RechargeToken/Distribution/ticker")}</div>
+                  <div>{t("RechargeToken/Distribution/total-supply")}</div>
                 </div>
                 <div className="content Roboto_20pt_Regular_L ">
                   <div>Recharge</div>
@@ -184,27 +173,21 @@ function Recharge() {
               <WLine />
               <div className="middle">
                 <div className="object Roboto_20pt_Black_L">
-                  <div>Ecosystem</div>
-                  <div>Development</div>
+                  <div>{t("RechargeToken/Distribution/ecosystem")}</div>
+                  <div>{t("RechargeToken/Distribution/development")}</div>
                   <div>
-                    Exchanges
-                    <span style={{ fontWeight: "normal" }}>
-                      {" "}
-                      (Decentralized)
-                    </span>
+                    {t("RechargeToken/Distribution/exchanges/decentralized")}
                   </div>
                   <div>
-                    Exchanges
-                    <span style={{ fontWeight: "normal" }}> (Centralized)</span>
+                    {t("RechargeToken/Distribution/exchanges/centralized")}
                   </div>
-                  <div>Governance Reserve</div>
-                  <div>Marketing</div>
                   <div>
-                    Private Sales
-                    <span style={{ fontWeight: "normal" }}> (1 year lock)</span>
+                    {t("RechargeToken/Distribution/governance-reserve")}
                   </div>
-                  <div>Team</div>
-                  <div>Advisors</div>
+                  <div>{t("RechargeToken/Distribution/marketing")}</div>
+                  <div>{t("RechargeToken/Distribution/private-sales")}</div>
+                  <div>{t("RechargeToken/Distribution/team")}</div>
+                  <div>{t("RechargeToken/Distribution/advisors")}</div>
                 </div>
                 <div className="content Roboto_20pt_Regular_L">
                   <div>40%</div>
@@ -221,13 +204,15 @@ function Recharge() {
               <WLine />
               <div className="bottom">
                 <div className="object Roboto_30pt_Black_L">
-                  Recharge Token address
+                  {t("RechargeToken/Distribution/recharge-token-address")}
                 </div>
                 <div className="content Roboto_20pt_Regular_L ">
-                  <div>ERC-20 (Ethereum Mainnet) : </div>
+                  <div>{t("RechargeToken/Distribution/erc20")} : </div>
                   <div>0xe74bE071f3b62f6A4aC23cA68E5E2A39797A3c30</div>
-                  <div>HRC-20 (Huobi Eco Chain) : </div>
+                  <div>{t("RechargeToken/Distribution/hrc20")} : </div>
                   <div>0xbddC276CACC18E9177B2f5CFb3BFb6eef491799b</div>
+                  <div>{t("RechargeToken/Distribution/bep20")} : </div>
+                  <div>0x2D94172436D869c1e3c094BeaD272508faB0d9E3</div>
                 </div>
               </div>
             </div>
@@ -251,13 +236,10 @@ function Recharge() {
             </div>
             <div className="right">
               <div className="topic Roboto_30pt_Black_L">
-                Recharge Governance
+                {t("RechargeToken/Governance/title")}
               </div>
               <div className="text Roboto_20pt_Regular_L">
-                Recharge Governance is designed for Recharge Ecosystem
-                Contributors to shape the future of the protocols. Recharge
-                holders can influence decision concerning the Recharge Ecosystem
-                such as proposals and decision makings on shaping the ecosystem.{" "}
+                {t("RechargeToken/Governance/content")}
               </div>
               <div
                 className="button Roboto_20pt_Regular_L"
@@ -687,4 +669,4 @@ const Background = styled.div`
   background-position: right 0px;
 `;
 
-export default Recharge;
+export default withTranslation()(Recharge);

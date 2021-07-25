@@ -11,10 +11,12 @@ import { Route, Switch } from "react-router-dom";
 import Web3 from "web3";
 import { Main } from "@aragon/ui";
 // import styled from "styled-components";
-// import { useRecoilValue } from "recoil";
+// i18n
+import { withTranslation } from "react-i18next";
+import i18next from "./locale/i18n";
 
 const Desktop = React.memo(
-  ({ web3Modal, toast }) => {
+  ({ web3Modal, toast, t }) => {
     const [account, setAccount] = useState(undefined);
     const [chainId, setChainId] = useState(-1);
     const [web3, setWeb3] = useState(
@@ -50,7 +52,7 @@ const Desktop = React.memo(
     }
 
     async function onDisconnect(event) {
-      toast("Disconnecting Wallet");
+      toast(t("Disconnect/wallet"));
       if (
         !event &&
         web3 &&
@@ -69,38 +71,38 @@ const Desktop = React.memo(
         return;
       }
       provider.on("open", async (info) => {
-        toast("Wallet Connected!");
+        toast(t("Connect/wallet"));
         fetchAccountData(provider);
       });
       provider.on("close", () => onDisconnect(true));
       provider.on("accountsChanged", async (accounts) => {
         fetchAccountData(provider);
-        toast("Account Changed");
+        toast(t("Change/account"));
       });
       provider.on("chainChanged", async (chainId) => {
         const networkId = await web3.eth.net.getId();
         fetchAccountData(provider);
-        toast("Chain Id Changed");
+        toast(t("Change/chainId"));
       });
 
       provider.on("networkChanged", async (networkId) => {
         fetchAccountData(provider);
-        toast("Network Changed");
+        toast(t("Change/network"));
       });
       provider.on("disconnect", async (error) => {
-        toast("Wallet lose connection.");
+        toast(t("Disconnect/wallet"));
       });
     }
 
     async function ConnectWallet() {
       console.log("Opening a dialog", web3Modal);
-      toast("Please Connect Wallet");
+      toast(t("Ask/Connect"));
       try {
         provider = await web3Modal.connect();
-        toast("Wallet Connected!");
+        toast(t("Connect/wallet"));
         connectEventHandler(provider);
       } catch (e) {
-        toast("Wallet Connect Failed. Please try again");
+        toast(t("ConnectFail/wallet"));
         console.log("Could not get a wallet connection", e);
         return;
       }
@@ -229,4 +231,4 @@ const Desktop = React.memo(
   }
 );
 
-export default Desktop;
+export default withTranslation()(Desktop);

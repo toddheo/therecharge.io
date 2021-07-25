@@ -2,6 +2,7 @@ import styled from "styled-components";
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { ToastHub, Toast } from "@aragon/ui";
+import { useTranslation } from "react-i18next";
 
 function Gnb({
   connectWallet,
@@ -17,6 +18,7 @@ function Gnb({
   modalSwapOpen,
   setModalSwapOpen,
 }) {
+  const { t, i18n } = useTranslation();
   const [menuOpen, setMenuOpen] = useState(false);
   const [sidemenuOpen, setSidemenuOpen] = useState({
     about: false,
@@ -67,6 +69,15 @@ function Gnb({
         )}
       </Logo>
       <div className="state Roboto_30pt_Black">{getTitle()}</div>
+      <div
+        className="lang Roboto_30pt_Black"
+        onClick={() => {
+          i18n.changeLanguage(i18n.language != "en" ? "en" : "ko");
+          console.log("change language to " + i18n.language);
+        }}
+      >
+        {i18n.language.toUpperCase()}
+      </div>
       <div className="hamButton" onClick={() => open()}>
         <img src={menuOpen ? "/ic_menu_close.svg" : "/ic_menu.svg"} />
       </div>
@@ -81,18 +92,20 @@ function Gnb({
                 onClick={
                   account
                     ? async () => {
-                      await onDisconnect();
-                      // await toast("코인 지갑의 연결이 해제되었어요.");
-                    }
+                        await onDisconnect();
+                        // await toast("코인 지갑의 연결이 해제되었어요.");
+                      }
                     : async () => {
-                      await connectWallet();
-                      // await toast("코인 지갑이 연결되었어요.");
-                    }
+                        await connectWallet();
+                        // await toast("코인 지갑이 연결되었어요.");
+                      }
                 }
               >
                 <span className="Roboto_35pt_Bold">
                   {account
-                    ? account.substring(0, 8) + "..." + account.substring(36, 42)
+                    ? account.substring(0, 8) +
+                      "..." +
+                      account.substring(36, 42)
                     : "Wallet Connect"}
                 </span>
               </ConnectWallet>
@@ -435,8 +448,8 @@ function Gnb({
               <div
                 className="logo"
                 onClick={() =>
-                (window.location =
-                  "https://etherscan.io/token/0xe74bE071f3b62f6A4aC23cA68E5E2A39797A3c30")
+                  (window.location =
+                    "https://etherscan.io/token/0xe74bE071f3b62f6A4aC23cA68E5E2A39797A3c30")
                 }
               >
                 <img src="/footer5.png" />
@@ -444,8 +457,8 @@ function Gnb({
               <div
                 className="logo"
                 onClick={() =>
-                (window.location =
-                  "https://hecoinfo.com/token/0xbddC276CACC18E9177B2f5CFb3BFb6eef491799b")
+                  (window.location =
+                    "https://hecoinfo.com/token/0xbddC276CACC18E9177B2f5CFb3BFb6eef491799b")
                 }
               >
                 <img src="/footer6.png" />
@@ -475,9 +488,13 @@ const Container = styled.div`
     margin: auto;
     text-shadow: 0 0 40px rgba(255, 255, 255, 0.5);
   }
-
+  .lang {
+    margin: auto auto;
+    margin-right: 50px;
+  }
   .hamButton {
     margin: auto;
+    margin-left: 0px;
     margin-right: 50px;
     width: 30px;
     height: 30px;

@@ -1,7 +1,9 @@
 import styled from "styled-components";
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 function Modal1({ modal1Open, handleModal1 }) {
+  const { t } = useTranslation();
   return (
     <Container>
       <div className={modal1Open ? "modalOn" : "modalOff"}>
@@ -19,15 +21,11 @@ function Modal1({ modal1Open, handleModal1 }) {
               <div className="img">
                 <img
                   src="mpopCharging.png"
-                // style={{ width: "1088px", height: "1143px" }}
+                  // style={{ width: "1088px", height: "1143px" }}
                 />
               </div>
               <div className="desc Roboto_20pt_Regular">
-                Fully Decentralized Incentive Hub for Recharge Ecosystem.
-                Charging Station is built to offer full range of De-Fi services
-                for Recharge Labs. Automated Incentive circulation is fueled by
-                carbon redemption and it stimulates Recharge Virtuous Cycle as
-                well as electric power-based services.
+                {t("Home/text/info-charging-station")}
               </div>
             </div>
           </div>
@@ -69,7 +67,7 @@ const Container = styled.div`
       width: 100%;
       overflow: scroll;
       padding: 50px;
-    
+
       .background {
         position: absolute;
         background-color: black;

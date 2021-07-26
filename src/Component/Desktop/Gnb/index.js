@@ -83,9 +83,6 @@ function Gnb({ connectWallet, account, onDisconnect }) {
                 <a href={"/recharge#rechargeSection1"}>Features</a>
               </div>
               <div>
-                <a href={"/recharge#rechargeSection2"}>Utility</a>
-              </div>
-              <div>
                 <a href={"/recharge#rechargeSection3"}>Distribution</a>
               </div>
               <div>

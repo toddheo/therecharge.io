@@ -219,17 +219,6 @@ function Gnb({
             <div>
               <a
                 className="Roboto_25pt_Regular"
-                href="/recharge#rechargeSection2"
-                onClick={() => {
-                  setMenuOpen(false);
-                }}
-              >
-                Utility
-              </a>
-            </div>
-            <div>
-              <a
-                className="Roboto_25pt_Regular"
                 href="/recharge#rechargeSection3"
                 onClick={() => {
                   setMenuOpen(false);

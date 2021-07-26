@@ -286,7 +286,7 @@ function Defi({
             <div className="content" style={{ marginTop: "80px" }}>
               <div className="box" onClick={() => handleModalSwap()}>
                 <img src="/ic_rechargingswap.svg" />
-                <div className="name Roboto_40pt_Black">Recharging Swap</div>
+                <div className="name Roboto_40pt_Black">Recharge swap</div>
               </div>
               <div className="text Roboto_25pt_Regular">
                 {t("De-Fi/Station/recharge-swap")}

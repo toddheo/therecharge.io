@@ -544,7 +544,7 @@ export default function ModalSwap({
                 src={"/ic_swap.svg"}
                 style={{ width: "79.2px", height: "80px", marginTop: "80px" }}
               />
-              <div className="theme Roboto_50pt_Black">Recharging Swap</div>
+              <div className="theme Roboto_50pt_Black">Recharge swap</div>
             </div>
             <div
               className="walletConnect Roboto_20pt_Regular"

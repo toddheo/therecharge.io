@@ -432,7 +432,7 @@ function Gnb({
               <div
                 className="logo"
                 onClick={() =>
-                  (window.location = "https://twitter.com/TheRecharge1")
+                  (window.location = "https://twitter.com/TheRecharge_")
                 }
               >
                 <img src="/footer3.png" />

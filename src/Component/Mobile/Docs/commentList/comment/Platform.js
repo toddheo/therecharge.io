@@ -36,10 +36,10 @@ function Platform() {
       <div className="text Roboto_20pt_Regular_L">
         ■ Staking Locked (40%) – Regular Staking pool.
       </div>
-      <div className="subTitle Roboto_20pt_Black_L">3-2 Recharging Swap</div>
+      <div className="subTitle Roboto_20pt_Black_L">3-2 Recharge swap</div>
       <div className="text Roboto_20pt_Regular_L">
         The Frequent Use Points can be swapped with Recharge Tokens through the
-        Recharging Swap (Exchange Rate applies). In addition, Recharging Swap
+        Recharge swap (Exchange Rate applies). In addition, Recharge swap
         supports Cross Chain Bridge between ERC-20, BEP-20, and HRC-20 on
         demand. This was done in consideration of the continuous expansion of
         the Recharge ecosystem, providing stable services with awareness of the

@@ -285,7 +285,7 @@ function Home({ t }) {
           </div>
           <DefaultSlider setSliderIndex={setSliderIndex}>
             <div className="topic text Roboto_40pt_Black">Charging Station</div>
-            <div className="topic text Roboto_40pt_Black">Recharging Swap</div>
+            <div className="topic text Roboto_40pt_Black">Recharge swap</div>
             {/* <div className="text Roboto_40pt_Black">AD Station</div>
             <div className="text Roboto_40pt_Black">Panda Trust</div> */}
           </DefaultSlider>

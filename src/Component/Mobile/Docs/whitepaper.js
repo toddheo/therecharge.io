@@ -207,7 +207,8 @@ function Whitepaper() {
             fontFamily: "Wingdings",
           }}
         >
-          &#9632;<span style={{ font: '7.0pt "Times New Roman"' }}>&nbsp; </span>
+          &#9632;
+          <span style={{ font: '7.0pt "Times New Roman"' }}>&nbsp; </span>
         </span>
         <span style={{ fontSize: "30pt", lineHeight: "115%" }}>
           Operating marketplace on Alibaba B2B
@@ -228,7 +229,8 @@ function Whitepaper() {
             fontFamily: "Wingdings",
           }}
         >
-          &#9632;<span style={{ font: '7.0pt "Times New Roman"' }}>&nbsp; </span>
+          &#9632;
+          <span style={{ font: '7.0pt "Times New Roman"' }}>&nbsp; </span>
         </span>
         <span style={{ fontSize: "30pt", lineHeight: "115%" }}>
           Exporting to 20 different countries globally{" "}
@@ -249,7 +251,8 @@ function Whitepaper() {
             fontFamily: "Wingdings",
           }}
         >
-          &#9632;<span style={{ font: '7.0pt "Times New Roman"' }}>&nbsp; </span>
+          &#9632;
+          <span style={{ font: '7.0pt "Times New Roman"' }}>&nbsp; </span>
         </span>
         <span style={{ fontSize: "30pt", lineHeight: "115%" }}>
           Awarded Alibaba’s best seller award
@@ -295,7 +298,8 @@ function Whitepaper() {
             fontFamily: "Wingdings",
           }}
         >
-          &#9632;<span style={{ font: '7.0pt "Times New Roman"' }}>&nbsp; </span>
+          &#9632;
+          <span style={{ font: '7.0pt "Times New Roman"' }}>&nbsp; </span>
         </span>
         <span style={{ fontSize: "30pt", lineHeight: "115%" }}>
           Operating “Panda Beauty” T-mall global mall
@@ -316,7 +320,8 @@ function Whitepaper() {
             fontFamily: "Wingdings",
           }}
         >
-          &#9632;<span style={{ font: '7.0pt "Times New Roman"' }}>&nbsp; </span>
+          &#9632;
+          <span style={{ font: '7.0pt "Times New Roman"' }}>&nbsp; </span>
         </span>
         <span style={{ fontSize: "30pt", lineHeight: "115%" }}>
           Operating “Panda Food” on Taobao Korea
@@ -337,7 +342,8 @@ function Whitepaper() {
             fontFamily: "Wingdings",
           }}
         >
-          &#9632;<span style={{ font: '7.0pt "Times New Roman"' }}>&nbsp; </span>
+          &#9632;
+          <span style={{ font: '7.0pt "Times New Roman"' }}>&nbsp; </span>
         </span>
         <span style={{ fontSize: "30pt", lineHeight: "115%" }}>
           Operating “Panda Pick” on Lazada Mall (Southeast Asia)
@@ -358,7 +364,8 @@ function Whitepaper() {
             fontFamily: "Wingdings",
           }}
         >
-          &#9632;<span style={{ font: '7.0pt "Times New Roman"' }}>&nbsp; </span>
+          &#9632;
+          <span style={{ font: '7.0pt "Times New Roman"' }}>&nbsp; </span>
         </span>
         <span style={{ fontSize: "30pt", lineHeight: "115%" }}>
           Operating “Pandahao” Korean smart store for Chinese ingredients{" "}
@@ -406,7 +413,8 @@ function Whitepaper() {
             fontFamily: "Wingdings",
           }}
         >
-          &#9632;<span style={{ font: '7.0pt "Times New Roman"' }}>&nbsp; </span>
+          &#9632;
+          <span style={{ font: '7.0pt "Times New Roman"' }}>&nbsp; </span>
         </span>
         <span style={{ fontSize: "30pt", lineHeight: "115%" }}>
           Opening and operating Tmall Global{" "}
@@ -427,7 +435,8 @@ function Whitepaper() {
             fontFamily: "Wingdings",
           }}
         >
-          &#9632;<span style={{ font: '7.0pt "Times New Roman"' }}>&nbsp; </span>
+          &#9632;
+          <span style={{ font: '7.0pt "Times New Roman"' }}>&nbsp; </span>
         </span>
         <span style={{ fontSize: "30pt", lineHeight: "115%" }}>
           Providing one-stop services from store operations to customer services
@@ -448,7 +457,8 @@ function Whitepaper() {
             fontFamily: "Wingdings",
           }}
         >
-          &#9632;<span style={{ font: '7.0pt "Times New Roman"' }}>&nbsp; </span>
+          &#9632;
+          <span style={{ font: '7.0pt "Times New Roman"' }}>&nbsp; </span>
         </span>
         <span style={{ fontSize: "30pt", lineHeight: "115%" }}>
           Years’ worth of experience, sourcing / customer service / business
@@ -530,7 +540,8 @@ function Whitepaper() {
             fontFamily: "Wingdings",
           }}
         >
-          &#9632;<span style={{ font: '7.0pt "Times New Roman"' }}>&nbsp; </span>
+          &#9632;
+          <span style={{ font: '7.0pt "Times New Roman"' }}>&nbsp; </span>
         </span>
         <span style={{ fontSize: "30pt", lineHeight: "115%" }}>
           Electric bicycle sharing solutions along with bicycle body ODM
@@ -552,7 +563,8 @@ function Whitepaper() {
             fontFamily: "Wingdings",
           }}
         >
-          &#9632;<span style={{ font: '7.0pt "Times New Roman"' }}>&nbsp; </span>
+          &#9632;
+          <span style={{ font: '7.0pt "Times New Roman"' }}>&nbsp; </span>
         </span>
         <span style={{ fontSize: "30pt", lineHeight: "115%" }}>
           Providing 5-10 billion to Kakao Mobility each year
@@ -573,7 +585,8 @@ function Whitepaper() {
             fontFamily: "Wingdings",
           }}
         >
-          &#9632;<span style={{ font: '7.0pt "Times New Roman"' }}>&nbsp; </span>
+          &#9632;
+          <span style={{ font: '7.0pt "Times New Roman"' }}>&nbsp; </span>
         </span>
         <span style={{ fontSize: "30pt", lineHeight: "115%" }}>
           Business operations for zero carbon emission ESG (Environmental,
@@ -612,7 +625,8 @@ function Whitepaper() {
             fontFamily: "Wingdings",
           }}
         >
-          &#10003;<span style={{ font: '7.0pt "Times New Roman"' }}>&nbsp; </span>
+          &#10003;
+          <span style={{ font: '7.0pt "Times New Roman"' }}>&nbsp; </span>
         </span>
         <span style={{ fontSize: "30pt", lineHeight: "115%" }}>
           Operating in six major cities in South Korea (2020~)
@@ -633,7 +647,8 @@ function Whitepaper() {
             fontFamily: "Wingdings",
           }}
         >
-          &#10003;<span style={{ font: '7.0pt "Times New Roman"' }}>&nbsp; </span>
+          &#10003;
+          <span style={{ font: '7.0pt "Times New Roman"' }}>&nbsp; </span>
         </span>
         <span style={{ fontSize: "30pt", lineHeight: "115%" }}>
           Partnering to supply and sustain both regular and electric bikes.
@@ -654,7 +669,8 @@ function Whitepaper() {
             fontFamily: "Wingdings",
           }}
         >
-          &#10003;<span style={{ font: '7.0pt "Times New Roman"' }}>&nbsp; </span>
+          &#10003;
+          <span style={{ font: '7.0pt "Times New Roman"' }}>&nbsp; </span>
         </span>
         <span style={{ fontSize: "30pt", lineHeight: "115%" }}>
           lanning on introducing regular bike services in 2021
@@ -675,7 +691,8 @@ function Whitepaper() {
             fontFamily: "Wingdings",
           }}
         >
-          &#10003;<span style={{ font: '7.0pt "Times New Roman"' }}>&nbsp; </span>
+          &#10003;
+          <span style={{ font: '7.0pt "Times New Roman"' }}>&nbsp; </span>
         </span>
         <span style={{ fontSize: "30pt", lineHeight: "115%" }}>
           Developing and applying our own IoT services{" "}
@@ -696,7 +713,8 @@ function Whitepaper() {
             fontFamily: "Wingdings",
           }}
         >
-          &#10003;<span style={{ font: '7.0pt "Times New Roman"' }}>&nbsp; </span>
+          &#10003;
+          <span style={{ font: '7.0pt "Times New Roman"' }}>&nbsp; </span>
         </span>
         <span style={{ fontSize: "30pt", lineHeight: "115%" }}>
           Creating and supplying Smart Lock (for payment and locking bikes in
@@ -718,7 +736,8 @@ function Whitepaper() {
             fontFamily: "Wingdings",
           }}
         >
-          &#10003;<span style={{ font: '7.0pt "Times New Roman"' }}>&nbsp; </span>
+          &#10003;
+          <span style={{ font: '7.0pt "Times New Roman"' }}>&nbsp; </span>
         </span>
         <span style={{ fontSize: "30pt", lineHeight: "115%" }}>
           Providing IoT communication services for sustaining and repairing the
@@ -740,7 +759,8 @@ function Whitepaper() {
             fontFamily: "Wingdings",
           }}
         >
-          &#10003;<span style={{ font: '7.0pt "Times New Roman"' }}>&nbsp; </span>
+          &#10003;
+          <span style={{ font: '7.0pt "Times New Roman"' }}>&nbsp; </span>
         </span>
         <span style={{ fontSize: "30pt", lineHeight: "115%" }}>
           Planning on expanding the developed IoT services to other services for
@@ -1230,7 +1250,8 @@ function Whitepaper() {
             fontFamily: "Wingdings",
           }}
         >
-          &#9632;<span style={{ font: '7.0pt "Times New Roman"' }}>&nbsp; </span>
+          &#9632;
+          <span style={{ font: '7.0pt "Times New Roman"' }}>&nbsp; </span>
         </span>
         <span style={{ fontSize: "30pt", lineHeight: "115%" }}>
           A smart contract is an automatically executing contract that is part
@@ -1282,7 +1303,8 @@ function Whitepaper() {
             fontFamily: "Wingdings",
           }}
         >
-          &#9632;<span style={{ font: '7.0pt "Times New Roman"' }}>&nbsp; </span>
+          &#9632;
+          <span style={{ font: '7.0pt "Times New Roman"' }}>&nbsp; </span>
         </span>
         <span style={{ fontSize: "30pt", lineHeight: "115%" }}>
           Decentralized finance is the environment in which the finance
@@ -1333,7 +1355,8 @@ function Whitepaper() {
             fontFamily: "Wingdings",
           }}
         >
-          &#9632;<span style={{ font: '7.0pt "Times New Roman"' }}>&nbsp; </span>
+          &#9632;
+          <span style={{ font: '7.0pt "Times New Roman"' }}>&nbsp; </span>
         </span>
         <span style={{ fontSize: "30pt", lineHeight: "115%" }}>
           An exchange with decentralized finance as its background. Users can
@@ -1382,7 +1405,8 @@ function Whitepaper() {
             fontFamily: "Wingdings",
           }}
         >
-          &#9632;<span style={{ font: '7.0pt "Times New Roman"' }}>&nbsp; </span>
+          &#9632;
+          <span style={{ font: '7.0pt "Times New Roman"' }}>&nbsp; </span>
         </span>
         <span style={{ fontSize: "30pt", lineHeight: "115%" }}>
           A traditional method of exchange, the opposite of a decentralized
@@ -1431,7 +1455,8 @@ function Whitepaper() {
             fontFamily: "Wingdings",
           }}
         >
-          &#9632;<span style={{ font: '7.0pt "Times New Roman"' }}>&nbsp; </span>
+          &#9632;
+          <span style={{ font: '7.0pt "Times New Roman"' }}>&nbsp; </span>
         </span>
         <span style={{ fontSize: "30pt", lineHeight: "115%" }}>
           Acts as a link between different blockchains to connect them together.
@@ -1480,7 +1505,8 @@ function Whitepaper() {
             fontFamily: "Wingdings",
           }}
         >
-          &#9632;<span style={{ font: '7.0pt "Times New Roman"' }}>&nbsp; </span>
+          &#9632;
+          <span style={{ font: '7.0pt "Times New Roman"' }}>&nbsp; </span>
         </span>
         <span style={{ fontSize: "30pt", lineHeight: "115%" }}>
           Users deposit coins to the decentralized platform and can participate
@@ -1529,7 +1555,8 @@ function Whitepaper() {
             fontFamily: "Wingdings",
           }}
         >
-          &#9632;<span style={{ font: '7.0pt "Times New Roman"' }}>&nbsp; </span>
+          &#9632;
+          <span style={{ font: '7.0pt "Times New Roman"' }}>&nbsp; </span>
         </span>
         <span style={{ fontSize: "30pt", lineHeight: "115%" }}>
           Refers to the act of providing liquidity to de-fi service products and
@@ -1575,7 +1602,8 @@ function Whitepaper() {
             fontFamily: "Wingdings",
           }}
         >
-          &#9632;<span style={{ font: '7.0pt "Times New Roman"' }}>&nbsp; </span>
+          &#9632;
+          <span style={{ font: '7.0pt "Times New Roman"' }}>&nbsp; </span>
         </span>
         <span style={{ fontSize: "30pt", lineHeight: "115%" }}>
           Refers to the action of users depositing their coins to a specific
@@ -2884,7 +2912,8 @@ function Whitepaper() {
             fontFamily: "Wingdings",
           }}
         >
-          &#9632;<span style={{ font: '7.0pt "Times New Roman"' }}>&nbsp; </span>
+          &#9632;
+          <span style={{ font: '7.0pt "Times New Roman"' }}>&nbsp; </span>
         </span>
         <span style={{ fontSize: "30pt", lineHeight: "115%" }}>
           Purchasing carbon credits (10%)
@@ -2905,7 +2934,8 @@ function Whitepaper() {
             fontFamily: "Wingdings",
           }}
         >
-          &#9632;<span style={{ font: '7.0pt "Times New Roman"' }}>&nbsp; </span>
+          &#9632;
+          <span style={{ font: '7.0pt "Times New Roman"' }}>&nbsp; </span>
         </span>
         <span style={{ fontSize: "30pt", lineHeight: "115%" }}>
           Staking (20%) – Private and Angel only deposit pool{" "}
@@ -2926,7 +2956,8 @@ function Whitepaper() {
             fontFamily: "Wingdings",
           }}
         >
-          &#9632;<span style={{ font: '7.0pt "Times New Roman"' }}>&nbsp; </span>
+          &#9632;
+          <span style={{ font: '7.0pt "Times New Roman"' }}>&nbsp; </span>
         </span>
         <span style={{ fontSize: "30pt", lineHeight: "115%" }}>
           Staking Unlocked (30%) – Regular deposit pool
@@ -2947,7 +2978,8 @@ function Whitepaper() {
             fontFamily: "Wingdings",
           }}
         >
-          &#9632;<span style={{ font: '7.0pt "Times New Roman"' }}>&nbsp; </span>
+          &#9632;
+          <span style={{ font: '7.0pt "Times New Roman"' }}>&nbsp; </span>
         </span>
         <span style={{ fontSize: "30pt", lineHeight: "115%" }}>
           Staking Locked (40%) – Regular deposit pool{" "}
@@ -2962,7 +2994,7 @@ function Whitepaper() {
       <p className="MsoNormal" style={{ lineHeight: "115%" }}>
         <b>
           <span style={{ fontSize: "30pt", lineHeight: "115%" }}>
-            4-2 Recharging Swap
+            4-2 Recharge swap
           </span>
         </b>
       </p>
@@ -2976,11 +3008,11 @@ function Whitepaper() {
         <span style={{ fontSize: "30pt", lineHeight: "115%" }}>
           The Frequent Use Points used in the Recharge Token ecosystem can be
           exchanged for Recharge Tokens according to the exchange rates set in
-          advance through the Recharging Swap. In addition, Recharging Swap
-          supports Cross Chain Bridge between ERC-20, BEP-20, and HRC-20 on
-          demand. This was done in consideration of the continuous expansion of
-          the Recharge ecosystem, providing stable services with awareness of
-          the transaction fees and inclusion of various exchanges.{" "}
+          advance through the Recharge swap. In addition, Recharge swap supports
+          Cross Chain Bridge between ERC-20, BEP-20, and HRC-20 on demand. This
+          was done in consideration of the continuous expansion of the Recharge
+          ecosystem, providing stable services with awareness of the transaction
+          fees and inclusion of various exchanges.{" "}
         </span>
       </p>
       <p className="MsoNormal" style={{ lineHeight: "115%" }}>

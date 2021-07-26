@@ -222,7 +222,7 @@ function About({ t }) {
                     style={{ height: "78px", width: "65.2px" }}
                   />
                 </div>
-                <div className="desc text Roboto_20pt_Regular">
+                <div className="desc text Roboto_16pt_Regular">
                   {t("About/Recharge-is-on/5")}
                 </div>
               </div>

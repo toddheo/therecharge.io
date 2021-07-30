@@ -4,6 +4,8 @@ import { Link } from "react-router-dom";
 import { ToastHub, Toast } from "@aragon/ui";
 import { useTranslation } from "react-i18next";
 
+import Language from "../../Components/Language";
+
 function Gnb({ connectWallet, account, onDisconnect }) {
   const { t, i18n } = useTranslation();
   const [black, setBlack] = useState(false);
@@ -44,117 +46,153 @@ function Gnb({ connectWallet, account, onDisconnect }) {
         </Logo>
 
         <Nav>
-          <div className="dropdown">
-            <a
-              href={"/about"}
-              onClick={() => {
-                window.scrollTo(0, 0);
-              }}
-            >
-              About
-            </a>
-            <div className="dropdownContent">
-              <div>
-                <a href={"/about#aboutSection1"}>Ecosystem</a>
-              </div>
-              <div>
-                <a href={"/about#aboutSection2"}>Recharge Virtuous Cycle</a>
-              </div>
-              <div>
-                <a href={"/about#aboutSection3"}>Team members</a>
-              </div>
-              <div>
-                <a href={"/about#aboutSection4"}>Recharge is on</a>
+          <Link to={"/"}>
+            <div className="dropdown">
+              <a
+                onClick={() => {
+                  window.scrollTo(0, 0);
+                }}
+              >
+                Home
+              </a>
+            </div>
+          </Link>
+          <Link to={"/about"}>
+            <div className="dropdown">
+              <a
+                onClick={() => {
+                  window.scrollTo(0, 0);
+                }}
+              >
+                About
+              </a>
+              <div className="dropdownContent">
+                <Link to={"/about#aboutSection1"}>
+                  <div>
+                    <a>Ecosystem</a>
+                  </div>
+                </Link>
+                <Link to={"/about#aboutSection2"}>
+                  <div>
+                    <a>Recharge Virtuous Cycle</a>
+                  </div>
+                </Link>
+                <Link to={"/about#aboutSection3"}>
+                  <div>
+                    <a>Team members</a>
+                  </div>
+                </Link>
+                <Link to={"/about#aboutSection4"}>
+                  <div>
+                    <a>Recharge is on</a>
+                  </div>
+                </Link>
               </div>
             </div>
-          </div>
+          </Link>
+          <Link to={"/recharge"}>
+            <div className="dropdown">
+              <a
+                href={"/recharge"}
+                // onClick={() => {
+                //   window.scrollTo(0, 0);
+                // }}
+              >
+                Recharge Token
+              </a>
+              <div className="dropdownContent">
+                <Link to={"/recharge#rechargeSection1"}>
+                  <div>
+                    <a>Features</a>
+                  </div>
+                </Link>
+                <Link to={"/recharge#rechargeSection3"}>
+                  <div>
+                    <a>Distribution</a>
+                  </div>
+                </Link>
+                <Link to={"/recharge#rechargeSection4"}>
+                  <div>
+                    <a>Governance</a>
+                  </div>
+                </Link>
+                <Link to={"/recharge#rechargeSection5"}>
+                  <div>
+                    <a>Exchanges</a>
+                  </div>
+                </Link>
+              </div>
+            </div>
+          </Link>
+          <Link to={"/defi"}>
+            <div className="dropdown">
+              <a
+                href={"/defi"}
+                onClick={() => {
+                  window.scrollTo(0, 0);
+                }}
+              >
+                De-Fi
+              </a>
+              <div className="dropdownContent">
+                <Link to={"/defi#station"}>
+                  <div>
+                    <a>Station</a>
+                  </div>
+                </Link>
+                <Link to={"/defi#mypools"}>
+                  <div>
+                    <a>My pools</a>
+                  </div>
+                </Link>
+                <Link to={"/defi#analytics"}>
+                  <div>
+                    <a>Analytics</a>
+                  </div>
+                </Link>
+              </div>
+            </div>
+          </Link>
+          <Link to={"/docs/1"}>
+            <div className="dropdown">
+              <a
+                href={"/docs/1"}
+                onClick={() => {
+                  window.scrollTo(0, 0);
+                }}
+              >
+                Docs
+              </a>
+              <div className="dropdownContent">
+                <Link to={"/docs/1"}>
+                  <div>
+                    <a>WhitePaper</a>
+                  </div>
+                </Link>
 
-          <div className="dropdown">
-            <a
-              href={"/recharge"}
-              // onClick={() => {
-              //   window.scrollTo(0, 0);
-              // }}
-            >
-              Recharge Token
-            </a>
-            <div className="dropdownContent">
-              <div>
-                <a href={"/recharge#rechargeSection1"}>Features</a>
-              </div>
-              <div>
-                <a href={"/recharge#rechargeSection3"}>Distribution</a>
-              </div>
-              <div>
-                <a href={"/recharge#rechargeSection4"}>Governance</a>
-              </div>
-              <div>
-                <a href={"/recharge#rechargeSection5"}>Exchanges</a>
+                <div className="unactive" style={{ cursor: "not-allowed" }}>
+                  Onepager
+                </div>
+                <div>
+                  <a href="https://www.certik.org/projects/therecharge">
+                    Token Audit
+                  </a>
+                </div>
+                <Link to={"/docs/1"}>
+                  <div>
+                    <a>Disclaimer</a>
+                  </div>
+                </Link>
+                <Link to={"/docs/3"}>
+                  <div>
+                    <a>CI Download</a>
+                  </div>
+                </Link>
               </div>
             </div>
-          </div>
-
-          <div className="dropdown">
-            <a
-              href={"/defi"}
-              onClick={() => {
-                window.scrollTo(0, 0);
-              }}
-            >
-              De-Fi
-            </a>
-            <div className="dropdownContent">
-              <div>
-                <a href={"/defi#station"}>Station</a>
-              </div>
-              <div>
-                <a href={"/defi#mypools"}>My pools</a>
-              </div>
-              <div>
-                <a href={"/defi#analytics"}>Analytics</a>
-              </div>
-            </div>
-          </div>
-
-          <div className="dropdown">
-            <a
-              href={"/docs/1"}
-              onClick={() => {
-                window.scrollTo(0, 0);
-              }}
-            >
-              Docs
-            </a>
-            <div className="dropdownContent">
-              <div>
-                <a href="/docs/1">WhitePaper</a>
-              </div>
-              <div className="unactive" style={{ cursor: "not-allowed" }}>
-                Onepager
-              </div>
-              <div>
-                <a href="https://www.certik.org/projects/therecharge">
-                  Token Audit
-                </a>
-              </div>
-              <div>
-                <a href={"/docs/2"}>Disclaimer</a>
-              </div>
-              <div>
-                <a href="/docs/3">CI Download</a>
-              </div>
-            </div>
-          </div>
+          </Link>
         </Nav>
-        <div
-          className="lang"
-          onClick={() => {
-            i18n.changeLanguage(i18n.language != "en" ? "en" : "ko");
-            console.log("change language to " + i18n.language);
-          }}
-        >
-          <a>{i18n.language.toUpperCase()}</a>
-        </div>
+        <Language />
         <ConnectWallet
           onClick={
             account

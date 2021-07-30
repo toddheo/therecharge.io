@@ -224,6 +224,9 @@ const Container = styled.div`
   min-width: 1088px;
   height: 100px;
   z-index: 6;
+  a {
+    text-decoration: none;
+  }
 `;
 const Section = styled.div`
   display: flex;
@@ -263,7 +266,6 @@ const Nav = styled.div`
 
     a {
       color: #ffffff;
-      text-decoration: none;
     }
   }
   .dropdownContent {

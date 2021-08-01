@@ -1133,6 +1133,7 @@ const Container = styled.div`
                 }
 
                 &:hover {
+                  border-radius: 0 0 20px 20px;
                   background-color: var(--black-10);
                 }
               }

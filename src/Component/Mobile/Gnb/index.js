@@ -633,7 +633,7 @@ const Footer = styled.div`
       padding: 14px 79px 13px 61px;
       text-align: center;
       border: 1px solid var(--yellow);
-      border-radius: 10px;
+      border-radius: 27px;
       box-sizing: border-box;
 
       span {

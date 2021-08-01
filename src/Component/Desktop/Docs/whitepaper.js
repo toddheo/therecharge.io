@@ -4303,7 +4303,7 @@ function Whitepaper() {
               fontFamily: '"Apple SD Gothic Neo"',
             }}
           >
-            4-2 Recharging Swap
+            4-2 Recharge swap
           </span>
         </b>
       </p>
@@ -4331,11 +4331,11 @@ function Whitepaper() {
         >
           The Frequent Use Points used in the Recharge Token ecosystem can be
           exchanged for Recharge Tokens according to the exchange rates set in
-          advance through the Recharging Swap. In addition, Recharging Swap
-          supports Cross Chain Bridge between ERC-20, BEP-20, and HRC-20 on
-          demand. This was done in consideration of the continuous expansion of
-          the Recharge ecosystem, providing stable services with awareness of
-          the transaction fees and inclusion of various exchanges.{" "}
+          advance through the Recharge swap. In addition, Recharge swap supports
+          Cross Chain Bridge between ERC-20, BEP-20, and HRC-20 on demand. This
+          was done in consideration of the continuous expansion of the Recharge
+          ecosystem, providing stable services with awareness of the transaction
+          fees and inclusion of various exchanges.{" "}
         </span>
       </p>
       <p className="MsoNormal" style={{ lineHeight: "115%" }}>

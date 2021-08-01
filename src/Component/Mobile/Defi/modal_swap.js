@@ -524,7 +524,7 @@ function ModalSwap({
                   marginTop: "145px",
                 }}
               />
-              <div className="theme Roboto_50pt_Black">Recharging Swap</div>
+              <div className="theme Roboto_50pt_Black">Recharge swap</div>
               <div className="desc Roboto_25pt_Regular_Mobile3">
                 {t("De-Fi/Station/Recharge/content")}
               </div>

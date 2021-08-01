@@ -429,7 +429,10 @@ function Gnb({
               <div
                 className="logo"
                 onClick={() =>
-                  (window.location = "https://t.me/therecharge_officialkr")
+                  (window.location =
+                    i18n.language == "en"
+                      ? "https://t.me/therecharge_official"
+                      : "https://t.me/therecharge_officialkr")
                 }
               >
                 <img src="/footer4.png" />

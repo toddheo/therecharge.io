@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-import RechargeSlider from "../../Components/Slider/RechargeSlider";
+import RechargeSlider from "../../Components/Common/Slider/RechargeSlider";
 
 import { withTranslation } from "react-i18next";
 

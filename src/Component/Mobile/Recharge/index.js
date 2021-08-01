@@ -147,10 +147,11 @@ function Recharge({ t }) {
           <div
             className="button text Roboto_30pt_Regular_Mobile"
             onClick={() => {
-              window.open("https://snapshot.org/#/therecharge.eth/all");
+              window.open("https://snapshot.org/#/therecharge.eth");
             }}
           >
             Go to Snapshot
+            <div className="arrow">〉</div>
           </div>
         </div>
       </Content>
@@ -396,11 +397,29 @@ const Content = styled.div`
       justify-content: flex-start;
       box-sizing: border-box;
       padding-left: 25px;
+      // border-radius: 30px;
 
       margin: 0 auto;
       width: 300px;
       height: 60px;
-      background-image: url("/btn-governance.png");
+      padding: 0 20px;
+      box-sizing: border-box;
+      border: 1px solid var(--bright-sky-blue);
+      border-radius: 30px;
+      .arrow {
+        margin: auto 0;
+        font-size: 25px;
+        font-weight: bold;
+        margin-left: 20px;
+        margin-right: -5px;
+        color: var(--bright-sky-blue);
+      }
+    }
+    .button:hover {
+      background-color: var(--bright-sky-blue);
+      .arrow {
+        color: var(--white);
+      }
     }
   }
 

@@ -168,7 +168,7 @@ function Recharge({ t }) {
               <div
                 className="button Roboto_20pt_Regular_L"
                 onClick={() =>
-                  window.open("https://snapshot.org/#/therecharge.eth/all")
+                  window.open("https://snapshot.org/#/therecharge.eth")
                 }
               >
                 <div style={{ margin: "auto", marginLeft: "0" }}>
@@ -404,7 +404,7 @@ const Content = styled.div`
       padding: 0 20px;
       box-sizing: border-box;
       border: 1px solid var(--bright-sky-blue);
-      border-radius: 10px;
+      border-radius: 20px;
       cursor: pointer;
       .arrow {
         margin: auto 0;

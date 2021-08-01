@@ -329,7 +329,7 @@ function Defi({
                 className="content Roboto_40pt_Black"
                 style={{ width: "356px" }}
               >
-                {t("De-Fi/Station/no-pool")}
+                {t("De-Fi/MyPool/no-pool")}
               </div>
             </div>
           ) : (

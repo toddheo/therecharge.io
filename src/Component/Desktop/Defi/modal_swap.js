@@ -7,6 +7,7 @@ import Web3 from "web3";
 import { fromWei, toWei } from "web3-utils";
 import { useRecoilState } from "recoil";
 import { modalSwapOpenState } from "../../../store/modal.js";
+import { withTranslation } from "react-i18next";
 const ERC20_ABI = require("./abis/ERC20ABI.json");
 
 function makeNum(str, decimal = 4) {
@@ -22,13 +23,14 @@ const weiToEther = (wei) => {
   return fromWei(wei, "ether");
 };
 
-export default function ModalSwap({
+function ModalSwap({
   web3,
   connectWallet,
   onDisconnect,
   account,
   chainId,
   toast,
+  t,
 }) {
   const [modalSwapOpen, setModalSwapOpen] = useRecoilState(modalSwapOpenState);
   const [recipe, setRecipe] = useState({
@@ -531,20 +533,32 @@ export default function ModalSwap({
           }}
         >
           <div className="modal">
-            <img
+            {/* <img
               className="back"
               src={"/ic_back@3x.png"}
               style={{ width: "79px", height: "30px" }}
               onClick={() => {
                 setModalSwapOpen(!modalSwapOpen);
               }}
-            />
+            /> */}
             <div className="title">
+              <div>
+                <img
+                  src={"/ic_swap.svg"}
+                  style={{ width: "79.2px", height: "80px", marginTop: "80px" }}
+                />
+                <div className="theme Roboto_50pt_Black">Recharge swap</div>
+                <div className="Roboto_20pt_Regular">
+                  {t("De-Fi/Station/Recharge/content")}
+                </div>
+              </div>
               <img
-                src={"/ic_swap.svg"}
-                style={{ width: "79.2px", height: "80px", marginTop: "80px" }}
+                src={"/ic_close.svg"}
+                className="close"
+                onClick={() => {
+                  setModalSwapOpen(!modalSwapOpen);
+                }}
               />
-              <div className="theme Roboto_50pt_Black">Recharge swap</div>
             </div>
             <div
               className="walletConnect Roboto_20pt_Regular"
@@ -842,16 +856,31 @@ const Container = styled.div`
 
     .title {
       display: flex;
-      flex-direction: column;
+      flex-direction: row;
       width: 1100px;
       margin: 0 auto;
       margin-bottom: 40px;
       justify-content: center;
       align-items: center;
-
+      div {
+        display: flex;
+        flex-direction: column;
+        width: 850px;
+        margin: 0 auto;
+        justify-content: center;
+        align-items: center;
+        div {
+          margin-top: 40px;
+        }
+      }
       .theme {
         margin-top: 8px;
         color: #ffffff;
+      }
+      .close {
+      position: absolute;
+      top:186px;
+      left:1196px;
       }
     }
     .walletConnect {
@@ -1305,3 +1334,4 @@ const ExitBtn = styled.div`
 //   }
 //   return true;
 // })
+export default withTranslation()(ModalSwap);

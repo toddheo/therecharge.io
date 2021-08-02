@@ -18,6 +18,8 @@ function ModalPool({
   params,
   setParams,
   t,
+  chainId,
+  toast,
 }) {
   const [modalPoolOpen, setModalPoolOpen] = useRecoilState(modalPoolOpenState);
   const [modalPool2Open, setModalPool2Open] =
@@ -35,7 +37,7 @@ function ModalPool({
 
   return (
     <Container>
-      <div className={modalPoolOpen === true ? "modalOn" : "modalOff"}>
+      <div className={modalPoolOpen ? "modalOn" : "modalOff"}>
         <div
           className="background"
           onClick={() => {
@@ -93,7 +95,7 @@ function ModalPool({
                           address: "0x5419eB32938e33b5E333F185e32bdAd11d73a679",
                         });
                       }}
-                      // className="disable"
+                    // className="disable"
                     >
                       <div className="station">
                         <img
@@ -115,7 +117,7 @@ function ModalPool({
                           address: "0x5419eB32938e33b5E333F185e32bdAd11d73a679",
                         });
                       }}
-                      // className="disable"
+                    // className="disable"
                     >
                       <div className="station">
                         <img
@@ -131,15 +133,15 @@ function ModalPool({
                   <div className="tier">
                     <Link
                       to="/defi/flexibleLP"
-                      onClick={() => {
-                        setModalPool2Open(!modalPool2Open);
-                        setParams({
-                          type: "Flexible",
-                          isLP: true,
-                          address: "0x5419eB32938e33b5E333F185e32bdAd11d73a679",
-                        });
-                      }}
-                      // className="disable"
+                      // onClick={() => {
+                      //   setModalPool2Open(!modalPool2Open);
+                      //   setParams({
+                      //     type: "Flexible",
+                      //     isLP: true,
+                      //     address: "0x5419eB32938e33b5E333F185e32bdAd11d73a679",
+                      //   });
+                      // }}
+                      className="disable"
                     >
                       <div className="station">
                         <img
@@ -153,15 +155,15 @@ function ModalPool({
                     </Link>
                     <Link
                       to="/defi/lockedLP"
-                      onClick={() => {
-                        setModalPool2Open(!modalPool2Open);
-                        setParams({
-                          type: "Locked",
-                          isLP: true,
-                          address: "0x5419eB32938e33b5E333F185e32bdAd11d73a679",
-                        });
-                      }}
-                      // className="disable"
+                      // onClick={() => {
+                      //   setModalPool2Open(!modalPool2Open);
+                      //   setParams({
+                      //     type: "Locked",
+                      //     isLP: true,
+                      //     address: "0x5419eB32938e33b5E333F185e32bdAd11d73a679",
+                      //   });
+                      // }}
+                      className="disable"
                     >
                       <div className="station">
                         <img
@@ -181,19 +183,23 @@ function ModalPool({
               className="modal2"
               style={modalPool2Open ? { display: "flex" } : { display: "none" }}
             >
-              <Pool
-                web3={web3}
-                connectWallet={connectWallet}
-                onDisconnect={onDisconnect}
-                handleModal2={() => {
-                  setModalPool2Open(!modalPool2Open);
-                }}
-                account={account}
-                setParams={setParams}
-                params={params}
-                sel={sel}
-                setSelCharger={setSelCharger}
-              />
+              {modalPool2Open ?
+                <Pool
+                  web3={web3}
+                  connectWallet={connectWallet}
+                  onDisconnect={onDisconnect}
+                  handleModal2={() => {
+                    setModalPool2Open(!modalPool2Open);
+                  }}
+                  account={account}
+                  setParams={setParams}
+                  params={params}
+                  sel={sel}
+                  setSelCharger={setSelCharger}
+                  chainId={chainId}
+                  toast={toast}
+                />
+                : <></>}
             </div>
           </div>
         </div>

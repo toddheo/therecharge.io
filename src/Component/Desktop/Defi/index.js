@@ -224,11 +224,11 @@ function Defi({
       style={
         modalPoolOpen || modalSwapOpen
           ? {
-              position: "fixed",
-              top: "-20px",
-              width: "100%",
-              backgroundColor: "#02051c",
-            }
+            position: "fixed",
+            top: "-20px",
+            width: "100%",
+            backgroundColor: "#02051c",
+          }
           : {}
       }
     >
@@ -341,9 +341,8 @@ function Defi({
                               {...cell.getCellProps()}
                               onClick={() => {
                                 setParams({
-                                  type: `${
-                                    myPools[row.index].type.split(" ")[0]
-                                  }`,
+                                  type: `${myPools[row.index].type.split(" ")[0]
+                                    }`,
                                   isLP: false,
                                 });
 
@@ -381,8 +380,8 @@ function Defi({
                 <div className="title Roboto_30pt_Medium">
                   {analytics.ERC.total
                     ? convertNum(weiToEther(convertNum(analytics.ERC.total)), {
-                        unitSeparator: true,
-                      })
+                      unitSeparator: true,
+                    })
                     : 0}{" "}
                   RCG
                 </div>
@@ -394,8 +393,8 @@ function Defi({
                 <div className="title Roboto_30pt_Medium">
                   {analytics.HRC.total
                     ? convertNum(weiToEther(convertNum(analytics.HRC.total)), {
-                        unitSeparator: true,
-                      })
+                      unitSeparator: true,
+                    })
                     : 0}{" "}
                   RCG
                 </div>
@@ -579,6 +578,8 @@ function Defi({
         account={account}
         setSelCharger={setSelCharger}
         sel={sel}
+        chainId={chainId}
+        toast={toast}
       />
       <ModalSwap
         web3={web3}
@@ -635,8 +636,8 @@ function Defi({
             <div
               className="logo"
               onClick={() =>
-                (window.location =
-                  "https://etherscan.io/token/0xe74bE071f3b62f6A4aC23cA68E5E2A39797A3c30")
+              (window.location =
+                "https://etherscan.io/token/0xe74bE071f3b62f6A4aC23cA68E5E2A39797A3c30")
               }
             >
               <img src="/footer5.png" />
@@ -644,8 +645,8 @@ function Defi({
             <div
               className="logo"
               onClick={() =>
-                (window.location =
-                  "https://hecoinfo.com/token/0xbddC276CACC18E9177B2f5CFb3BFb6eef491799b")
+              (window.location =
+                "https://hecoinfo.com/token/0xbddC276CACC18E9177B2f5CFb3BFb6eef491799b")
               }
             >
               <img src="/footer6.png" />

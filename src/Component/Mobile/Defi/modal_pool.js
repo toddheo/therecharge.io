@@ -119,14 +119,15 @@ function ModalPool({
                   <div className="tier">
                     <Link
                       to="/defi/flexibleLP"
-                      onClick={() => {
-                        setModalPool2Open(!modalPool2Open);
-                        setParams({
-                          type: "Flexible",
-                          isLP: true,
-                          address: "0x5419eB32938e33b5E333F185e32bdAd11d73a679",
-                        });
-                      }}
+                      // onClick={() => {
+                      //   setModalPool2Open(!modalPool2Open);
+                      //   setParams({
+                      //     type: "Flexible",
+                      //     isLP: true,
+                      //     address: "0x5419eB32938e33b5E333F185e32bdAd11d73a679",
+                      //   });
+                      // }}
+                      className="disable"
                     >
                       <div className="station">
                         <img
@@ -140,14 +141,15 @@ function ModalPool({
                     </Link>
                     <Link
                       to="/defi/lockedLP"
-                      onClick={() => {
-                        setModalPool2Open(!modalPool2Open);
-                        setParams({
-                          type: "Locked",
-                          isLP: true,
-                          address: "0x5419eB32938e33b5E333F185e32bdAd11d73a679",
-                        });
-                      }}
+                      // onClick={() => {
+                      //   setModalPool2Open(!modalPool2Open);
+                      //   setParams({
+                      //     type: "Locked",
+                      //     isLP: true,
+                      //     address: "0x5419eB32938e33b5E333F185e32bdAd11d73a679",
+                      //   });
+                      // }}
+                      className="disable"
                     >
                       <div className="station">
                         <img

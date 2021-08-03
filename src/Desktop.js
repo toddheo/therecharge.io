@@ -221,6 +221,14 @@ const Desktop = React.memo(
               background-color: #02051c;
               border-radius: 1px;
             }
+            .ToastHub___StyledAnimatedDiv-sc-1y0i8xl-1 {
+              margin-top: 10px;
+            }
+            .ToastHub___StyledDiv2-sc-1y0i8xl-2 {
+              font-size: larger;
+              height: 90%;
+              padding: 5px 20px;
+            }
           `}</style>
         </div>
       </Main>

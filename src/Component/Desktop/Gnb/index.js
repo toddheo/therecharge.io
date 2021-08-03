@@ -1,7 +1,6 @@
 import styled from "styled-components";
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import { ToastHub, Toast } from "@aragon/ui";
 import { useTranslation } from "react-i18next";
 
 import Language from "../../Components/Desktop/Language";
@@ -94,9 +93,9 @@ function Gnb({ connectWallet, account, onDisconnect }) {
             <div className="dropdown">
               <a
                 href={"/recharge"}
-                // onClick={() => {
-                //   window.scrollTo(0, 0);
-                // }}
+              // onClick={() => {
+              //   window.scrollTo(0, 0);
+              // }}
               >
                 Recharge Token
               </a>
@@ -194,14 +193,9 @@ function Gnb({ connectWallet, account, onDisconnect }) {
         </Nav>
         <Language />
         <ConnectWallet
-          onClick={
-            account
-              ? () => {
-                  onDisconnect();
-                }
-              : () => {
-                  connectWallet();
-                }
+          onClick={account
+            ? () => { onDisconnect(); }
+            : () => { connectWallet(); }
           }
         >
           <span>

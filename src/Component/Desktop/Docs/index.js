@@ -56,7 +56,11 @@ function Docs({ match }) {
                   <a
                     className={currentPage == 0 ? "active" : ""}
                     style={{ textDecoration: "none" }}
-                    onClick={() => setCurrentPage(0)}
+                    onClick={() => {
+                      setViewNum(1);
+                      window.scrollTo(0, 0);
+                      setCurrentPage(0);
+                    }}
                   >
                     Background
                   </a>
@@ -65,7 +69,11 @@ function Docs({ match }) {
                   <a
                     className={currentPage == 1 ? "active" : ""}
                     style={{ textDecoration: "none" }}
-                    onClick={() => setCurrentPage(1)}
+                    onClick={() => {
+                      setViewNum(1);
+                      window.scrollTo(0, 0);
+                      setCurrentPage(1);
+                    }}
                   >
                     About Our Business
                   </a>
@@ -74,7 +82,11 @@ function Docs({ match }) {
                   <a
                     className={currentPage == 2 ? "active" : ""}
                     style={{ textDecoration: "none" }}
-                    onClick={() => setCurrentPage(2)}
+                    onClick={() => {
+                      setViewNum(1);
+                      window.scrollTo(0, 0);
+                      setCurrentPage(2);
+                    }}
                   >
                     Our Platforms
                   </a>
@@ -83,7 +95,11 @@ function Docs({ match }) {
                   <a
                     className={currentPage == 3 ? "active" : ""}
                     style={{ textDecoration: "none" }}
-                    onClick={() => setCurrentPage(3)}
+                    onClick={() => {
+                      setViewNum(1);
+                      window.scrollTo(0, 0);
+                      setCurrentPage(3);
+                    }}
                   >
                     Vision
                   </a>
@@ -92,7 +108,11 @@ function Docs({ match }) {
                   <a
                     className={currentPage == 4 ? "active" : ""}
                     style={{ textDecoration: "none" }}
-                    onClick={() => setCurrentPage(4)}
+                    onClick={() => {
+                      setViewNum(1);
+                      window.scrollTo(0, 0);
+                      setCurrentPage(4);
+                    }}
                   >
                     Disclaimers and Risks
                   </a>
@@ -101,7 +121,11 @@ function Docs({ match }) {
                   <a
                     className={currentPage == 5 ? "active" : ""}
                     style={{ textDecoration: "none" }}
-                    onClick={() => setCurrentPage(5)}
+                    onClick={() => {
+                      setViewNum(1);
+                      window.scrollTo(0, 0);
+                      setCurrentPage(5);
+                    }}
                   >
                     Terms and Definitions
                   </a>

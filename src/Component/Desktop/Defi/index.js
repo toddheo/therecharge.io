@@ -225,11 +225,11 @@ function Defi({
       style={
         modalPoolOpen || modalSwapOpen
           ? {
-              position: "fixed",
-              top: "-20px",
-              width: "100%",
-              backgroundColor: "#02051c",
-            }
+            position: "fixed",
+            top: "-20px",
+            width: "100%",
+            backgroundColor: "#02051c",
+          }
           : {}
       }
     >
@@ -342,9 +342,8 @@ function Defi({
                               {...cell.getCellProps()}
                               onClick={() => {
                                 setParams({
-                                  type: `${
-                                    myPools[row.index].type.split(" ")[0]
-                                  }`,
+                                  type: `${myPools[row.index].type.split(" ")[0]
+                                    }`,
                                   isLP: false,
                                 });
 
@@ -382,8 +381,8 @@ function Defi({
                 <div className="title Roboto_30pt_Medium">
                   {analytics.ERC.total
                     ? convertNum(weiToEther(convertNum(analytics.ERC.total)), {
-                        unitSeparator: true,
-                      })
+                      unitSeparator: true,
+                    })
                     : 0}{" "}
                   RCG
                 </div>
@@ -395,8 +394,8 @@ function Defi({
                 <div className="title Roboto_30pt_Medium">
                   {analytics.HRC.total
                     ? convertNum(weiToEther(convertNum(analytics.HRC.total)), {
-                        unitSeparator: true,
-                      })
+                      unitSeparator: true,
+                    })
                     : 0}{" "}
                   RCG
                 </div>
@@ -580,6 +579,8 @@ function Defi({
         account={account}
         setSelCharger={setSelCharger}
         sel={sel}
+        chainId={chainId}
+        toast={toast}
       />
       <ModalSwap
         web3={web3}

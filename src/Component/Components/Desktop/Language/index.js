@@ -70,7 +70,7 @@ const Dropdown = styled.div`
   flex-direction: column;
   width: 100px;
   height: 80px;
-  color: var(--black);
+  background-color: black;
 `;
 const Row = styled.div`
   display: flex;

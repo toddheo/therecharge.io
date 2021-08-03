@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import DefaultSlider from "../../Components/Slider";
+import DefaultSlider from "../../Components/Common/Slider";
 import styled from "styled-components";
 import { Helmet } from "react-helmet";
 import Modal1 from "./modal1";

@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 
-import Language from "../../Components/Language";
+import Language from "../../Components/Desktop/Language";
 
 function Gnb({ connectWallet, account, onDisconnect }) {
   const { t, i18n } = useTranslation();

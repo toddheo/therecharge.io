@@ -69,7 +69,7 @@ function Gnb({
         )}
       </Logo>
       <div className="state Roboto_30pt_Black">{getTitle()}</div>
-      <div
+      {/* <div
         className="lang Roboto_30pt_Black"
         onClick={() => {
           i18n.changeLanguage(i18n.language != "en" ? "en" : "ko");
@@ -77,7 +77,7 @@ function Gnb({
         }}
       >
         {i18n.language.toUpperCase()}
-      </div>
+      </div> */}
       <div className="hamButton" onClick={() => open()}>
         <img src={menuOpen ? "/ic_menu_close.svg" : "/ic_menu.svg"} />
       </div>
@@ -429,7 +429,10 @@ function Gnb({
               <div
                 className="logo"
                 onClick={() =>
-                  (window.location = "https://t.me/therecharge_officialkr")
+                  (window.location =
+                    i18n.language == "en"
+                      ? "https://t.me/therecharge_official"
+                      : "https://t.me/therecharge_officialkr")
                 }
               >
                 <img src="/footer4.png" />
@@ -458,6 +461,20 @@ function Gnb({
             </div>
           </div>
         </Footer>
+        <Lang
+          onClick={() =>
+            i18n.changeLanguage(i18n.language != "en" ? "en" : "ko")
+          }
+        >
+          <div className="Roboto_35pt_Black">
+            <img src="/lang/ic-eng.svg" />
+            <span className={i18n.language == "en" ? "bold" : ""}>ENG</span>
+          </div>
+          <div className="Roboto_35pt_Black">
+            <img src="/lang/ic-kor.svg" />
+            <span className={i18n.language == "ko" ? "bold" : ""}>KOR</span>
+          </div>
+        </Lang>
       </div>
     </Container>
   );
@@ -593,6 +610,7 @@ const Container = styled.div`
 const Logo = styled.div`
   margin: auto;
   margin-left: 50px;
+  margin-right: 0px;
   img {
     width: 40px;
     height: 40px;
@@ -619,7 +637,8 @@ const ConnectWallet = styled.div`
 const Footer = styled.div`
   display: flex;
   margin: auto;
-  margin-bottom: 10vh;
+  // margin-bottom: 10vh;
+  margin-bottom: 0px;
 
   .footer {
     display: flex;
@@ -633,7 +652,7 @@ const Footer = styled.div`
       padding: 14px 79px 13px 61px;
       text-align: center;
       border: 1px solid var(--yellow);
-      border-radius: 10px;
+      border-radius: 27px;
       box-sizing: border-box;
 
       span {
@@ -660,7 +679,33 @@ const Footer = styled.div`
     }
     .bottom {
       margin: 0 auto;
-      margin-bottom: 80px;
+      margin-bottom: 0px;
+    }
+  }
+`;
+
+const Lang = styled.div`
+  display: flex;
+  margin: auto auto;
+  margin-top: 40px;
+  flex-wrap: wrap;
+  gap: 80px;
+
+  div {
+    display: flex;
+    margin: auto auto;
+    gap: 20px;
+
+    img {
+      height: 46px;
+    }
+
+    span {
+      font-weight: 400;
+    }
+
+    .bold {
+      font-weight: bold;
     }
   }
 `;

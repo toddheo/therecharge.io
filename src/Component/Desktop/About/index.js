@@ -145,9 +145,7 @@ function About({ t }) {
             <div className="tier">
               <div
                 className="partner"
-                onClick={() =>
-                  (window.location = "https://info.uniswap.org/#/")
-                }
+                onClick={() => { window.open("https://info.uniswap.org/#/", "_blank") }}
               >
                 <div className="logo">
                   <img
@@ -162,7 +160,7 @@ function About({ t }) {
               </div>
               <div
                 className="partner"
-                onClick={() => (window.location = "https://coinmarketcap.com/")}
+                onClick={() => { window.open("https://coinmarketcap.com/", "_blank") }}
               >
                 <div className="logo">
                   <img
@@ -177,7 +175,7 @@ function About({ t }) {
               </div>
               <div
                 className="partner"
-                onClick={() => (window.location = "https://xangle.io/")}
+                onClick={() => { window.open("https://xangle.io/", "_blank") }}
               >
                 <div className="logo">
                   <img
@@ -194,7 +192,7 @@ function About({ t }) {
             <div className="tier">
               <div
                 className="partner"
-                onClick={() => (window.location = "https://cobak.co.kr/")}
+                onClick={() => { window.open("https://cobak.co.kr/", "_blank") }}
               >
                 <div className="logo">
                   <img
@@ -214,7 +212,7 @@ function About({ t }) {
               </div>
               <div
                 className="partner"
-                onClick={() => (window.location = "https://snapshot.org/")}
+                onClick={() => { window.open("https://snapshot.org/", "_blank") }}
               >
                 <div className="logo">
                   <img
@@ -223,7 +221,7 @@ function About({ t }) {
                     style={{ height: "78px", width: "65.2px" }}
                   />
                 </div>
-                <div className="desc text Roboto_16pt_Regular">
+                <div className={"desc text " + (t("About/Recharge-is-on/5")[0] == "P" ? "Roboto_16pt_Regular" : "Roboto_20pt_Regular")}>
                   {t("About/Recharge-is-on/5")}
                 </div>
               </div>

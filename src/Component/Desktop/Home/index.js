@@ -227,23 +227,20 @@ function Home({ t }) {
             <div className="tier">
               <div
                 className="partner"
-                onClick={() => (window.location = "https://ethereum.org/en/")}
+                onClick={() => { window.open("https://ethereum.org/en/", "_blank") }}
               >
                 <img src="/ic_etheteum.svg" />
               </div>
               <div
                 className="partner"
-                onClick={() =>
-                  (window.location = "https://www.hecochain.com/en-us/")
+                onClick={() => { window.open("https://www.hecochain.com/en-us/", "_blank") }
                 }
               >
                 <img src="/ic_huobi.svg" />
               </div>
               <div
                 className="partner"
-                onClick={() =>
-                  (window.location =
-                    "https://www.certik.org/projects/therecharge")
+                onClick={() => { window.open("https://www.certik.org/projects/therecharge", "_blank") }
                 }
               >
                 <img src="/ic_certick.svg" />
@@ -252,23 +249,21 @@ function Home({ t }) {
             <div className="tier">
               <div
                 className="partner"
-                onClick={() =>
-                  (window.location = "https://www.kakaomobility.com/")
+                onClick={() => { window.open("https://www.kakaomobility.com/", "_blank") }
                 }
               >
                 <img src="/ic_kakao.svg" />
               </div>
               <div
                 className="partner"
-                onClick={() =>
-                  (window.location = "https://www.company-pandakorea.com/")
+                onClick={() => { window.open("https://www.company-pandakorea.com/", "_blank") }
                 }
               >
                 <img src="/ic_panda.svg" />
               </div>
               <div
                 className="partner"
-                onClick={() => (window.location = "https://piggycell.com/")}
+                onClick={() => { window.open("https://piggycell.com/", "_blank") }}
               >
                 <img src="/ic_piggycell.svg" />
               </div>
@@ -276,8 +271,7 @@ function Home({ t }) {
             <div className="tier">
               <div
                 className="partner"
-                onClick={() =>
-                  (window.location = "http://www.keyeast.co.kr/index/")
+                onClick={() => { window.open("http://www.keyeast.co.kr/index/", "_blank") }
                 }
               >
                 <img src="/ic_keyeast.svg" />

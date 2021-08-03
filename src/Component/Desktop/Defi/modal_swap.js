@@ -30,6 +30,7 @@ function ModalSwap({
   account,
   chainId,
   toast,
+  redemption,
   t,
 }) {
   const [modalSwapOpen, setModalSwapOpen] = useRecoilState(modalSwapOpenState);
@@ -119,10 +120,12 @@ function ModalSwap({
   };
 
   const assetList = ["RCG", "FUP"];
-  const myAssetList = ["RCG", "ETH", "HT", "BNB", "FUP"];
+  const myAssetList = ["ERC RCG", "HRC RCG", "BEP RCG", "ETH", "HT", "BNB", "FUP"];
   const networkList = ["Ethereum", "Huobi ECO Chain"];
   const [tokensBalance, setTokensBalance] = useState({
-    RCG: 0,
+    "ERC RCG": 0,
+    "HRC RCG": 0,
+    "BEP RCG": 0,
     ETH: 0,
     HT: 0,
     BNB: 0,
@@ -188,15 +191,17 @@ function ModalSwap({
     return (
       <>
         {tokensList.map((token) => {
+          let rcg;
+          if (token === "ERC RCG" || token === "HRC RCG" || token === "BEP RCG") rcg = "RCG";
           return (
             <div className="balance">
               <div className="logo">
                 <img
-                  src={"/swap_" + tokensInfo[token].logo + ".svg"}
+                  src={"/swap_" + (rcg ? tokensInfo[rcg].logo : tokensInfo[token].logo) + ".svg"}
                   style={{ width: "25px", height: "25px" }}
                 />
                 <div className="symbol Roboto_20pt_Medium_L">
-                  {tokensInfo[token].symbol}
+                  {token}
                 </div>
               </div>
               <div className="amount Roboto_20pt_Light">
@@ -391,7 +396,7 @@ function ModalSwap({
       };
       const swap = async (swapAmount) => {
         try {
-          console.log("Type of swapAmount :", typeof swapAmount);
+          // console.log("Type of swapAmount :", typeof swapAmount);
           await swapM
             .transfer(bridgeAddress, toWei(swapAmount, "ether"))
             .send({ from: account });
@@ -442,40 +447,44 @@ function ModalSwap({
     const HECO = new Web3("https://http-mainnet.hecochain.com");
     const BNB = new Web3("https://bsc-dataseed.binance.org/");
 
-    let RCGeth, RCGht, balanceRCG, balanceETH, balanceHT, balanceBNB;
+    let RCGeth, RCGht, balanceRCG, balanceHRCRCG, balanceBEPRCG, balanceETH, balanceHT, balanceBNB;
 
-    if (chainId === 1) {
-      RCGeth = new ETH.eth.Contract(
-        ERC20_ABI,
-        "0xe74be071f3b62f6a4ac23ca68e5e2a39797a3c30"
-      );
-    }
-    if (chainId === 128) {
-      RCGht = new HECO.eth.Contract(
-        ERC20_ABI,
-        "0xbddC276CACC18E9177B2f5CFb3BFb6eef491799b"
-      );
-    }
+    RCGeth = new ETH.eth.Contract(
+      ERC20_ABI,
+      "0xe74be071f3b62f6a4ac23ca68e5e2a39797a3c30"
+    );
+
+    RCGht = new HECO.eth.Contract(
+      ERC20_ABI,
+      "0xbddC276CACC18E9177B2f5CFb3BFb6eef491799b"
+    );
+
+    // RCGbep = new ???.eth.Contract(
+    //   ERC20_ABI,
+    //   "???"
+    // );
 
     if (account) {
-      if (chainId === 1) {
-        balanceRCG = await RCGeth.methods.balanceOf(account).call();
-      }
-      if (chainId === 128) {
-        balanceRCG = await RCGht.methods.balanceOf(account).call();
-      }
+
+      balanceRCG = await RCGeth.methods.balanceOf(account).call();
+      balanceHRCRCG = await RCGht.methods.balanceOf(account).call();
+      balanceBEPRCG = 0;
       balanceETH = await ETH.eth.getBalance(account);
       balanceHT = await HECO.eth.getBalance(account);
       balanceBNB = await BNB.eth.getBalance(account);
 
       balanceRCG = makeNum(weiToEther(balanceRCG));
+      balanceHRCRCG = makeNum(weiToEther(balanceHRCRCG));
+      // balanceBEPRCG = makeNum(weiToEther(balanceBEPRCG));
       balanceETH = makeNum(weiToEther(balanceETH));
       balanceHT = makeNum(weiToEther(balanceHT));
       balanceBNB = makeNum(weiToEther(balanceBNB));
 
       setTokensBalance({
         ...tokensBalance,
-        RCG: balanceRCG,
+        "ERC RCG": balanceRCG,
+        "HRC RCG": balanceHRCRCG,
+        "BEP RCG": balanceBEPRCG,
         ETH: balanceETH,
         HT: balanceHT,
         BNB: balanceBNB,
@@ -756,20 +765,20 @@ function ModalSwap({
                     </div>
                     <div className="right Roboto_20pt_Black">
                       <div className="detail">
-                        {Number(poolMethods.redemption).toFixed(2).toString()}%
+                        {redemption ? redemption / 100 : 0} %
                       </div>
                       <div className="detail">
                         {selAsset.conversionFee[selAsset.chainId[recipe.from]]}{" "}
                         {selAsset.symbol}
                       </div>
                       <div className="detail">
-                        {makeNum(recipe.swapAmount)} {selAsset.symbol}
+                        {makeNum(recipe.swapAmount ? recipe.swapAmount : 0)} {selAsset.symbol}
                       </div>
                       <div className="detail">
                         {makeNum(
                           (
                             (recipe.swapAmount / 100) *
-                            poolMethods.redemption
+                            (redemption ? redemption / 100 : 1)
                           ).toString()
                         )}{" "}
                         {selAsset.symbol}
@@ -778,7 +787,7 @@ function ModalSwap({
                         {makeNum(
                           (
                             recipe.swapAmount -
-                            (recipe.swapAmount / 100) * poolMethods.redemption -
+                            (recipe.swapAmount / 100) * (redemption ? redemption / 100 : 1) -
                             selAsset.conversionFee[
                             selAsset.chainId[recipe.from]
                             ]

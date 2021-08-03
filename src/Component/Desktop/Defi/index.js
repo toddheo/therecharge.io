@@ -377,7 +377,51 @@ function Defi({
           </div>
           <div className="contents">
             <div className="container">
-              <div className="large box">
+              <div className="left box exception">
+                <div className="title Roboto_30pt_Medium">
+                  {analytics.general.RedemptionRate
+                    ? analytics.general.RedemptionRate / 100
+                    : 0}{" "}%
+                </div>
+                <div className="text Roboto_16pt_Regular_Gray">
+                  Current Redemption Rate
+                </div>
+              </div>
+              <div className="right box exception">
+                <div className="item">
+                  <div className="title Roboto_20pt_Black">
+                    {analytics.general.ServicesPlugged
+                      ? analytics.general.ServicesPlugged
+                      : 0}
+                  </div>
+                  <div className="text Roboto_16pt_Regular_Gray">
+                    Number of Services{<br />}Plugged
+                  </div>
+                </div>
+                <div className="item">
+                  <div className="title Roboto_20pt_Black">
+                    {analytics.general.ChargersActivated
+                      ? analytics.general.ChargersActivated
+                      : 0}
+                  </div>
+                  <div className="text Roboto_16pt_Regular_Gray">
+                    Number of Chargers{<br />}Activated
+                  </div>
+                </div>
+                <div className="item">
+                  <div className="title Roboto_20pt_Black">
+                    {analytics.general.BridgesActivated
+                      ? analytics.general.BridgesActivated
+                      : 0}
+                  </div>
+                  <div className="text Roboto_16pt_Regular_Gray">
+                    Number of Bridges{<br />}Activated
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="container">
+              <div className="left box">
                 <div className="title Roboto_30pt_Medium">
                   {analytics.ERC.total
                     ? convertNum(weiToEther(convertNum(analytics.ERC.total)), {
@@ -389,8 +433,51 @@ function Defi({
                 <div className="text Roboto_16pt_Regular_Gray">
                   Total Circulating Supply in ERC20
                 </div>
+                <div className="logo">
+                  <img src="/swap_eth.svg" style={{ width: "25px", height: "25px" }} />
+                </div>
               </div>
-              <div className="large box">
+              <div className="right box">
+                <div className="content le">
+                  <div className="item">
+                    <div className="title Roboto_20pt_Black">
+                      {analytics.ERC.redemption ? analytics.ERC.redemption : 0} RCG
+                    </div>
+                    <div className="text Roboto_16pt_Regular_Gray">
+                      Accumulated Carbon Redemption ERC20
+                    </div>
+                  </div>
+                  <div className="item">
+                    <div className="title Roboto_20pt_Black">
+                      $ {analytics.ERC.price ? analytics.ERC.price : 0}
+                    </div>
+                    <div className="text Roboto_16pt_Regular_Gray">
+                      Current RCG Price($) ERC20 Uniswap
+                    </div>
+                  </div>
+                </div>
+                <div className="content">
+                  <div className="item">
+                    <div className="title Roboto_20pt_Black">
+                      {analytics.ERC.swapped ? analytics.ERC.swapped : 0}
+                    </div>
+                    <div className="text Roboto_16pt_Regular_Gray">
+                      RCG (ERC20) Swapped in
+                    </div>
+                  </div>
+                  <div className="item">
+                    <div className="title Roboto_20pt_Black">
+                      {analytics.ERC.conversion ? analytics.ERC.conversion : 0}{" "}RCG
+                    </div>
+                    <div className="text Roboto_16pt_Regular_Gray">
+                      Accumulated Conversion Fee(ERC20)
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="container">
+              <div className="left box">
                 <div className="title Roboto_30pt_Medium">
                   {analytics.HRC.total
                     ? convertNum(weiToEther(convertNum(analytics.HRC.total)), {
@@ -402,164 +489,102 @@ function Defi({
                 <div className="text Roboto_16pt_Regular_Gray">
                   Total Circulating Supply in HRC20
                 </div>
+                <div className="logo">
+                  <img src="/swap_ht.svg" style={{ width: "25px", height: "25px" }} />
+                </div>
+              </div>
+              <div className="right box">
+                <div className="content le">
+                  <div className="item">
+                    <div className="title Roboto_20pt_Black">
+                      {analytics.HRC.redemption ? analytics.HRC.redemption : 0} RCG
+                    </div>
+                    <div className="text Roboto_16pt_Regular_Gray">
+                      Accumulated Carbon Redemption HRC20
+                    </div>
+                  </div>
+                  <div className="item">
+                    <div className="title Roboto_20pt_Black">
+                      $ {analytics.HRC.price ? analytics.HRC.price : 0}
+                    </div>
+                    <div className="text Roboto_16pt_Regular_Gray">
+                      Current RCG Price($) HRC20-Mdex
+                    </div>
+                  </div>
+                </div>
+                <div className="content">
+                  <div className="item">
+                    <div className="title Roboto_20pt_Black">
+                      {analytics.HRC.swapped ? analytics.HRC.swapped : 0}
+                    </div>
+                    <div className="text Roboto_16pt_Regular_Gray">
+                      RCG (HRC20) Swapped in
+                    </div>
+                  </div>
+                  <div className="item">
+                    <div className="title Roboto_20pt_Black">
+                      {analytics.HRC.conversion ? analytics.HRC.conversion : 0}{" "}RCG
+                    </div>
+                    <div className="text Roboto_16pt_Regular_Gray">
+                      Accumulated Conversion Fee(HRC20)
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
             <div className="container">
-              <div className="medium box">
-                <div className="title">
-                  {analytics.ERC.redemption ? analytics.ERC.redemption : 0} RCG
+              <div className="left box">
+                <div className="title Roboto_30pt_Medium">
+                  0 RCG
                 </div>
                 <div className="text Roboto_16pt_Regular_Gray">
-                  Accumulated Carbon Redemption ERC20
+                  Total Circulating Supply in BEP20
+                </div>
+                <div className="logo">
+                  <img src="/swap_bnb.svg" style={{ width: "25px", height: "25px" }} />
                 </div>
               </div>
-              <div className="medium box">
-                <div className="title">
-                  {analytics.HRC.redemption ? analytics.HRC.redemption : 0} RCG
-                </div>
-                <div className="text Roboto_16pt_Regular_Gray">
-                  Accumulated Carbon Redemption HRC20
-                </div>
-              </div>
-              <div className="medium box">
-                <div className="title">
-                  $ {analytics.ERC.price ? analytics.ERC.price : 0}
-                </div>
-                <div className="text Roboto_16pt_Regular_Gray">
-                  Current RCG Price ($) ERC20 Uniswap
-                </div>
-              </div>
-              <div className="medium box">
-                <div className="title">
-                  $ {analytics.HRC.price ? analytics.HRC.price : 0}
-                </div>
-                <div className="text Roboto_16pt_Regular_Gray">
-                  Current RCG Price ($) HRC20-Mdex
-                </div>
-              </div>
-            </div>
-            <div className="container">
-              <div className="subCont">
-                <div className="small box">
-                  <div className="title">
-                    {analytics.general.ServicesPlugged
-                      ? analytics.general.ServicesPlugged
-                      : 0}
+              <div className="right box">
+                <div className="content le">
+                  <div className="item">
+                    <div className="title Roboto_20pt_Black">
+                      0 RCG
+                    </div>
+                    <div className="text Roboto_16pt_Regular_Gray">
+                      Accumulated Carbon Redemption BEP20
+                    </div>
                   </div>
-                  <div className="text Roboto_16pt_Regular_Gray">
-                    Number of Services Plugged
+                  <div className="item">
+                    <div className="title Roboto_20pt_Black">
+                      $ 0.00
+                    </div>
+                    <div className="text Roboto_16pt_Regular_Gray">
+                      Current RCG Price($) BEP20 Pancakeswap
+                    </div>
                   </div>
                 </div>
-                <div className="small box">
-                  <div className="title">
-                    {analytics.general.ChargersActivated
-                      ? analytics.general.ChargersActivated
-                      : 0}
+                <div className="content">
+                  <div className="item">
+                    <div className="title Roboto_20pt_Black">
+                      0.00
+                    </div>
+                    <div className="text Roboto_16pt_Regular_Gray">
+                      RCG (BEP20) Swapped in
+                    </div>
                   </div>
-                  <div className="text Roboto_16pt_Regular_Gray">
-                    Number of Chargers Activated
-                  </div>
-                </div>
-                <div className="small box">
-                  <div className="title">
-                    {analytics.general.ProposalsPosted
-                      ? analytics.general.ProposalsPosted
-                      : 0}
-                  </div>
-                  <div className="text Roboto_16pt_Regular_Gray">
-                    Number of Proposals posted
-                  </div>
-                </div>
-                <div className="small box">
-                  <div className="title">
-                    {analytics.general.ProposalsApproved
-                      ? analytics.general.ProposalsApproved
-                      : 0}
-                  </div>
-                  <div className="text Roboto_16pt_Regular_Gray">
-                    Number of Proposals Approved
-                  </div>
-                </div>
-                <div className="small box">
-                  <div className="title">
-                    {analytics.ERC.swapped ? analytics.ERC.swapped : 0}
-                  </div>
-                  <div className="text Roboto_16pt_Regular_Gray">
-                    RCG (ERC20) Swapped in
-                  </div>
-                </div>
-                <div className="small box">
-                  <div className="title">
-                    {analytics.ERC.conversion ? analytics.ERC.conversion : 0}{" "}
-                    RCG
-                  </div>
-                  <div className="text Roboto_14pt_Regular_Gray">
-                    Accumulated Conversion Fee(ERC20)
-                  </div>
-                </div>
-              </div>
-              <div className="subCont">
-                <div className="small box">
-                  <div className="title">
-                    {analytics.general.BridgesActivated
-                      ? analytics.general.BridgesActivated
-                      : 0}
-                  </div>
-                  <div className="text Roboto_16pt_Regular_Gray">
-                    Number of Bridges Activated
-                  </div>
-                </div>
-                <div className="small box">
-                  <div className="title">
-                    {analytics.general.RedemptionRate
-                      ? analytics.general.RedemptionRate / 100
-                      : 0}{" "}
-                    %
-                  </div>
-                  <div className="text Roboto_16pt_Regular_Gray">
-                    Current Redemption Rate
-                  </div>
-                </div>
-                <div className="small box">
-                  <div className="title">
-                    {analytics.general.ProposalsRejected
-                      ? analytics.general.ProposalsRejected
-                      : 0}
-                  </div>
-                  <div className="text Roboto_16pt_Regular_Gray">
-                    Number of Proposals Rejected
-                  </div>
-                </div>
-                <div className="small box">
-                  <div className="title">
-                    {analytics.general.ProposalsPending
-                      ? analytics.general.ProposalsPending
-                      : 0}
-                  </div>
-                  <div className="text Roboto_16pt_Regular_Gray">
-                    Number of Proposals Pending
-                  </div>
-                </div>
-                <div className="small box">
-                  <div className="title">
-                    {analytics.HRC.swapped ? analytics.HRC.swapped : 0}
-                  </div>
-                  <div className="text Roboto_16pt_Regular_Gray">
-                    RCG (HRC20) Swapped in
-                  </div>
-                </div>
-                <div className="small box">
-                  <div className="title">
-                    {analytics.HRC.conversion ? analytics.HRC.conversion : 0}{" "}
-                    RCG
-                  </div>
-                  <div className="text Roboto_14pt_Regular_Gray">
-                    Accumulated Conversion Fee(HRC20)
+                  <div className="item">
+                    <div className="title Roboto_20pt_Black">
+                      0.00 RCG
+                    </div>
+                    <div className="text Roboto_16pt_Regular_Gray">
+                      Accumulated Conversion Fee(BEP20)
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
+
           {/* <div className="subTheme Roboto_30pt_Medium">
               Daily Carbon Redemption
             </div>
@@ -593,6 +618,7 @@ function Defi({
         toast={toast}
         chargerList={chargerList}
         chargerInfoList={chargerInfoList}
+        redemption={analytics.general.RedemptionRate}
       />
       <Footer />
     </Container>
@@ -731,72 +757,93 @@ const Content = styled.div`
       margin-bottom: 80px;
     }
     .contents {
-      display: grid;
+      display: flex;
+      flex-direction: column;
+      gap: 20px 0;
       width: 100%;
       gap: 16px 0;
       margin-bottom: 120px;
 
-      .container:nth-child(1) {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 0 20px;
+      .container {
+        display: flex;
+        gap: 0 8px;
 
-        .large {
-          width: 534px;
-          height: 148px;
-          padding: 40px 0;
+        .left {
+          position: relative;
+          width: 400px;
+          height: 230px;
+          display: flex;
+          flex-direction: column;
+          gap: 8px 0;
           box-sizing: border-box;
+          padding: 20px;
+          justify-content: center;
+          align-items: center;
 
-          .title {
-            margin-bottom: 8px;
+          .logo {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
           }
         }
-      }
-      .container:nth-child(2) {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 8px 20px;
 
-        .medium {
-          width: 534px;
-          height: 95px;
+        .left.exception {
+          height: 120px;
+        }
 
+        .right.exception {
+          display: flex;
+          height: 120px;
+          padding: 0 40px;
+          box-sizing: border-box;
+          justify-content: space-between;
+          align-items: center;
+          
+          .item {
+            display: flex;
+            flex-direction: column;
+            gap: 8px 0;
+          }
           .title {
-            margin-bottom: 8px;
+            text-align: left;
+          }
+          .text {
+            text-align: left;
           }
         }
-      }
-      .container:nth-child(3) {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 8px 20px;
 
-        .subCont:nth-child(1) {
-          display: grid;
-          grid-template-columns: repeat(2, 1fr);
-          gap: 8px 8px;
-        }
-        .subCont:nth-child(2) {
-          display: grid;
-          grid-template-columns: repeat(2, 1fr);
-          gap: 8px 8px;
-        }
-        .small {
-          width: 263px;
-          height: 95px;
+        .right {
+          display: flex;
+          width: 680px;
+          height: 230px;
 
-          .title {
-            margin-bottom: 8px;
+          .content {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            margin-left: 40px;
+            gap: 20px 0;
+            
+            .item {
+              display: flex;
+              flex-direction: column;
+              gap: 8px 0;
+            }
+            .title {
+              text-align: left;
+            }
+            .text {
+              text-align: left;
+            }
+          }
+          .le {
+            width: 302px;
           }
         }
       }
       .box {
         background-color: var(--black-30);
         border-radius: 20px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
       }
       .box:hover {
         background-color: var(--black-20);

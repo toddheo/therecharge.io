@@ -199,7 +199,6 @@ function Recharge({ t }) {
           <div className="title Roboto_50pt_Black">Coming up Soon</div>
         </div>
       </Content>
-
       <Footer />
       <Background />
     </Container>

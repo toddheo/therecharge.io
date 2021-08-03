@@ -102,7 +102,7 @@ const Desktop = React.memo(
         toast(t("Connect/wallet"));
         connectEventHandler(provider);
       } catch (e) {
-        toast(t("ConnectFail/wallet"));
+        e ? toast(t("ConnectFail/wallet")) : toast(t("ConnectFail/metamask"))
         console.log("Could not get a wallet connection", e);
         return;
       }

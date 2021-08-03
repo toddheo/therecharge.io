@@ -111,7 +111,7 @@ const Mobile = React.memo(
         toast("Wallet Connected!");
         connectEventHandler(provider);
       } catch (e) {
-        toast("Wallet Connect Failed. Please try again");
+        e ? toast("Wallet Connect Failed. Please try again") : toast("Wallet Connect Failed. Please Log-in metamask")
         console.log("Could not get a wallet connection", e);
         return;
       }

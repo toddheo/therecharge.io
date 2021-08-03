@@ -1,15 +1,14 @@
 {
   "hello": "Hello!",
-
   "Ask/Connect": "Please connect wallet!",
   "Connect/wallet": "Wallet Connected!",
   "ConnectFail/wallet": "Wallet Connect Failed. Please try again",
+  "ConnectFail/metamask": "Wallet Connect Failed. Please Log-in metamask",
   "LoseConnection/wallet": "Wallet lose connection.",
   "Disconnect/wallet": "Disconnecting Wallet",
   "Change/account": "Account changed",
   "Change/chainId": "ChainId changed",
   "Change/network": "Network changed",
-
   "Home/text/title": "The Recharge",
   "Home/text/info": "Decentralized Incentive Hub for Electric Power Based Ecosystem.\nWe aim to provide a long-term sustainable eco-system that helps accelerate electric powered services to reduce carbon emissions.",
   "Home/text/if-cannot-embed-videos": "Sorry, your browser doesn't support embedded videos.",
@@ -24,7 +23,6 @@
   "Home/Visioning/text/22Q1": "- EV Charging Complex 1st unveiling\n- Adoption of EV Charging Complex into Recharge Ecosystem",
   "Home/Visioning/text/22Q2": "- EV Charging Complex Opening\n- 3rd Recharge Ecosystem Partner Service Unveiling",
   "Home/Platforms/text/title": "Platforms and Verifiers",
-
   "About/Ecosystem": "The recharge is an electric powered ecosystem using blockchain technology to provide a decentralized incentive solution to ecosystem partners.",
   "About/Recharge-Virtuous-Cycle": "The Recharge is creating a new value by the carbon redemption point while performing a token transaction",
   "About/Member/jayLee/title": "Jay Lee | CEO",
@@ -38,7 +36,6 @@
   "About/Recharge-is-on/3": "Provides disclosure practices of the crypto industry",
   "About/Recharge-is-on/4": "No.1 Crypto community in Korea",
   "About/Recharge-is-on/5": "Provides a off-chain, gasless, multi-governance community polling dashboard",
-
   "RechargeToken/Features/1/title": "Frequent Use Point",
   "RechargeToken/Features/1/content": "Frequent Use Point (FUP) is designed to reward regular users on the Recharge Ecosystem.\nAny payment made in the Recharge connected services will provide Frequent User Point on a pro rata basis.\nFUP is switchable with Recharge Token on a station in Recharge Ecosystem. ",
   "RechargeToken/Features/2/title": "Automated Carbon Redemption",
@@ -65,13 +62,11 @@
   "RechargeToken/Distribution/bep20": "BEP-20 (Binance Smart Chain)",
   "RechargeToken/Governance/title": "Recharge Governance",
   "RechargeToken/Governance/content": "Recharge Governance is designed for Recharge Ecosystem Contributors to shape the future of the protocols.\nRecharge holders can influence decision concerning the Recharge Ecosystem such as proposals and decision makings on shaping the ecosystem. ",
-
   "De-Fi/Station/charging-station": "All in one staking tool to maximize your incentives on Recharge Ecosystem",
   "De-Fi/Station/recharge-swap": "Scalability through connectivity solution. One click swap experience between the different mainnets.",
   "De-Fi/Station/MyPool/ask-connect": "Connect to Wallet",
   "De-Fi/Station/MyPool/no-pool": "There is no staking pool participated",
   "De-Fi/Station/Charger/content": "Maximize your RCG by choosing a right charger Locked options generally provide higher yield than the other options due to its inflexibility",
   "De-Fi/Station/Recharge/content": "Recharge swap is a cross chain gateway for Frequent Use Point as well as major blockchain protocols. We aim to provide a simple and easy swap experience for Recharge Token. Recharge Swap is compatible with ERC 20, HRC20, and BEP20.",
-
   "end": "end"
 }

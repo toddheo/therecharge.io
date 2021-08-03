@@ -129,12 +129,13 @@ function Pool({
           name: "No supplied pool",
           apy: "0",
         }]);
+        return;
       }
       let temp = data.map((d) => {
         return {
           ...d,
           name: `${d.name.substring(0, 13)}`,
-          apy: d.apy > 1000 ? "999+" : `${d.apy.toFixed(4)}`,
+          apy: d.apy > 0 ? (d.apy > 1000 ? "999+" : `${d.apy.toFixed(4)}`) : 0,
         };
       });
       let temp2 = data.map((d) => {
@@ -150,6 +151,7 @@ function Pool({
       console.log(err);
       console.log("There are no supplied pools")
     }
+    return;
   };
 
   const loadPoolInfo = async () => {
@@ -292,23 +294,13 @@ function Pool({
     prepareRow
   } = useTable({ columns, data /*initialState*/ }, useSortBy);
 
-  useEffect(() => {
-    loadChargerList();
-    loadPoolInfo();
-  }, [params]);
-
-  useEffect(() => {
-    if (!account) return;
-    if (chList[sel].address === "0x00") return;
-    // console.log("passed loadMethods!!!")
-    loadUserInfo();
-    loadMethods(poolInfo.token[0], poolInfo.token[1], chList[sel].address);
-  }, [account]);
-
   useEffect(async () => {
     setOnLoading(true);
     try {
-      if (account && chList[sel].address !== "0x00") {
+      if (chList[0].name === "Now Loading") {
+        await loadChargerList();
+      }
+      else if (account && chList[sel].address !== "0x00") {
         await Promise.all([
           loadPoolInfo(),
           loadUserInfo(),
@@ -320,8 +312,23 @@ function Pool({
     } catch (err) {
       console.log(err);
     }
-    setOnLoading(false);
-  }, [sel]);
+  }, [params, sel]);
+
+  useEffect(async () => {
+    await loadPoolInfo();
+  }, [chList])
+
+  useEffect(async () => {
+    if (chList[sel].address !== "0x00") setOnLoading(false);
+    if (chList[sel].name === "No supplied pool") setOnLoading(false);
+  }, [poolInfo])
+
+  useEffect(() => {
+    if (!account) return;
+    if (chList[sel].address === "0x00") return;
+    loadUserInfo();
+    loadMethods(poolInfo.token[0], poolInfo.token[1], chList[sel].address);
+  }, [account]);
 
   const useInterval = (callback, delay) => {
     const savedCallback = useRef();
@@ -355,7 +362,6 @@ function Pool({
   useInterval(() => updateChargerInfoList(), 5000);
 
   useEffect(() => {
-    console.log("chainID :", chainId)
     if (chainId === -1) return;
     if (chainId !== 128) {
       toast("MetaMask의 네트워크를 HECO 메인넷으로 변경해주세요.")
@@ -524,7 +530,7 @@ function Pool({
             <div className="detail">
               <div className="left Roboto_20pt_Light">APY</div>
               <div className="right Roboto_20pt_Black_L">
-                {poolInfo.apy > 100000 ? '100,000.000+%' : makeNum(poolInfo.apy)} %
+                {poolInfo.apy > 0 ? (poolInfo.apy > 100000 ? '100,000.000+%' : makeNum(poolInfo.apy)) : 0} %
               </div>
             </div>
             <div className="detail">
@@ -906,7 +912,7 @@ function Pool({
                   %
                 </div>
                 <div className="detail">
-                  {plAmount} {poolInfo.symbol[0]}
+                  {plAmount ? plAmount : 0} {poolInfo.symbol[0]}
                 </div>
                 <div className="detail">
                   {makeNum(

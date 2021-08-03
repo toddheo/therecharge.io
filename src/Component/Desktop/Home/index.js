@@ -226,23 +226,20 @@ function Home({ t }) {
             <div className="tier">
               <div
                 className="partner"
-                onClick={() => (window.location = "https://ethereum.org/en/")}
+                onClick={() => { window.open("https://ethereum.org/en/", "_blank") }}
               >
                 <img src="/ic_etheteum.svg" />
               </div>
               <div
                 className="partner"
-                onClick={() =>
-                  (window.location = "https://www.hecochain.com/en-us/")
+                onClick={() => { window.open("https://www.hecochain.com/en-us/", "_blank") }
                 }
               >
                 <img src="/ic_huobi.svg" />
               </div>
               <div
                 className="partner"
-                onClick={() =>
-                  (window.location =
-                    "https://www.certik.org/projects/therecharge")
+                onClick={() => { window.open("https://www.certik.org/projects/therecharge", "_blank") }
                 }
               >
                 <img src="/ic_certick.svg" />
@@ -251,23 +248,21 @@ function Home({ t }) {
             <div className="tier">
               <div
                 className="partner"
-                onClick={() =>
-                  (window.location = "https://www.kakaomobility.com/")
+                onClick={() => { window.open("https://www.kakaomobility.com/", "_blank") }
                 }
               >
                 <img src="/ic_kakao.svg" />
               </div>
               <div
                 className="partner"
-                onClick={() =>
-                  (window.location = "https://www.company-pandakorea.com/")
+                onClick={() => { window.open("https://www.company-pandakorea.com/", "_blank") }
                 }
               >
                 <img src="/ic_panda.svg" />
               </div>
               <div
                 className="partner"
-                onClick={() => (window.location = "https://piggycell.com/")}
+                onClick={() => { window.open("https://piggycell.com/", "_blank") }}
               >
                 <img src="/ic_piggycell.svg" />
               </div>
@@ -275,8 +270,7 @@ function Home({ t }) {
             <div className="tier">
               <div
                 className="partner"
-                onClick={() =>
-                  (window.location = "http://www.keyeast.co.kr/index/")
+                onClick={() => { window.open("http://www.keyeast.co.kr/index/", "_blank") }
                 }
               >
                 <img src="/ic_keyeast.svg" />
@@ -296,49 +290,42 @@ function Home({ t }) {
             <div
               className="logo"
               onClick={() =>
-                (window.location = "https://github.com/therecharge")
+                window.open("https://github.com/therecharge", "_blank")
               }
             >
               <img src="/footer1.png" />
             </div>
             <div
               className="logo"
-              onClick={() =>
-                (window.location = "https://medium.com/therecharge")
+              onClick={() => { window.open("https://medium.com/therecharge", "_blank") }
               }
             >
               <img src="/footer2.png" />
             </div>
             <div
               className="logo"
-              onClick={() =>
-                (window.location = "https://twitter.com/TheRecharge_")
+              onClick={() => { window.open("https://twitter.com/TheRecharge_", "_blank") }
               }
             >
               <img src="/footer3.png" />
             </div>
             <div
               className="logo"
-              onClick={() =>
-                (window.location = "https://t.me/therecharge_officialkr")
+              onClick={() => { window.open("https://t.me/therecharge_officialkr", "_blank") }
               }
             >
               <img src="/footer4.png" />
             </div>
             <div
               className="logo"
-              onClick={() =>
-                (window.location =
-                  "https://etherscan.io/token/0xe74bE071f3b62f6A4aC23cA68E5E2A39797A3c30")
+              onClick={() => { window.open("https://etherscan.io/token/0xe74bE071f3b62f6A4aC23cA68E5E2A39797A3c30", "_blank") }
               }
             >
               <img src="/footer5.png" />
             </div>
             <div
               className="logo"
-              onClick={() =>
-                (window.location =
-                  "https://hecoinfo.com/token/0xbddC276CACC18E9177B2f5CFb3BFb6eef491799b")
+              onClick={() => { window.open("https://hecoinfo.com/token/0xbddC276CACC18E9177B2f5CFb3BFb6eef491799b", "_blank") }
               }
             >
               <img src="/footer6.png" />

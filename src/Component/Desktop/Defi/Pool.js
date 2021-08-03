@@ -133,7 +133,7 @@ function Pool({
       let temp = data.map((d) => {
         return {
           ...d,
-          name: `${d.name.substring(0, 15)} ...`,
+          name: `${d.name.substring(0, 13)}`,
           apy: d.apy > 1000 ? "999+" : `${d.apy.toFixed(4)}`,
         };
       });
@@ -524,7 +524,7 @@ function Pool({
             <div className="detail">
               <div className="left Roboto_20pt_Light">APY</div>
               <div className="right Roboto_20pt_Black_L">
-                {makeNum(poolInfo.apy)} %
+                {poolInfo.apy > 100000 ? '100,000.000+%' : makeNum(poolInfo.apy)} %
               </div>
             </div>
             <div className="detail">

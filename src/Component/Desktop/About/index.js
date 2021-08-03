@@ -144,9 +144,7 @@ function About({ t }) {
             <div className="tier">
               <div
                 className="partner"
-                onClick={() =>
-                  (window.location = "https://info.uniswap.org/#/")
-                }
+                onClick={() => { window.open("https://info.uniswap.org/#/", "_blank") }}
               >
                 <div className="logo">
                   <img
@@ -161,7 +159,7 @@ function About({ t }) {
               </div>
               <div
                 className="partner"
-                onClick={() => (window.location = "https://coinmarketcap.com/")}
+                onClick={() => { window.open("https://coinmarketcap.com/", "_blank") }}
               >
                 <div className="logo">
                   <img
@@ -176,7 +174,7 @@ function About({ t }) {
               </div>
               <div
                 className="partner"
-                onClick={() => (window.location = "https://xangle.io/")}
+                onClick={() => { window.open("https://xangle.io/", "_blank") }}
               >
                 <div className="logo">
                   <img
@@ -193,7 +191,7 @@ function About({ t }) {
             <div className="tier">
               <div
                 className="partner"
-                onClick={() => (window.location = "https://cobak.co.kr/")}
+                onClick={() => { window.open("https://cobak.co.kr/", "_blank") }}
               >
                 <div className="logo">
                   <img
@@ -213,7 +211,7 @@ function About({ t }) {
               </div>
               <div
                 className="partner"
-                onClick={() => (window.location = "https://snapshot.org/")}
+                onClick={() => { window.open("https://snapshot.org/", "_blank") }}
               >
                 <div className="logo">
                   <img
@@ -231,7 +229,7 @@ function About({ t }) {
         </div>
       </Content>
       <Footer>
-        <div className="footer text Roboto_20pt_Regular">
+        <div className="footer Roboto_20pt_Regular">
           <div className="header">
             <a href="mailto:info@therecharge.io">
               info@therecharge.io<span>〉</span>
@@ -241,52 +239,45 @@ function About({ t }) {
             <div
               className="logo"
               onClick={() =>
-                (window.location = "https://github.com/therecharge")
+                window.open("https://github.com/therecharge", "_blank")
               }
             >
-              <img alt="" src="/footer1.png" />
+              <img src="/footer1.png" />
             </div>
             <div
               className="logo"
-              onClick={() =>
-                (window.location = "https://medium.com/therecharge")
+              onClick={() => { window.open("https://medium.com/therecharge", "_blank") }
               }
             >
-              <img alt="" src="/footer2.png" />
+              <img src="/footer2.png" />
             </div>
             <div
               className="logo"
-              onClick={() =>
-                (window.location = "https://twitter.com/TheRecharge1")
+              onClick={() => { window.open("https://twitter.com/TheRecharge_", "_blank") }
               }
             >
-              <img alt="" src="/footer3.png" />
+              <img src="/footer3.png" />
             </div>
             <div
               className="logo"
-              onClick={() =>
-                (window.location = "https://t.me/therecharge_officialkr")
+              onClick={() => { window.open("https://t.me/therecharge_officialkr", "_blank") }
               }
             >
-              <img alt="" src="/footer4.png" />
+              <img src="/footer4.png" />
             </div>
             <div
               className="logo"
-              onClick={() =>
-                (window.location =
-                  "https://etherscan.io/token/0xe74bE071f3b62f6A4aC23cA68E5E2A39797A3c30")
+              onClick={() => { window.open("https://etherscan.io/token/0xe74bE071f3b62f6A4aC23cA68E5E2A39797A3c30", "_blank") }
               }
             >
-              <img alt="" src="/footer5.png" />
+              <img src="/footer5.png" />
             </div>
             <div
               className="logo"
-              onClick={() =>
-                (window.location =
-                  "https://hecoinfo.com/token/0xbddC276CACC18E9177B2f5CFb3BFb6eef491799b")
+              onClick={() => { window.open("https://hecoinfo.com/token/0xbddC276CACC18E9177B2f5CFb3BFb6eef491799b", "_blank") }
               }
             >
-              <img alt="" src="/footer6.png" />
+              <img src="/footer6.png" />
             </div>
           </div>
           <div className="bottom" style={{ fontSize: "12px" }}>

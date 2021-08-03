@@ -262,11 +262,11 @@ function Defi({
       style={
         modalPoolOpen || modalSwapOpen
           ? {
-              position: "fixed",
-              top: "-20px",
-              width: "100%",
-              backgroundColor: "#02051c",
-            }
+            position: "fixed",
+            top: "-20px",
+            width: "100%",
+            backgroundColor: "#02051c",
+          }
           : {}
       }
     >
@@ -378,9 +378,8 @@ function Defi({
                               {...cell.getCellProps()}
                               onClick={() => {
                                 setParams({
-                                  type: `${
-                                    myPools[row.index].type.split(" ")[0]
-                                  }`,
+                                  type: `${myPools[row.index].type.split(" ")[0]
+                                    }`,
                                   isLP: false,
                                 });
 
@@ -417,8 +416,8 @@ function Defi({
                 <div className="title Roboto_30pt_Medium">
                   {analytics.ERC.total
                     ? convertNum(weiToEther(convertNum(analytics.ERC.total)), {
-                        unitSeparator: true,
-                      })
+                      unitSeparator: true,
+                    })
                     : 0}{" "}
                   RCG
                 </div>
@@ -515,8 +514,8 @@ function Defi({
                 <div className="title Roboto_30pt_Medium">
                   {analytics.HRC.total
                     ? convertNum(weiToEther(convertNum(analytics.HRC.total)), {
-                        unitSeparator: true,
-                      })
+                      unitSeparator: true,
+                    })
                     : 0}{" "}
                   RCG
                 </div>
@@ -640,6 +639,7 @@ function Defi({
         toast={toast}
         chargerList={chargerList}
         chargerInfoList={chargerInfoList}
+        redemption={analytics.general.RedemptionRate}
       />
       <Footer>
         <div className="footer Roboto_20pt_Regular">
@@ -682,8 +682,8 @@ function Defi({
             <div
               className="logo"
               onClick={() =>
-                (window.location =
-                  "https://hecoinfo.com/token/0x46D5e02eEa581022184DF5fC36e6fc8D56d16a93#balances")
+              (window.location =
+                "https://hecoinfo.com/token/0x46D5e02eEa581022184DF5fC36e6fc8D56d16a93#balances")
               }
             >
               <img src="/footer6.png" />

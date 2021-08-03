@@ -870,7 +870,7 @@ const Container = styled.div`
 
       .content{
         display: flex;
-        margin: auto;
+        margin: auto 60px;
         margin-bottom: 20px;
         cursor: pointer;
         .logo{

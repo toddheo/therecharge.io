@@ -40,15 +40,15 @@ function ModalPool({
       <div className={modalPoolOpen ? "modalOn" : "modalOff"}>
         <div
           className="background"
-          onClick={() => {
-            setModalPoolOpen(false);
-            setModalPool2Open(false);
-            // setParams({
-            //   type: "",
-            //   isLP: false,
-            // });
-            // setSelCharger(0);
-          }}
+        // onClick={() => {
+        //   setModalPoolOpen(false);
+        //   setModalPool2Open(false);
+        // setParams({
+        //   type: "",
+        //   isLP: false,
+        // });
+        // setSelCharger(0);
+        // }}
         ></div>
         <div
           className="modalScroll"

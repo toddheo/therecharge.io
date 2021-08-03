@@ -17,42 +17,49 @@ function Footer(props) {
               window.open("https://github.com/therecharge", "_blank")
             }
           >
-            <img src="/footer1.png" />
+            <img src="/footer1.png" alt="" />
           </div>
           <div
             className="logo"
             onClick={() => { window.open("https://medium.com/therecharge", "_blank") }
             }
           >
-            <img src="/footer2.png" />
+            <img src="/footer2.png" alt="" />
+          </div>
+          <div
+            className="logo"
+            onClick={() => { window.open("https://blog.naver.com/therecharge", "_blank") }
+            }
+          >
+            <img src="/ic_naver.svg" alt="naver" />
           </div>
           <div
             className="logo"
             onClick={() => { window.open("https://twitter.com/TheRecharge_", "_blank") }
             }
           >
-            <img src="/footer3.png" />
+            <img src="/footer3.png" alt="" />
           </div>
           <div
             className="logo"
             onClick={() => { window.open("https://t.me/therecharge_officialkr", "_blank") }
             }
           >
-            <img src="/footer4.png" />
+            <img src="/footer4.png" alt="" />
           </div>
           <div
             className="logo"
             onClick={() => { window.open("https://etherscan.io/token/0xe74bE071f3b62f6A4aC23cA68E5E2A39797A3c30", "_blank") }
             }
           >
-            <img src="/footer5.png" />
+            <img src="/footer5.png" alt="" />
           </div>
           <div
             className="logo"
             onClick={() => { window.open("https://hecoinfo.com/token/0xbddC276CACC18E9177B2f5CFb3BFb6eef491799b", "_blank") }
             }
           >
-            <img src="/footer6.png" />
+            <img src="/footer6.png" alt="" />
           </div>
         </div>
         <div className="bottom" style={{ fontSize: "12px" }}>

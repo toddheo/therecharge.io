@@ -21,6 +21,7 @@ function ModalPool({
   params,
   setParams,
   t,
+  toast
 }) {
   // const [modalPoolOpen, setModalPoolOpen] = useRecoilState(modalPoolOpenState);
   // const [modalPool2Open, setModalPool2Open] =
@@ -180,6 +181,7 @@ function ModalPool({
                 chargerInfoList={chargerInfoList}
                 setParams={setParams}
                 params={params}
+                toast={toast}
               />
             </div>
           </div>

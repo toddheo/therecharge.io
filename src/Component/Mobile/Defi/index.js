@@ -641,6 +641,7 @@ function Defi({
         setModalPool2Open={setModalPool2Open}
         params={params}
         setParams={setParams}
+        toast={toast}
       />
       <ModalSwap
         web3={web3}
@@ -655,59 +656,6 @@ function Defi({
         chargerInfoList={chargerInfoList}
         redemption={analytics.general.RedemptionRate}
       />
-      <Footer>
-        <div className="footer Roboto_20pt_Regular">
-          <div className="header">
-            <a href="mailto:info@therecharge.io">
-              info@therecharge.io<span>〉</span>
-            </a>
-          </div>
-          <div className="sns">
-            <div
-              className="logo"
-              onClick={() =>
-                (window.location = "https://github.com/therecharge")
-              }
-            >
-              <img src="/footer1.png" />
-            </div>
-            <div
-              className="logo"
-              onClick={() =>
-                (window.location = "https://medium.com/@the_recharge")
-              }
-            >
-              <img src="/footer2.png" />
-            </div>
-            <div
-              className="logo"
-              onClick={() =>
-                (window.location = "https://twitter.com/TheRecharge1")
-              }
-            >
-              <img src="/footer3.png" />
-            </div>
-            <div className="logo" style={{ cursor: "default" }}>
-              <img src="/footer4.png" />
-            </div>
-            <div className="logo" style={{ cursor: "default" }}>
-              <img src="/footer5.png" />
-            </div>
-            <div
-              className="logo"
-              onClick={() =>
-              (window.location =
-                "https://hecoinfo.com/token/0x46D5e02eEa581022184DF5fC36e6fc8D56d16a93#balances")
-              }
-            >
-              <img src="/footer6.png" />
-            </div>
-          </div>
-          <div className="bottom" style={{ fontSize: "12px" }}>
-            @ 2021 Recharge Labs Ltd.
-          </div>
-        </div>
-      </Footer>
     </Container>
   );
 }

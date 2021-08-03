@@ -524,9 +524,9 @@ function ModalSwap({
         <Link to="/defi">
           <div
             className="background"
-            onClick={() => {
-              setModalSwapOpen(!modalSwapOpen);
-            }}
+          // onClick={() => {
+          //   setModalSwapOpen(!modalSwapOpen);
+          // }}
           ></div>
         </Link>
         <div

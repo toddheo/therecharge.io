@@ -93,6 +93,7 @@ function Pool({
     share: 0,
   });
   const [poolMethods, setPoolMethods] = useState({
+    isSet: true,
     available: 0,
     approve: () => {
       return;
@@ -298,30 +299,61 @@ function Pool({
     setOnLoading(true);
     try {
       if (chList[0].name === "Now Loading") {
-        await loadChargerList();
-      }
-      else if (account && chList[sel].address !== "0x00") {
-        await Promise.all([
-          loadPoolInfo(),
-          loadUserInfo(),
-          loadMethods(poolInfo.token[0], poolInfo.token[1], chList[sel].address),
-        ]);
-      } else {
-        await Promise.all([loadPoolInfo()]);
+        if (!account) {
+          await loadChargerList();
+        } else {
+          await loadChargerList();
+        }
       }
     } catch (err) {
       console.log(err);
     }
-  }, [params, sel]);
+  }, [params]);
 
   useEffect(async () => {
-    await loadPoolInfo();
+    if (!account && chList[0].name !== "Now Loading") {
+      await loadPoolInfo();
+    } else if (account && chList[0].name !== "Now Loading") {
+      await Promise.all([
+        loadPoolInfo(),
+        loadUserInfo(),
+      ]);
+    }
   }, [chList])
 
   useEffect(async () => {
-    if (chList[sel].address !== "0x00") setOnLoading(false);
-    if (chList[sel].name === "No supplied pool") setOnLoading(false);
+    if (!account) {
+      if (chList[sel].address !== "0x00") setOnLoading(false);
+      if (chList[sel].name === "No supplied pool") setOnLoading(false);
+    } else if (chList[sel].address !== "0x00") {
+      await loadMethods(poolInfo.token[0], poolInfo.token[1], chList[sel].address)
+    }
   }, [poolInfo])
+
+  useEffect(async () => {
+    if (account && chList[sel].address !== "0x00" && !poolMethods.isSet) {
+      setOnLoading(false);
+    }
+  }, [poolMethods])
+
+
+  useEffect(async () => {
+    setOnLoading(true);
+    try {
+      if (!account) {
+        await loadPoolInfo();
+      }
+      else if (chList[sel].address !== "0x00") {
+        await Promise.all([
+          loadPoolInfo(),
+          loadUserInfo()
+        ]);
+      }
+    } catch (err) {
+      console.log(err);
+    }
+  }, [sel]);
+
 
   useEffect(() => {
     if (!account) return;

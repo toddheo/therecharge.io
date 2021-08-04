@@ -26,7 +26,7 @@ function Footer(props) {
           <div
             className="logo"
             onClick={() =>
-              (window.location = "https://twitter.com/TheRecharge1")
+              (window.location = "https://twitter.com/TheRecharge_Ad")
             }
           >
             <img src="/footer3.png" />

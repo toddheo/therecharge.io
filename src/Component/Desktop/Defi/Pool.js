@@ -298,26 +298,25 @@ function Pool({
   useEffect(async () => {
     setOnLoading(true);
     try {
-      if (chList[0].name === "Now Loading") {
-        if (!account) {
-          await loadChargerList();
-        } else {
-          await loadChargerList();
-        }
-      }
+      if (chList[0].name === "Now Loading") await loadChargerList();
     } catch (err) {
       console.log(err);
     }
   }, [params]);
 
   useEffect(async () => {
-    if (!account && chList[0].name !== "Now Loading") {
-      await loadPoolInfo();
-    } else if (account && chList[0].name !== "Now Loading") {
-      await Promise.all([
-        loadPoolInfo(),
-        loadUserInfo(),
-      ]);
+    try {
+      if (!account && chList[0].name !== "Now Loading") {
+        await loadPoolInfo();
+      } else if (account && chList[sel].address !== "0x00") {
+        let ret = await Promise.all([
+          loadPoolInfo(),
+          loadUserInfo(),
+        ]);
+        console.log("test ret :", ret)
+      }
+    } catch (err) {
+      console.log(err);
     }
   }, [chList])
 
@@ -326,15 +325,18 @@ function Pool({
       if (chList[sel].address !== "0x00") setOnLoading(false);
       if (chList[sel].name === "No supplied pool") setOnLoading(false);
     } else if (chList[sel].address !== "0x00") {
+      if (!poolMethods.isSet && userInfo.address !== "0x00") {
+        setOnLoading(false);
+      }
       await loadMethods(poolInfo.token[0], poolInfo.token[1], chList[sel].address)
     }
-  }, [poolInfo])
+  }, [poolInfo, userInfo])
 
-  useEffect(async () => {
-    if (account && chList[sel].address !== "0x00" && !poolMethods.isSet) {
-      setOnLoading(false);
-    }
-  }, [poolMethods])
+  // useEffect(async () => {
+  //   if (account && chList[sel].address !== "0x00" && !poolMethods.isSet && userInfo.address !== "0x00") {
+  //     setOnLoading(false);
+  //   }
+  // }, [poolMethods])
 
 
   useEffect(async () => {
@@ -384,11 +386,11 @@ function Pool({
 
   const updateChargerInfoList = () => {
     loadChargerList();
-    loadPoolInfo();
-    if (account) {
-      loadUserInfo();
-      loadMethods(poolInfo.token[0], poolInfo.token[1], chList[sel].address);
-    }
+    // loadPoolInfo();
+    // if (account) {
+    //   loadUserInfo();
+    //   loadMethods(poolInfo.token[0], poolInfo.token[1], chList[sel].address);
+    // }
   };
 
   useInterval(() => updateChargerInfoList(), 5000);
@@ -673,6 +675,9 @@ function Pool({
                     ) {
                       toast("This pool is inactive");
                     }
+                    else if (!account) {
+                      toast("Please connect to wallet");
+                    }
                     //if in period => active || close
                     else {
                       // if active
@@ -742,6 +747,9 @@ function Pool({
                     ) {
                       toast("This pool is inactive");
                     }
+                    else if (!account) {
+                      toast("Please connect to wallet");
+                    }
                     //if in period => active || close
                     else {
                       await poolMethods.earn();
@@ -779,8 +787,11 @@ function Pool({
                 </RewardBtn>
                 <ExitBtn
                   onClick={async () => {
+                    if (!account) {
+                      toast("Please connect to wallet");
+                    }
                     //if user Balance > 0
-                    if (userInfo.balance > 0) {
+                    else if (userInfo.balance > 0) {
                       await poolMethods.exit();
                       await toast(
                         'Please approve "UNPLUG" in your private wallet'
@@ -826,8 +837,11 @@ function Pool({
                     }
                     //if in period => active || close
                     else {
+                      if (!account) {
+                        toast("Please connect to wallet");
+                      }
                       // if active
-                      if (
+                      else if (
                         !poolInfo.limit ||
                         poolInfo.limit > poolInfo.tvl
                       ) {
@@ -890,7 +904,10 @@ function Pool({
                       poolInfo.period[0] + poolInfo.period[1] <
                       new Date().getTime() / 1000
                     ) {
-                      if (userInfo.balance > 0) {
+                      if (!account) {
+                        toast("Please connect to wallet");
+                      }
+                      else if (userInfo.balance > 0) {
                         await poolMethods.exit();
                         await toast(
                           'Please approve "UNPLUG" in your private wallet'

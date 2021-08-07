@@ -49,8 +49,9 @@ function Defi({
   const [onLoading, setOnLoading] = useState(true);
   const [modalPoolOpen, setModalPoolOpen] = useRecoilState(modalPoolOpenState);
   const [modalSwapOpen, setModalSwapOpen] = useRecoilState(modalSwapOpenState);
-  const [modalPool2Open, setModalPool2Open] =
-    useRecoilState(modalPool2OpenState);
+  const [modalPool2Open, setModalPool2Open] = useRecoilState(
+    modalPool2OpenState
+  );
   // const [modalPoolOpen, setModalPoolOpen] = useState(false);
   // const [modalSwapOpen, setModalSwapOpen] = useState(false);
   const [sel, setSelCharger] = useState(0);
@@ -92,10 +93,9 @@ function Defi({
     general: {},
   });
 
-  const data = React.useMemo(
-    () => (myPools === null ? [] : myPools),
-    [myPools]
-  );
+  const data = React.useMemo(() => (myPools === null ? [] : myPools), [
+    myPools,
+  ]);
   const columns = React.useMemo(
     () => [
       {
@@ -131,8 +131,13 @@ function Defi({
     ],
   };
 
-  const { getTableProps, getTableBodyProps, headerGroups, rows, prepareRow } =
-    useTable({ columns, data, initialState }, useSortBy);
+  const {
+    getTableProps,
+    getTableBodyProps,
+    headerGroups,
+    rows,
+    prepareRow,
+  } = useTable({ columns, data, initialState }, useSortBy);
 
   const handleModalPool = () => {
     setModalPoolOpen(!modalPoolOpen);
@@ -220,16 +225,22 @@ function Defi({
   //   handleLoading();
   // }, [myPools]);
 
+  // useEffect(() => {
+  //   setModalPoolOpen(false);
+  //   setModalPool2Open(false);
+  //   setModalSwapOpen(false);
+  // }, []);
+
   return (
     <Container
       style={
         modalPoolOpen || modalSwapOpen
           ? {
-            position: "fixed",
-            top: "-20px",
-            width: "100%",
-            backgroundColor: "#02051c",
-          }
+              position: "fixed",
+              top: "-20px",
+              width: "100%",
+              backgroundColor: "#02051c",
+            }
           : {}
       }
     >
@@ -342,8 +353,9 @@ function Defi({
                               {...cell.getCellProps()}
                               onClick={() => {
                                 setParams({
-                                  type: `${myPools[row.index].type.split(" ")[0]
-                                    }`,
+                                  type: `${
+                                    myPools[row.index].type.split(" ")[0]
+                                  }`,
                                   isLP: false,
                                 });
 
@@ -381,7 +393,8 @@ function Defi({
                 <div className="title Roboto_30pt_Medium">
                   {analytics.general.RedemptionRate
                     ? analytics.general.RedemptionRate / 100
-                    : 0}{" "}%
+                    : 0}{" "}
+                  %
                 </div>
                 <div className="text Roboto_16pt_Regular_Gray">
                   Current Redemption Rate
@@ -425,23 +438,27 @@ function Defi({
                 <div className="title Roboto_30pt_Medium">
                   {analytics.ERC.total
                     ? convertNum(weiToEther(convertNum(analytics.ERC.total)), {
-                      unitSeparator: true,
-                    })
+                        unitSeparator: true,
+                      })
                     : 0}{" "}
                   RCG
                 </div>
                 <div className="text Roboto_16pt_Regular_Gray">
                   Total Circulating Supply in ERC20
                 </div>
-                <div className="logo">
-                  <img src="/swap_eth.svg" style={{ width: "25px", height: "25px" }} />
+                <div className="logo1">
+                  <img
+                    src="/img_erc_back.svg"
+                    style={{ width: "92.2px", height: "150px" }}
+                  />
                 </div>
               </div>
               <div className="right box">
                 <div className="content le">
                   <div className="item">
                     <div className="title Roboto_20pt_Black">
-                      {analytics.ERC.redemption ? analytics.ERC.redemption : 0} RCG
+                      {analytics.ERC.redemption ? analytics.ERC.redemption : 0}{" "}
+                      RCG
                     </div>
                     <div className="text Roboto_16pt_Regular_Gray">
                       Accumulated Carbon Redemption ERC20
@@ -467,7 +484,8 @@ function Defi({
                   </div>
                   <div className="item">
                     <div className="title Roboto_20pt_Black">
-                      {analytics.ERC.conversion ? analytics.ERC.conversion : 0}{" "}RCG
+                      {analytics.ERC.conversion ? analytics.ERC.conversion : 0}{" "}
+                      RCG
                     </div>
                     <div className="text Roboto_16pt_Regular_Gray">
                       Accumulated Conversion Fee(ERC20)
@@ -481,23 +499,27 @@ function Defi({
                 <div className="title Roboto_30pt_Medium">
                   {analytics.HRC.total
                     ? convertNum(weiToEther(convertNum(analytics.HRC.total)), {
-                      unitSeparator: true,
-                    })
+                        unitSeparator: true,
+                      })
                     : 0}{" "}
                   RCG
                 </div>
                 <div className="text Roboto_16pt_Regular_Gray">
                   Total Circulating Supply in HRC20
                 </div>
-                <div className="logo">
-                  <img src="/swap_ht.svg" style={{ width: "25px", height: "25px" }} />
+                <div className="logo2">
+                  <img
+                    src="/img_hrc_back.svg"
+                    style={{ width: "97.5px", height: "150px" }}
+                  />
                 </div>
               </div>
               <div className="right box">
                 <div className="content le">
                   <div className="item">
                     <div className="title Roboto_20pt_Black">
-                      {analytics.HRC.redemption ? analytics.HRC.redemption : 0} RCG
+                      {analytics.HRC.redemption ? analytics.HRC.redemption : 0}{" "}
+                      RCG
                     </div>
                     <div className="text Roboto_16pt_Regular_Gray">
                       Accumulated Carbon Redemption HRC20
@@ -523,7 +545,8 @@ function Defi({
                   </div>
                   <div className="item">
                     <div className="title Roboto_20pt_Black">
-                      {analytics.HRC.conversion ? analytics.HRC.conversion : 0}{" "}RCG
+                      {analytics.HRC.conversion ? analytics.HRC.conversion : 0}{" "}
+                      RCG
                     </div>
                     <div className="text Roboto_16pt_Regular_Gray">
                       Accumulated Conversion Fee(HRC20)
@@ -534,30 +557,27 @@ function Defi({
             </div>
             <div className="container">
               <div className="left box">
-                <div className="title Roboto_30pt_Medium">
-                  0 RCG
-                </div>
+                <div className="title Roboto_30pt_Medium">0 RCG</div>
                 <div className="text Roboto_16pt_Regular_Gray">
                   Total Circulating Supply in BEP20
                 </div>
-                <div className="logo">
-                  <img src="/swap_bnb.svg" style={{ width: "25px", height: "25px" }} />
+                <div className="logo3">
+                  <img
+                    src="/img_bep_back.svg"
+                    style={{ width: "150px", height: "150px" }}
+                  />
                 </div>
               </div>
               <div className="right box">
                 <div className="content le">
                   <div className="item">
-                    <div className="title Roboto_20pt_Black">
-                      0 RCG
-                    </div>
+                    <div className="title Roboto_20pt_Black">0 RCG</div>
                     <div className="text Roboto_16pt_Regular_Gray">
                       Accumulated Carbon Redemption BEP20
                     </div>
                   </div>
                   <div className="item">
-                    <div className="title Roboto_20pt_Black">
-                      $ 0.00
-                    </div>
+                    <div className="title Roboto_20pt_Black">$ 0.00</div>
                     <div className="text Roboto_16pt_Regular_Gray">
                       Current RCG Price($) BEP20 Pancakeswap
                     </div>
@@ -565,17 +585,13 @@ function Defi({
                 </div>
                 <div className="content">
                   <div className="item">
-                    <div className="title Roboto_20pt_Black">
-                      0.00
-                    </div>
+                    <div className="title Roboto_20pt_Black">0.00</div>
                     <div className="text Roboto_16pt_Regular_Gray">
                       RCG (BEP20) Swapped in
                     </div>
                   </div>
                   <div className="item">
-                    <div className="title Roboto_20pt_Black">
-                      0.00 RCG
-                    </div>
+                    <div className="title Roboto_20pt_Black">0.00 RCG</div>
                     <div className="text Roboto_16pt_Regular_Gray">
                       Accumulated Conversion Fee(BEP20)
                     </div>
@@ -780,10 +796,22 @@ const Content = styled.div`
           justify-content: center;
           align-items: center;
 
-          .logo {
+          .logo1 {
             position: absolute;
-            bottom: 20px;
-            right: 20px;
+            bottom: 40px;
+            right: 149.8px;
+          }
+
+          .logo2 {
+            position: absolute;
+            bottom: 40px;
+            right: 147.5px;
+          }
+
+          .logo3 {
+            position: absolute;
+            bottom: 40px;
+            right: 121.3px;
           }
         }
 
@@ -798,7 +826,7 @@ const Content = styled.div`
           box-sizing: border-box;
           justify-content: space-between;
           align-items: center;
-          
+
           .item {
             display: flex;
             flex-direction: column;
@@ -823,7 +851,7 @@ const Content = styled.div`
             justify-content: center;
             margin-left: 40px;
             gap: 20px 0;
-            
+
             .item {
               display: flex;
               flex-direction: column;

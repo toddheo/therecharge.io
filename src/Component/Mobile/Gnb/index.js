@@ -68,7 +68,12 @@ function Gnb({
           </a>
         )}
       </Logo>
-      <div className="state Roboto_30pt_Black">{getTitle()}</div>
+      <div
+        className="state Roboto_30pt_Black"
+        style={modal2Open || modalPoolOpen ? { marginLeft: "80px" } : {}}
+      >
+        {getTitle()}
+      </div>
       {/* <div
         className="lang Roboto_30pt_Black"
         onClick={() => {
@@ -92,20 +97,20 @@ function Gnb({
                 onClick={
                   account
                     ? async () => {
-                      await onDisconnect();
-                      // await toast("코인 지갑의 연결이 해제되었어요.");
-                    }
+                        await onDisconnect();
+                        // await toast("코인 지갑의 연결이 해제되었어요.");
+                      }
                     : async () => {
-                      await connectWallet();
-                      // await toast("코인 지갑이 연결되었어요.");
-                    }
+                        await connectWallet();
+                        // await toast("코인 지갑이 연결되었어요.");
+                      }
                 }
               >
                 <span className="Roboto_35pt_Bold">
                   {account
                     ? account.substring(0, 8) +
-                    "..." +
-                    account.substring(36, 42)
+                      "..." +
+                      account.substring(36, 42)
                     : "Wallet Connect"}
                 </span>
               </ConnectWallet>
@@ -404,55 +409,66 @@ function Gnb({
             <div className="sns">
               <div
                 className="logo"
-                onClick={() => { window.open("https://github.com/therecharge", "_blank") }
-                }
+                onClick={() => {
+                  window.open("https://github.com/therecharge", "_blank");
+                }}
               >
                 <img src="/footer1.png" />
               </div>
               <div
                 className="logo"
-
-                onClick={() => { window.open("https://medium.com/therecharge", "_blank") }
-                }
+                onClick={() => {
+                  window.open("https://medium.com/therecharge", "_blank");
+                }}
               >
                 <img src="/footer2.png" />
               </div>
               <div
                 className="logo"
-                onClick={() => { window.open("https://blog.naver.com/therecharge", "_blank") }
-                }
+                onClick={() => {
+                  window.open("https://blog.naver.com/therecharge", "_blank");
+                }}
               >
                 <img src="/ic_naver.svg" />
               </div>
               <div
                 className="logo"
-                onClick={() => { window.open("https://twitter.com/TheRecharge_", "_blank") }
-                }
+                onClick={() => {
+                  window.open("https://twitter.com/TheRecharge_", "_blank");
+                }}
               >
                 <img src="/footer3.png" />
               </div>
               <div
                 className="logo"
                 onClick={() =>
-                (window.location =
-                  i18n.language == "en"
-                    ? "https://t.me/therecharge_official"
-                    : "https://t.me/therecharge_officialkr")
+                  (window.location =
+                    i18n.language == "en"
+                      ? "https://t.me/therecharge_official"
+                      : "https://t.me/therecharge_officialkr")
                 }
               >
                 <img src="/footer4.png" />
               </div>
               <div
                 className="logo"
-                onClick={() => { window.open("https://etherscan.io/token/0xe74bE071f3b62f6A4aC23cA68E5E2A39797A3c30", "_blank") }
-                }
+                onClick={() => {
+                  window.open(
+                    "https://etherscan.io/token/0xe74bE071f3b62f6A4aC23cA68E5E2A39797A3c30",
+                    "_blank"
+                  );
+                }}
               >
                 <img src="/footer5.png" />
               </div>
               <div
                 className="logo"
-                onClick={() => { window.open("https://hecoinfo.com/token/0xbddC276CACC18E9177B2f5CFb3BFb6eef491799b", "_blank") }
-                }
+                onClick={() => {
+                  window.open(
+                    "https://hecoinfo.com/token/0xbddC276CACC18E9177B2f5CFb3BFb6eef491799b",
+                    "_blank"
+                  );
+                }}
               >
                 <img src="/footer6.png" />
               </div>

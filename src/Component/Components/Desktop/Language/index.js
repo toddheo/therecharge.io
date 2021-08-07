@@ -61,6 +61,7 @@ const Container = styled.div`
 `;
 const Flag = styled.img`
   height: 20px;
+  cursor: pointer;
 `;
 const Dropdown = styled.div`
   position: fixed;
@@ -77,6 +78,10 @@ const Row = styled.div`
   margin: auto auto;
   width: 70px;
   height: 20px;
+  cursor: pointer;
+  &:hover span {
+    color: var(--white);
+  }
   img {
     height: 20px;
   }
@@ -85,10 +90,10 @@ const Row = styled.div`
     margin-bottom: 0;
     margin-left: 8.7px;
     font: var(--Roboto_15pt_Regular);
-    color: var(--white);
+    color: var(--gray-20);
   }
   .bold {
-    font-weight: bold;
+    font: var(--Roboto_15pt_Bold);
   }
 `;
 

@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="150" height="150" viewBox="0 0 150 150">
+    <defs>
+        <style>
+            .cls-2{fill:#f0b90b}
+        </style>
+    </defs>
+    <g id="img_bep_back" opacity="0.249">
+        <path id="패스_186" d="M172.357 395.986L155.4 412.927l-16.94-16.94 16.94-16.94z" class="cls-2" transform="translate(-138.462 -320.987)"/>
+        <path id="패스_187" d="M220.34 341.1l29.03 29.044 16.94-16.94-45.97-45.97-45.97 45.966 16.94 16.94z" class="cls-2" transform="translate(-145.34 -307.23)"/>
+        <path id="패스_188" d="M299.052 379.046l-16.94 16.94 16.94 16.94 16.926-16.94z" class="cls-2" transform="translate(-165.978 -320.987)"/>
+        <path id="패스_189" d="M220.34 444l-29.03-29.03-16.94 16.93 45.97 45.97 45.97-45.97-16.94-16.926z" class="cls-2" transform="translate(-145.34 -327.868)"/>
+        <path id="사각형_168" d="M0 0H23.957V23.957H0z" class="cls-2" transform="translate(58.06 75) rotate(-45)"/>
+    </g>
+</svg>

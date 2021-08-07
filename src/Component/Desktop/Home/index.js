@@ -227,21 +227,28 @@ function Home({ t }) {
             <div className="tier">
               <div
                 className="partner"
-                onClick={() => { window.open("https://ethereum.org/en/", "_blank") }}
+                onClick={() => {
+                  window.open("https://ethereum.org/en/", "_blank");
+                }}
               >
                 <img src="/ic_etheteum.svg" />
               </div>
               <div
                 className="partner"
-                onClick={() => { window.open("https://www.hecochain.com/en-us/", "_blank") }
-                }
+                onClick={() => {
+                  window.open("https://www.hecochain.com/en-us/", "_blank");
+                }}
               >
                 <img src="/ic_huobi.svg" />
               </div>
               <div
                 className="partner"
-                onClick={() => { window.open("https://www.certik.org/projects/therecharge", "_blank") }
-                }
+                onClick={() => {
+                  window.open(
+                    "https://www.certik.org/projects/therecharge",
+                    "_blank"
+                  );
+                }}
               >
                 <img src="/ic_certick.svg" />
               </div>
@@ -249,21 +256,25 @@ function Home({ t }) {
             <div className="tier">
               <div
                 className="partner"
-                onClick={() => { window.open("https://www.kakaomobility.com/", "_blank") }
-                }
+                onClick={() => {
+                  window.open("https://www.kakaomobility.com/", "_blank");
+                }}
               >
                 <img src="/ic_kakao.svg" />
               </div>
               <div
                 className="partner"
-                onClick={() => { window.open("https://www.company-pandakorea.com/", "_blank") }
-                }
+                onClick={() => {
+                  window.open("https://www.company-pandakorea.com/", "_blank");
+                }}
               >
                 <img src="/ic_panda.svg" />
               </div>
               <div
                 className="partner"
-                onClick={() => { window.open("https://piggycell.com/", "_blank") }}
+                onClick={() => {
+                  window.open("https://piggycell.com/", "_blank");
+                }}
               >
                 <img src="/ic_piggycell.svg" />
               </div>
@@ -271,8 +282,9 @@ function Home({ t }) {
             <div className="tier">
               <div
                 className="partner"
-                onClick={() => { window.open("http://www.keyeast.co.kr/index/", "_blank") }
-                }
+                onClick={() => {
+                  window.open("http://www.keyeast.co.kr/index/", "_blank");
+                }}
               >
                 <img src="/ic_keyeast.svg" />
               </div>

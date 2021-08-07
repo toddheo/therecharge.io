@@ -672,6 +672,18 @@ html {
   color: #ffffff;
 }
 
+.Roboto_15pt_Bold {
+  font-family: Roboto;
+  font-size: 15px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.33;
+  letter-spacing: normal;
+  text-align: left;
+  color: #ffffff;
+}
+
 .Roboto_14pt_Regular_Gray {
   font-family: Roboto;
   font-size: 14px;

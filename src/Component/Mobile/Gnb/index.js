@@ -434,7 +434,7 @@ function Gnb({
               <div
                 className="logo"
                 onClick={() => {
-                  window.open("https://twitter.com/TheRecharge_", "_blank");
+                  window.open("https://twitter.com/TheRecharge_Ad", "_blank");
                 }}
               >
                 <img src="/footer3.png" />

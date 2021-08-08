@@ -28,7 +28,7 @@ function Footer(props) {
           </div>
           <div
             className="logo"
-            onClick={() => { window.open("https://blog.naver.com/therecharge", "_blank") }
+            onClick={() => { window.open("https://blog.naver.com/TheRecharge_Ad", "_blank") }
             }
           >
             <img src="/ic_naver.svg" alt="naver" />

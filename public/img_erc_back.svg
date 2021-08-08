@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="92.203" height="150" viewBox="0 0 92.203 150">
+    <defs>
+        <style>
+            .cls-2{fill:#232423}.cls-4{fill:#6f7071}
+        </style>
+    </defs>
+    <g id="img_erc_back" opacity="0.3">
+        <path id="패스_211" d="M464.038 337.445V375l46.1-64.754z" class="cls-2" transform="translate(-417.937 -225.001)"/>
+        <path id="패스_212" fill="#030504" d="M464.038 219.982v48.206l46.1-27.27z" transform="translate(-417.937 -164.433)"/>
+        <path id="패스_213" d="M464.038 51.13v55.55l46.1 20.936z" class="cls-2" transform="translate(-417.937 -51.13)"/>
+        <path id="패스_214" d="M370.01 337.445V375l-46.1-64.754z" class="cls-4" transform="translate(-323.908 -225.001)"/>
+        <path id="패스_215" fill="#272828" d="M370.012 219.982v48.206l-46.1-27.27z" transform="translate(-323.91 -164.433)"/>
+        <path id="패스_216" d="M370.012 51.13v55.55l-46.1 20.936z" class="cls-4" transform="translate(-323.91 -51.13)"/>
+    </g>
+</svg>

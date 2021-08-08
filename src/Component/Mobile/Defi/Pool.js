@@ -47,6 +47,7 @@ function Pool({
   connectWallet,
   onDisconnect,
   params,
+  toast
 }) {
   const [onLoading, setOnLoading] = useState(false);
   const [plAmount, setPlAmount] = useState("");
@@ -130,7 +131,7 @@ function Pool({
         return {
           ...d,
           name: d.name,
-          apy: d.apy > 1000 ? "999+" : `${d.apy.toFixed(4)}`,
+          apy: d.apy > 0 ? (d.apy > 1000 ? "999+" : `${d.apy.toFixed(4)}`) : 0,
         };
       });
       setChList(temp);
@@ -338,32 +339,26 @@ function Pool({
             " Staking"}
         </div>
       </div>
-      <ToastHub>
-        <Toast>
-          {(toast) => (
-            <div
-              className="walletConnect Roboto_35pt_Bold"
-              onClick={
-                account
-                  ? async () => {
-                      await onDisconnect();
-                      // await toast("코인 지갑의 연결이 해제되었어요.");
-                    }
-                  : async () => {
-                      await connectWallet();
-                      // await toast("코인 지갑이 연결되었어요.");
-                    }
-              }
-            >
-              <p>
-                {account
-                  ? account.substring(0, 8) + "..." + account.substring(36, 42)
-                  : "Wallet Connect"}
-              </p>
-            </div>
-          )}
-        </Toast>
-      </ToastHub>
+      <div
+        className="walletConnect Roboto_35pt_Bold"
+        onClick={
+          account
+            ? async () => {
+              await onDisconnect();
+              // await toast("코인 지갑의 연결이 해제되었어요.");
+            }
+            : async () => {
+              await connectWallet();
+              // await toast("코인 지갑이 연결되었어요.");
+            }
+        }
+      >
+        <p>
+          {account
+            ? account.substring(0, 8) + "..." + account.substring(36, 42)
+            : "Wallet Connect"}
+        </p>
+      </div>
       <div className="data">
         <div className="list">
           <div className="title2 Roboto_40pt_Black">Charger List</div>
@@ -447,7 +442,7 @@ function Pool({
             <img
               src={
                 poolInfo.period[0] + poolInfo.period[1] >=
-                new Date().getTime() / 1000
+                  new Date().getTime() / 1000
                   ? !poolInfo.limit || poolInfo.limit > poolInfo.tvl
                     ? "/ic_logo_defi_active.svg"
                     : "/ic_logo_defi_close.svg"
@@ -459,7 +454,7 @@ function Pool({
               className="sign Roboto_20pt_Black_L"
               style={
                 poolInfo.period[0] + poolInfo.period[1] >=
-                new Date().getTime() / 1000
+                  new Date().getTime() / 1000
                   ? !poolInfo.limit || poolInfo.limit > poolInfo.tvl
                     ? { color: "#0eef6d" }
                     : { color: "#d62828" }
@@ -467,7 +462,7 @@ function Pool({
               }
             >
               {poolInfo.period[0] + poolInfo.period[1] >=
-              new Date().getTime() / 1000
+                new Date().getTime() / 1000
                 ? !poolInfo.limit || poolInfo.limit > poolInfo.tvl
                   ? "Active"
                   : "Close"
@@ -478,7 +473,7 @@ function Pool({
             <div className="detail">
               <div className="left Roboto_30pt_Light">APY</div>
               <div className="right Roboto_30pt_Black_L">
-                {Number(poolInfo.apy).toFixed(4).toString().substr(0, 8)} %
+                {poolInfo.apy > 0 ? (poolInfo.apy > 100000 ? '100,000.000+%' : Number(poolInfo.apy).toFixed(4).toString().substr(0, 8)) : 0} %
               </div>
             </div>
             <div className="detail">
@@ -533,9 +528,8 @@ function Pool({
               <div className="left Roboto_40pt_Black">STAKING</div>
               <div className="right Roboto_20pt_Regular">
                 Available:{" "}
-                {`${makeNum((poolMethods.available - plAmount).toString())} ${
-                  poolInfo.symbol[0]
-                }`}
+                {`${makeNum((poolMethods.available - plAmount).toString())} ${poolInfo.symbol[0]
+                  }`}
               </div>
             </div>
             <div className="inputBox">
@@ -587,300 +581,270 @@ function Pool({
             </PercentBtns>
             {params.type == "Flexible" ? (
               <div className="buttons">
-                <ToastHub>
-                  <Toast>
-                    {(toast) => (
-                      <FlxBtns
-                        onClick={async () => {
-                          //if out of period => inactive
-                          if (
-                            poolInfo.period[0] > new Date().getTime() / 1000 ||
-                            poolInfo.period[0] + poolInfo.period[1] <
-                              new Date().getTime() / 1000
-                          ) {
-                            toast("This pool is inactive");
-                          }
-                          //if in period => active || close
-                          else {
-                            // if active
-                            if (
-                              !poolInfo.limit ||
-                              poolInfo.limit > poolInfo.tvl
-                            ) {
-                              if (userInfo.allowance == "0") {
-                                await poolMethods.approve();
-                              } else {
-                                if (plAmount) {
-                                  await poolMethods.stake(plAmount);
-                                  await toast(
-                                    userInfo.allowance > 0
-                                      ? 'Please approve "PLUG-IN" in your private wallet'
-                                      : 'Please approve "Transfer Limit" in your private wallet'
-                                  );
-                                } else
-                                  toast("Please enter the amount of Staking");
-                              }
-                            }
-                            //if close
-                            else {
-                              toast("This pool is closed");
-                            }
-                          }
-                        }}
-                        className={
-                          account
-                            ? "Roboto_30pt_Black"
-                            : "disable Roboto_30pt_Black"
-                        }
-                        style={
-                          poolInfo.period[0] > new Date().getTime() / 1000 ||
-                          poolInfo.period[0] + poolInfo.period[1] <
-                            new Date().getTime() / 1000
-                            ? {
-                                backgroundColor: "var(--gray-30)",
-                                color: "var(--gray-20)",
-                                cursor: "not-allowed",
-                              }
-                            : !poolInfo.limit || poolInfo.limit > poolInfo.tvl
-                            ? {
-                                backgroundColor: "var(--purple)",
-                                cursor: "pointer",
-                              }
-                            : {
-                                backgroundColor: "var(--gray-30)",
-                                color: "var(--gray-20)",
-                                cursor: "not-allowed",
-                              }
-                        }
-                      >
-                        <div>
-                          <span>
-                            {userInfo.allowance > 0 ? "PLUG-IN" : "APPROVE"}
-                          </span>
-                        </div>
-                      </FlxBtns>
-                    )}
-                  </Toast>
-                </ToastHub>
-                <ToastHub>
-                  <Toast>
-                    {(toast) => (
-                      <RewardBtn
-                        onClick={async () => {
-                          //if out of period => inactive
-                          if (
-                            poolInfo.period[0] > new Date().getTime() / 1000 ||
-                            poolInfo.period[0] + poolInfo.period[1] <
-                              new Date().getTime() / 1000
-                          ) {
-                            toast("This pool is inactive");
-                          }
-                          //if in period => active || close
-                          else {
-                            await poolMethods.earn();
+                <FlxBtns
+                  onClick={async () => {
+                    //if out of period => inactive
+                    if (
+                      poolInfo.period[0] > new Date().getTime() / 1000 ||
+                      poolInfo.period[0] + poolInfo.period[1] <
+                      new Date().getTime() / 1000
+                    ) {
+                      toast("This pool is inactive");
+                    }
+                    //if in period => active || close
+                    else {
+                      // if active
+                      if (
+                        !poolInfo.limit ||
+                        poolInfo.limit > poolInfo.tvl
+                      ) {
+                        if (userInfo.allowance == "0") {
+                          await poolMethods.approve();
+                        } else {
+                          if (plAmount) {
+                            await poolMethods.stake(plAmount);
                             await toast(
-                              'Please approve "GET FILLED" in your private wallet'
+                              userInfo.allowance > 0
+                                ? 'Please approve "PLUG-IN" in your private wallet'
+                                : 'Please approve "Transfer Limit" in your private wallet'
                             );
-                          }
-                        }}
-                        className={
-                          account
-                            ? "Roboto_30pt_Black"
-                            : "disable Roboto_30pt_Black"
+                          } else
+                            toast("Please enter the amount of Staking");
                         }
-                        style={
-                          poolInfo.period[0] > new Date().getTime() / 1000 ||
-                          poolInfo.period[0] + poolInfo.period[1] <
-                            new Date().getTime() / 1000
-                            ? {
-                                backgroundColor: "var(--gray-30)",
-                                color: "var(--gray-20)",
-                                cursor: "not-allowed",
-                              }
-                            : {
-                                backgroundColor: "var(--yellow)",
-                                cursor: "pointer",
-                              }
+                      }
+                      //if close
+                      else {
+                        toast("This pool is closed");
+                      }
+                    }
+                  }}
+                  className={
+                    account
+                      ? "Roboto_30pt_Black"
+                      : "disable Roboto_30pt_Black"
+                  }
+                  style={
+                    poolInfo.period[0] > new Date().getTime() / 1000 ||
+                      poolInfo.period[0] + poolInfo.period[1] <
+                      new Date().getTime() / 1000
+                      ? {
+                        backgroundColor: "var(--gray-30)",
+                        color: "var(--gray-20)",
+                        cursor: "not-allowed",
+                      }
+                      : !poolInfo.limit || poolInfo.limit > poolInfo.tvl
+                        ? {
+                          backgroundColor: "var(--purple)",
+                          cursor: "pointer",
                         }
-                      >
-                        <span
-                        // onClick={GetReward}
-                        // className={plLocked > 0 && account ? "" : "disable"}
-                        >
-                          GET FILLED
-                        </span>
-                      </RewardBtn>
-                    )}
-                  </Toast>
-                </ToastHub>
-                <ToastHub>
-                  <Toast>
-                    {(toast) => (
-                      <ExitBtn
-                        onClick={async () => {
-                          //if user Balance > 0
-                          if (userInfo.balance > 0) {
-                            await poolMethods.exit();
-                            await toast(
-                              'Please approve "UNPLUG" in your private wallet'
-                            );
-                          }
-                          //if user Balance <= 0
-                          else {
-                            toast("There is no withdrawable amount");
-                          }
-                        }}
-                        className={
-                          account
-                            ? "Roboto_30pt_Black"
-                            : "disable Roboto_30pt_Black"
+                        : {
+                          backgroundColor: "var(--gray-30)",
+                          color: "var(--gray-20)",
+                          cursor: "not-allowed",
                         }
-                        style={
-                          userInfo.balance > 0
-                            ? {
-                                backgroundColor: "var(--gray-20)",
-                                cursor: "pointer",
-                              }
-                            : {
-                                backgroundColor: "var(--gray-30)",
-                                color: "var(--gray-20)",
-                                cursor: "not-allowed",
-                              }
-                        }
-                      >
-                        <span>UNPLUG</span>
-                      </ExitBtn>
-                    )}
-                  </Toast>
-                </ToastHub>
+                  }
+                >
+                  <div>
+                    <span>
+                      {userInfo.allowance > 0 ? "PLUG-IN" : "APPROVE"}
+                    </span>
+                  </div>
+                </FlxBtns>
+                <RewardBtn
+                  onClick={async () => {
+                    //if out of period => inactive
+                    if (
+                      poolInfo.period[0] > new Date().getTime() / 1000 ||
+                      poolInfo.period[0] + poolInfo.period[1] <
+                      new Date().getTime() / 1000
+                    ) {
+                      toast("This pool is inactive");
+                    }
+                    //if in period => active || close
+                    else {
+                      await poolMethods.earn();
+                      await toast(
+                        'Please approve "GET FILLED" in your private wallet'
+                      );
+                    }
+                  }}
+                  className={
+                    account
+                      ? "Roboto_30pt_Black"
+                      : "disable Roboto_30pt_Black"
+                  }
+                  style={
+                    poolInfo.period[0] > new Date().getTime() / 1000 ||
+                      poolInfo.period[0] + poolInfo.period[1] <
+                      new Date().getTime() / 1000
+                      ? {
+                        backgroundColor: "var(--gray-30)",
+                        color: "var(--gray-20)",
+                        cursor: "not-allowed",
+                      }
+                      : {
+                        backgroundColor: "var(--yellow)",
+                        cursor: "pointer",
+                      }
+                  }
+                >
+                  <span
+                  // onClick={GetReward}
+                  // className={plLocked > 0 && account ? "" : "disable"}
+                  >
+                    GET FILLED
+                  </span>
+                </RewardBtn>
+                <ExitBtn
+                  onClick={async () => {
+                    //if user Balance > 0
+                    if (userInfo.balance > 0) {
+                      await poolMethods.exit();
+                      await toast(
+                        'Please approve "UNPLUG" in your private wallet'
+                      );
+                    }
+                    //if user Balance <= 0
+                    else {
+                      toast("There is no withdrawable amount");
+                    }
+                  }}
+                  className={
+                    account
+                      ? "Roboto_30pt_Black"
+                      : "disable Roboto_30pt_Black"
+                  }
+                  style={
+                    userInfo.balance > 0
+                      ? {
+                        backgroundColor: "var(--gray-20)",
+                        cursor: "pointer",
+                      }
+                      : {
+                        backgroundColor: "var(--gray-30)",
+                        color: "var(--gray-20)",
+                        cursor: "not-allowed",
+                      }
+                  }
+                >
+                  <span>UNPLUG</span>
+                </ExitBtn>
               </div>
             ) : (
               <div className="buttons">
-                <ToastHub>
-                  <Toast>
-                    {(toast) => (
-                      <TwoBtns
-                        onClick={async () => {
-                          //if out of period => inactive
-                          if (
-                            poolInfo.period[0] > new Date().getTime() / 1000 ||
-                            poolInfo.period[0] + poolInfo.period[1] <
-                              new Date().getTime() / 1000
-                          ) {
-                            toast("This pool is inactive");
-                          }
-                          //if in period => active || close
-                          else {
-                            // if active
-                            if (
-                              !poolInfo.limit ||
-                              poolInfo.limit > poolInfo.tvl
-                            ) {
-                              if (userInfo.allowance == "0") {
-                                await poolMethods.approve();
-                              } else {
-                                if (plAmount) {
-                                  await poolMethods.stake(plAmount);
-                                  await toast(
-                                    userInfo.allowance != "0"
-                                      ? 'Please approve "PLUG-IN" in your private wallet'
-                                      : 'Please approve "Transfer Limit" in your private wallet'
-                                  );
-                                } else
-                                  toast("Please enter the amount of Staking");
-                              }
-                            }
-                            //if close
-                            else {
-                              toast("This pool is closed");
-                            }
-                          }
-                        }}
-                        className={
-                          account
-                            ? "Roboto_30pt_Black"
-                            : "disable Roboto_30pt_Black"
-                        }
-                        style={
-                          (poolInfo.period[0] > new Date().getTime() / 1000) |
-                          (poolInfo.period[0] + poolInfo.period[1] <
-                            new Date().getTime() / 1000)
-                            ? {
-                                backgroundColor: "var(--gray-30)",
-                                color: "var(--gray-20)",
-                                cursor: "not-allowed",
-                              }
-                            : !poolInfo.limit || poolInfo.limit > poolInfo.tvl
-                            ? {
-                                backgroundColor: "var(--purple)",
-                                cursor: "pointer",
-                              }
-                            : {
-                                backgroundColor: "var(--gray-30)",
-                                color: "var(--gray-20)",
-                                cursor: "not-allowed",
-                              }
-                        }
-                      >
-                        <div>
-                          <span>
-                            {userInfo.allowance !== "0" ? "PLUG-IN" : "APPROVE"}
-                          </span>
-                        </div>
-                      </TwoBtns>
-                    )}
-                  </Toast>
-                </ToastHub>
-                <ToastHub>
-                  <Toast>
-                    {(toast) => (
-                      <StakeBtn
-                        onClick={async () => {
-                          //if out of period
-                          if (
-                            poolInfo.period[0] + poolInfo.period[1] <
-                            new Date().getTime() / 1000
-                          ) {
-                            if (userInfo.balance > 0) {
-                              await poolMethods.exit();
-                              await toast(
-                                'Please approve "UNPLUG" in your private wallet'
-                              );
-                            } else {
-                              toast("There is no withdrawable amount");
-                            }
-                          }
-                          //if in period
-                          else {
-                            toast(
-                              "Withdrawal is possible after the end of the period"
+                <TwoBtns
+                  onClick={async () => {
+                    //if out of period => inactive
+                    if (
+                      poolInfo.period[0] > new Date().getTime() / 1000 ||
+                      poolInfo.period[0] + poolInfo.period[1] <
+                      new Date().getTime() / 1000
+                    ) {
+                      toast("This pool is inactive");
+                    }
+                    //if in period => active || close
+                    else {
+                      // if active
+                      if (
+                        !poolInfo.limit ||
+                        poolInfo.limit > poolInfo.tvl
+                      ) {
+                        if (userInfo.allowance == "0") {
+                          await poolMethods.approve();
+                        } else {
+                          if (plAmount) {
+                            await poolMethods.stake(plAmount);
+                            await toast(
+                              userInfo.allowance != "0"
+                                ? 'Please approve "PLUG-IN" in your private wallet'
+                                : 'Please approve "Transfer Limit" in your private wallet'
                             );
-                          }
-                        }}
-                        className={
-                          account
-                            ? "Roboto_30pt_Black"
-                            : "disable Roboto_30pt_Black"
+                          } else
+                            toast("Please enter the amount of Staking");
                         }
-                        style={
-                          poolInfo.period[0] + poolInfo.period[1] <
-                            new Date().getTime() / 1000 && userInfo.balance > 0
-                            ? {
-                                backgroundColor: "var(--gray-20)",
-                                cursor: "pointer",
-                              }
-                            : {
-                                backgroundColor: "var(--gray-30)",
-                                color: "var(--gray-20)",
-                                cursor: "not-allowed",
-                              }
+                      }
+                      //if close
+                      else {
+                        toast("This pool is closed");
+                      }
+                    }
+                  }}
+                  className={
+                    account
+                      ? "Roboto_30pt_Black"
+                      : "disable Roboto_30pt_Black"
+                  }
+                  style={
+                    (poolInfo.period[0] > new Date().getTime() / 1000) |
+                      (poolInfo.period[0] + poolInfo.period[1] <
+                        new Date().getTime() / 1000)
+                      ? {
+                        backgroundColor: "var(--gray-30)",
+                        color: "var(--gray-20)",
+                        cursor: "not-allowed",
+                      }
+                      : !poolInfo.limit || poolInfo.limit > poolInfo.tvl
+                        ? {
+                          backgroundColor: "var(--purple)",
+                          cursor: "pointer",
                         }
-                      >
-                        <span>UNPLUG</span>
-                      </StakeBtn>
-                    )}
-                  </Toast>
-                </ToastHub>
+                        : {
+                          backgroundColor: "var(--gray-30)",
+                          color: "var(--gray-20)",
+                          cursor: "not-allowed",
+                        }
+                  }
+                >
+                  <div>
+                    <span>
+                      {userInfo.allowance !== "0" ? "PLUG-IN" : "APPROVE"}
+                    </span>
+                  </div>
+                </TwoBtns>
+                <StakeBtn
+                  onClick={async () => {
+                    //if out of period
+                    if (
+                      poolInfo.period[0] + poolInfo.period[1] <
+                      new Date().getTime() / 1000
+                    ) {
+                      if (userInfo.balance > 0) {
+                        await poolMethods.exit();
+                        await toast(
+                          'Please approve "UNPLUG" in your private wallet'
+                        );
+                      } else {
+                        toast("There is no withdrawable amount");
+                      }
+                    }
+                    //if in period
+                    else {
+                      toast(
+                        "Withdrawal is possible after the end of the period"
+                      );
+                    }
+                  }}
+                  className={
+                    account
+                      ? "Roboto_30pt_Black"
+                      : "disable Roboto_30pt_Black"
+                  }
+                  style={
+                    poolInfo.period[0] + poolInfo.period[1] <
+                      new Date().getTime() / 1000 && userInfo.balance > 0
+                      ? {
+                        backgroundColor: "var(--gray-20)",
+                        cursor: "pointer",
+                      }
+                      : {
+                        backgroundColor: "var(--gray-30)",
+                        color: "var(--gray-20)",
+                        cursor: "not-allowed",
+                      }
+                  }
+                >
+                  <span>UNPLUG</span>
+                </StakeBtn>
               </div>
             )}
             <div className="info">

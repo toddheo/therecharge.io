@@ -68,7 +68,12 @@ function Gnb({
           </a>
         )}
       </Logo>
-      <div className="state Roboto_30pt_Black">{getTitle()}</div>
+      <div
+        className="state Roboto_30pt_Black"
+        style={modal2Open || modalPoolOpen ? { marginLeft: "80px" } : {}}
+      >
+        {getTitle()}
+      </div>
       {/* <div
         className="lang Roboto_30pt_Black"
         onClick={() => {
@@ -404,25 +409,33 @@ function Gnb({
             <div className="sns">
               <div
                 className="logo"
-                onClick={() =>
-                  (window.location = "https://github.com/therecharge")
-                }
+                onClick={() => {
+                  window.open("https://github.com/therecharge", "_blank");
+                }}
               >
                 <img src="/footer1.png" />
               </div>
               <div
                 className="logo"
-                onClick={() =>
-                  (window.location = "https://medium.com/therecharge")
-                }
+                onClick={() => {
+                  window.open("https://medium.com/therecharge", "_blank");
+                }}
               >
                 <img src="/footer2.png" />
               </div>
               <div
                 className="logo"
-                onClick={() =>
-                  (window.location = "https://twitter.com/TheRecharge_Ad")
-                }
+                onClick={() => {
+                  window.open("https://blog.naver.com/therecharge", "_blank");
+                }}
+              >
+                <img src="/ic_naver.svg" />
+              </div>
+              <div
+                className="logo"
+                onClick={() => {
+                  window.open("https://twitter.com/TheRecharge_Ad", "_blank");
+                }}
               >
                 <img src="/footer3.png" />
               </div>
@@ -439,19 +452,23 @@ function Gnb({
               </div>
               <div
                 className="logo"
-                onClick={() =>
-                  (window.location =
-                    "https://etherscan.io/token/0xe74bE071f3b62f6A4aC23cA68E5E2A39797A3c30")
-                }
+                onClick={() => {
+                  window.open(
+                    "https://etherscan.io/token/0xe74bE071f3b62f6A4aC23cA68E5E2A39797A3c30",
+                    "_blank"
+                  );
+                }}
               >
                 <img src="/footer5.png" />
               </div>
               <div
                 className="logo"
-                onClick={() =>
-                  (window.location =
-                    "https://hecoinfo.com/token/0xbddC276CACC18E9177B2f5CFb3BFb6eef491799b")
-                }
+                onClick={() => {
+                  window.open(
+                    "https://hecoinfo.com/token/0xbddC276CACC18E9177B2f5CFb3BFb6eef491799b",
+                    "_blank"
+                  );
+                }}
               >
                 <img src="/footer6.png" />
               </div>

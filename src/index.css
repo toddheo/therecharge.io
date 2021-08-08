@@ -492,6 +492,18 @@ html {
   color: var(--yellow);
 }
 
+.Roboto_25pt_Black {
+  font-family: Roboto;
+  font-size: 25px;
+  font-weight: 900;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.32;
+  letter-spacing: normal;
+  text-align: center;
+  color: #ffffff;
+}
+
 .Roboto_25pt_Regular {
   font-family: Roboto;
   font-size: 25px;
@@ -624,6 +636,18 @@ html {
   color: #ffffff;
 }
 
+.Roboto_20pt_Regular_Gray {
+  font-family: Roboto;
+  font-size: 20px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.25;
+  letter-spacing: normal;
+  text-align: center;
+  color: var(--gray-10);
+}
+
 .Roboto_16pt_Regular_Gray {
   font-family: Roboto;
   font-size: 16px;
@@ -645,6 +669,18 @@ html {
   line-height: 1.33;
   letter-spacing: normal;
   text-align: center;
+  color: #ffffff;
+}
+
+.Roboto_15pt_Bold {
+  font-family: Roboto;
+  font-size: 15px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.33;
+  letter-spacing: normal;
+  text-align: left;
   color: #ffffff;
 }
 

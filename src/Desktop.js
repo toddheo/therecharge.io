@@ -102,7 +102,7 @@ const Desktop = React.memo(
         toast(t("Connect/wallet"));
         connectEventHandler(provider);
       } catch (e) {
-        toast(t("ConnectFail/wallet"));
+        e ? toast(t("ConnectFail/wallet")) : toast(t("ConnectFail/metamask"));
         console.log("Could not get a wallet connection", e);
         return;
       }
@@ -220,6 +220,14 @@ const Desktop = React.memo(
             body::-webkit-scrollbar-track {
               background-color: #02051c;
               border-radius: 1px;
+            }
+            .ToastHub___StyledAnimatedDiv-sc-1y0i8xl-1 {
+              margin-top: 10px;
+            }
+            .ToastHub___StyledDiv2-sc-1y0i8xl-2 {
+              font-size: 15px;
+              height: 110%;
+              padding: 5px 20px;
             }
           `}</style>
         </div>

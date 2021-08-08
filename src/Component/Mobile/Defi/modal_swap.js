@@ -31,6 +31,7 @@ function ModalSwap({
   chainId,
   toast,
   t,
+  redemption
 }) {
   const [modalSwapOpen, setModalSwapOpen] = useRecoilState(modalSwapOpenState);
   const [recipe, setRecipe] = useState({
@@ -100,7 +101,7 @@ function ModalSwap({
       symbol: "BNB",
     },
     FUP: {
-      logo: "fup",
+      logo: "piggy",
       name: "Frequent Use Point",
       symbol: "FUP",
       chainId: {
@@ -119,10 +120,12 @@ function ModalSwap({
   };
 
   const assetList = ["RCG", "FUP"];
-  const myAssetList = ["RCG", "ETH", "HT", "BNB", "FUP"];
+  const myAssetList = ["ERC RCG", "HRC RCG", "BEP RCG", "ETH", "HT", "BNB", "FUP"];
   const networkList = ["Ethereum", "Huobi ECO Chain"];
   const [tokensBalance, setTokensBalance] = useState({
-    RCG: 0,
+    "ERC RCG": 0,
+    "HRC RCG": 0,
+    "BEP RCG": 0,
     ETH: 0,
     HT: 0,
     BNB: 0,
@@ -185,15 +188,17 @@ function ModalSwap({
     return (
       <>
         {tokensList.map((token) => {
+          let rcg;
+          if (token === "ERC RCG" || token === "HRC RCG" || token === "BEP RCG") rcg = "RCG";
           return (
             <div className="balance">
               <div className="logo">
                 <img
-                  src={"/swap_" + tokensInfo[token].logo + ".svg"}
+                  src={"/swap_" + (rcg ? tokensInfo[rcg].logo : tokensInfo[token].logo) + ".svg"}
                   style={{ width: "50px", height: "50px" }}
                 />
                 <div className="symbol Roboto_30pt_Medium">
-                  {tokensInfo[token].symbol}
+                  {token}
                 </div>
               </div>
               <div className="amount Roboto_30pt_Light">
@@ -214,24 +219,24 @@ function ModalSwap({
         <div
           className="box"
           style={
-            selAsset.logo === "fup"
+            selAsset.logo === "piggy"
               ? {}
               : (direction == "from" ? dropdownOpen1 : dropdownOpen2)
-              ? {
+                ? {
                   borderRadius: "20px 20px 0 0",
                   boxShadow: "0 0 15px 0 var(--purple)",
                 }
-              : {}
+                : {}
           }
         >
           <div
             className="default"
             style={
-              selAsset.logo === "fup"
+              selAsset.logo === "piggy"
                 ? {}
                 : (direction == "from" ? dropdownOpen1 : dropdownOpen2)
-                ? {}
-                : {}
+                  ? {}
+                  : {}
             }
             onMouseOver={() => {
               direction == "from" ? setRollState1(true) : setRollState2(true);
@@ -248,16 +253,15 @@ function ModalSwap({
                 <img
                   src={
                     "/swap_" +
-                    `${
-                      recipe.networkList[
-                        direction == "from"
-                          ? selAsset.logo === "fup"
-                            ? "PiggyCell"
-                            : recipe.from
-                          : selAsset.logo === "fup"
-                          ? "Huobi ECO Chain"
-                          : recipe.to
-                      ]
+                    `${recipe.networkList[
+                    direction == "from"
+                      ? selAsset.logo === "piggy"
+                        ? "PiggyCell"
+                        : recipe.from
+                      : selAsset.logo === "piggy"
+                        ? "Huobi ECO Chain"
+                        : recipe.to
+                    ]
                     }` +
                     ".svg"
                   }
@@ -267,15 +271,15 @@ function ModalSwap({
               <div className="name">
                 <div className="Roboto_30pt_Bold">
                   {direction == "from"
-                    ? selAsset.logo === "fup"
+                    ? selAsset.logo === "piggy"
                       ? "PiggyCell"
                       : recipe.from
-                    : selAsset.logo === "fup"
-                    ? "Huobi ECO Chain"
-                    : recipe.to}
+                    : selAsset.logo === "piggy"
+                      ? "Huobi ECO Chain"
+                      : recipe.to}
                 </div>
                 <div className="Roboto_30pt_Bold">
-                  {direction == "from" && selAsset.logo === "fup"
+                  {direction == "from" && selAsset.logo === "piggy"
                     ? "Point"
                     : "Network"}
                 </div>
@@ -288,19 +292,19 @@ function ModalSwap({
                   (direction == "from" ? dropdownOpen1 : dropdownOpen2)
                     ? "/ic_swap_rollup.svg"
                     : (direction == "from" ? rollState1 : rollState2)
-                    ? "/ic_swap_rolldown_mouseover.svg"
-                    : "/swap_dropdown.svg"
+                      ? "/ic_swap_rolldown_mouseover.svg"
+                      : "/swap_dropdown.svg"
                 }
                 style={{ width: "16px", height: "9px" }}
               />
             </div>
             <div
               className={
-                selAsset.logo === "fup"
+                selAsset.logo === "piggy"
                   ? ""
                   : (direction == "from" ? dropdownOpen1 : dropdownOpen2)
-                  ? "test"
-                  : "inactive"
+                    ? "test"
+                    : "inactive"
               }
             ></div>
             <div
@@ -310,54 +314,54 @@ function ModalSwap({
                   : "inactive"
               }
             >
-              {selAsset.logo === "fup"
+              {selAsset.logo === "piggy"
                 ? ""
                 : netList.map((chain, index) => {
-                    return (
-                      <div
-                        className="dropdownContent"
-                        onClick={() => {
-                          direction === "from"
-                            ? netList[index] === recipe.to
-                              ? setRecipe({
-                                  ...recipe,
-                                  from: recipe.to,
-                                  to: recipe.from,
-                                  swapAmount: "",
-                                })
-                              : setRecipe({
-                                  ...recipe,
-                                })
-                            : netList[index] == recipe.from
+                  return (
+                    <div
+                      className="dropdownContent"
+                      onClick={() => {
+                        direction === "from"
+                          ? netList[index] === recipe.to
                             ? setRecipe({
-                                ...recipe,
-                                from: recipe.to,
-                                to: recipe.from,
-                                swapAmount: "",
-                              })
+                              ...recipe,
+                              from: recipe.to,
+                              to: recipe.from,
+                              swapAmount: "",
+                            })
                             : setRecipe({
-                                ...recipe,
-                              });
-                          direction == "from"
-                            ? handleDropdown1()
-                            : handleDropdown2();
-                        }}
-                      >
-                        <div className="logo">
-                          <img
-                            src={
-                              "/swap_" + `${recipe.networkList[chain]}` + ".svg"
-                            }
-                            style={{ width: "80px", height: "80px" }}
-                          />
-                        </div>
-                        <div className="name">
-                          <div className="Roboto_30pt_Bold">{chain}</div>
-                          <div className="Roboto_30pt_Bold">Network</div>
-                        </div>
+                              ...recipe,
+                            })
+                          : netList[index] == recipe.from
+                            ? setRecipe({
+                              ...recipe,
+                              from: recipe.to,
+                              to: recipe.from,
+                              swapAmount: "",
+                            })
+                            : setRecipe({
+                              ...recipe,
+                            });
+                        direction == "from"
+                          ? handleDropdown1()
+                          : handleDropdown2();
+                      }}
+                    >
+                      <div className="logo">
+                        <img
+                          src={
+                            "/swap_" + `${recipe.networkList[chain]}` + ".svg"
+                          }
+                          style={{ width: "80px", height: "80px" }}
+                        />
                       </div>
-                    );
-                  })}
+                      <div className="name">
+                        <div className="Roboto_30pt_Bold">{chain}</div>
+                        <div className="Roboto_30pt_Bold">Network</div>
+                      </div>
+                    </div>
+                  );
+                })}
             </div>
           </div>
         </div>
@@ -425,40 +429,44 @@ function ModalSwap({
     const HECO = new Web3("https://http-mainnet.hecochain.com");
     const BNB = new Web3("https://bsc-dataseed.binance.org/");
 
-    let RCGeth, RCGht, balanceRCG, balanceETH, balanceHT, balanceBNB;
+    let RCGeth, RCGht, balanceRCG, balanceHRCRCG, balanceBEPRCG, balanceETH, balanceHT, balanceBNB;
 
-    if (chainId === 1) {
-      RCGeth = new ETH.eth.Contract(
-        ERC20_ABI,
-        "0xe74be071f3b62f6a4ac23ca68e5e2a39797a3c30"
-      );
-    }
-    if (chainId === 128) {
-      RCGht = new HECO.eth.Contract(
-        ERC20_ABI,
-        "0xbddC276CACC18E9177B2f5CFb3BFb6eef491799b"
-      );
-    }
+    RCGeth = new ETH.eth.Contract(
+      ERC20_ABI,
+      "0xe74be071f3b62f6a4ac23ca68e5e2a39797a3c30"
+    );
+
+    RCGht = new HECO.eth.Contract(
+      ERC20_ABI,
+      "0xbddC276CACC18E9177B2f5CFb3BFb6eef491799b"
+    );
+
+    // RCGbep = new ???.eth.Contract(
+    //   ERC20_ABI,
+    //   "???"
+    // );
 
     if (account) {
-      if (chainId === 1) {
-        balanceRCG = await RCGeth.methods.balanceOf(account).call();
-      }
-      if (chainId === 128) {
-        balanceRCG = await RCGht.methods.balanceOf(account).call();
-      }
+
+      balanceRCG = await RCGeth.methods.balanceOf(account).call();
+      balanceHRCRCG = await RCGht.methods.balanceOf(account).call();
+      balanceBEPRCG = 0;
       balanceETH = await ETH.eth.getBalance(account);
       balanceHT = await HECO.eth.getBalance(account);
       balanceBNB = await BNB.eth.getBalance(account);
 
       balanceRCG = makeNum(weiToEther(balanceRCG));
+      balanceHRCRCG = makeNum(weiToEther(balanceHRCRCG));
+      // balanceBEPRCG = makeNum(weiToEther(balanceBEPRCG));
       balanceETH = makeNum(weiToEther(balanceETH));
       balanceHT = makeNum(weiToEther(balanceHT));
       balanceBNB = makeNum(weiToEther(balanceBNB));
 
       setTokensBalance({
         ...tokensBalance,
-        RCG: balanceRCG,
+        "ERC RCG": balanceRCG,
+        "HRC RCG": balanceHRCRCG,
+        "BEP RCG": balanceBEPRCG,
         ETH: balanceETH,
         HT: balanceHT,
         BNB: balanceBNB,
@@ -561,28 +569,28 @@ function ModalSwap({
                     <div className="arrow">
                       <img
                         src={
-                          selAsset.logo === "fup"
+                          selAsset.logo === "piggy"
                             ? "/swap_arrow_deactive.svg"
                             : "/swap_arrow.svg"
                         }
                         style={
-                          selAsset.logo === "fup"
+                          selAsset.logo === "piggy"
                             ? {
-                                width: "60px",
-                                height: "60px",
-                                cursor: "not-allowed",
-                              }
+                              width: "60px",
+                              height: "60px",
+                              cursor: "not-allowed",
+                            }
                             : { width: "60px", height: "60px" }
                         }
                         onClick={() => {
-                          selAsset.logo === "fup"
+                          selAsset.logo === "piggy"
                             ? console.log("nothing happen")
                             : setRecipe({
-                                ...recipe,
-                                from: recipe.to,
-                                to: recipe.from,
-                                swapAmount: "",
-                              });
+                              ...recipe,
+                              from: recipe.to,
+                              to: recipe.from,
+                              swapAmount: "",
+                            });
                         }}
                       />
                     </div>
@@ -623,7 +631,7 @@ function ModalSwap({
                           swapAmount: makeNum(poolMethods.available),
                         });
                       }}
-                      placeholder="Enter the amount of stake"
+                      placeholder="Enter the amount of swap"
                     />
                   </div>
 
@@ -658,9 +666,8 @@ function ModalSwap({
                     </div>
                   </PercentBtns>
                   <div className="caution Roboto_20pt_Medium_L">
-                    {`Conversion Fee: ${
-                      selAsset.conversionFee[selAsset.chainId[recipe.from]]
-                    } ${selAsset.symbol}`}
+                    {`Conversion Fee: ${selAsset.conversionFee[selAsset.chainId[recipe.from]]
+                      } ${selAsset.symbol}`}
                   </div>
                   <div className="buttons">
                     <TwoBtns
@@ -706,20 +713,20 @@ function ModalSwap({
                     </div>
                     <div className="right Roboto_20pt_Black">
                       <div className="detail">
-                        {Number(poolMethods.redemption).toFixed(2).toString()}%
+                        {redemption ? redemption / 100 : 0} %
                       </div>
                       <div className="detail">
                         {selAsset.conversionFee[selAsset.chainId[recipe.from]]}{" "}
                         {selAsset.symbol}
                       </div>
                       <div className="detail">
-                        {makeNum(recipe.swapAmount)} {selAsset.symbol}
+                        {makeNum(recipe.swapAmount ? recipe.swapAmount : 0)} {selAsset.symbol}
                       </div>
                       <div className="detail">
                         {makeNum(
                           (
                             (recipe.swapAmount / 100) *
-                            poolMethods.redemption
+                            (redemption ? redemption / 100 : 0)
                           ).toString()
                         )}{" "}
                         {selAsset.symbol}
@@ -728,9 +735,9 @@ function ModalSwap({
                         {makeNum(
                           (
                             recipe.swapAmount -
-                            (recipe.swapAmount / 100) * poolMethods.redemption -
+                            (recipe.swapAmount / 100) * (redemption ? redemption / 100 : 0) -
                             selAsset.conversionFee[
-                              selAsset.chainId[recipe.from]
+                            selAsset.chainId[recipe.from]
                             ]
                           ).toString()
                         )}{" "}
@@ -863,7 +870,7 @@ const Container = styled.div`
 
       .content{
         display: flex;
-        margin: auto;
+        margin: auto 60px;
         margin-bottom: 20px;
         cursor: pointer;
         .logo{

@@ -9,11 +9,10 @@ import Docs from "./Component/Desktop/Docs";
 import React, { useState, useEffect, useRef } from "react";
 import { Route, Switch } from "react-router-dom";
 import Web3 from "web3";
-import { Main } from "@aragon/ui";
 // import styled from "styled-components";
-// i18n
 import { withTranslation } from "react-i18next";
 import i18next from "./locale/i18n";
+import { ScrollingProvider } from 'react-scroll-section';
 
 const Desktop = React.memo(
   ({ web3Modal, toast, t }) => {
@@ -135,35 +134,34 @@ const Desktop = React.memo(
     useTimeout(() => onDisconnect(), countDown);
 
     return (
-      <Main layout={false}>
-        <div className="desktop">
-          <Gnb
-            onDisconnect={onDisconnect}
-            connectWallet={ConnectWallet}
-            account={account}
-          />
-          <Switch>
-            <Route path="/docs/:viewNum" component={Docs}></Route>
-            <Route
-              path="/defi"
-              component={() => (
-                <Defi
-                  onDisconnect={onDisconnect}
-                  connectWallet={ConnectWallet}
-                  account={account}
-                  chainId={chainId}
-                  web3={web3}
-                  toast={toast}
-                  params={params}
-                  setParams={setParams}
-                />
-              )}
-            ></Route>
-            <Route path="/recharge" component={Recharge}></Route>
-            <Route path="/about" component={About}></Route>
-            <Route path="/" component={Home}></Route>
-          </Switch>
-          <style jsx global>{`
+      <div className="desktop">
+        <Gnb
+          onDisconnect={onDisconnect}
+          connectWallet={ConnectWallet}
+          account={account}
+        />
+        <Switch>
+          <Route path="/docs/:viewNum" component={Docs}></Route>
+          <Route
+            path="/defi"
+            component={() => (
+              <Defi
+                onDisconnect={onDisconnect}
+                connectWallet={ConnectWallet}
+                account={account}
+                chainId={chainId}
+                web3={web3}
+                toast={toast}
+                params={params}
+                setParams={setParams}
+              />
+            )}
+          ></Route>
+          <Route path="/recharge" component={Recharge}></Route>
+          <Route path="/about" component={About}></Route>
+          <Route path="/" component={Home}></Route>
+        </Switch>
+        <style jsx global>{`
             .desktop {
               display: flex;
               // width: 100%;
@@ -230,10 +228,10 @@ const Desktop = React.memo(
               padding: 5px 20px;
             }
           `}</style>
-        </div>
-      </Main>
+      </div>
     );
-  },
+  }
+  ,
   (prevProps, nextProps) => {
     return true;
   }

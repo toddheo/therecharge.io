@@ -123,18 +123,18 @@ table {
   border-spacing: 0;
 }
 body {
+  height: auto;
+  /* min-height: unset; */
   margin: 0px;
   padding: 0px;
-  /* height: 100vh; */
-  /* overflow: auto; */
   font-family: "Roboto", sans-serif;
+  overflow-y: auto;
 }
 
 html {
   /* width: 1920px; */
+  /* height: 100% !important; */
   width: 100%;
-  /* height: 100vh; */
-  /* height: 100%; */
   overflow: auto;
 }
 

@@ -97,7 +97,7 @@ function Gnb({ connectWallet, account, onDisconnect }) {
               </a>
             </Link>
             <div className="dropdownContent">
-              <Link to={"/about"}>
+              <Link to={"/about#aboutSection1"}>
                 <div>
                   <a
                     onClick={() => {
@@ -112,9 +112,9 @@ function Gnb({ connectWallet, account, onDisconnect }) {
                   >Ecosystem</a>
                 </div>
               </Link>
-              <Link to={"/about"}>
+              <Link to={"/about#aboutSection2"}>
                 <div>
-                  <a
+                  <span
                     onClick={() => {
                       window.scroll({
                         top: 1500,
@@ -124,10 +124,10 @@ function Gnb({ connectWallet, account, onDisconnect }) {
                       setModalPool2Open(false);
                       setModalSwapOpen(false);
                     }}
-                  >Recharge Virtuous Cycle</a>
+                  >Recharge Virtuous Cycle</span>
                 </div>
               </Link>
-              <Link to={"/about"}>
+              <Link to={"/about#aboutSection3"}>
                 <div>
                   <a
                     onClick={() => {

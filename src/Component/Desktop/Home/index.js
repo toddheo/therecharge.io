@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import { withTranslation } from "react-i18next";
+import { Section } from 'react-scroll-section';
 import Footer from "../../Components/Desktop/Footer";
 
 function randomNum() {

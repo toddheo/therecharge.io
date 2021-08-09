@@ -2,9 +2,8 @@ import styled from "styled-components";
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-
 import Language from "../../Components/Desktop/Language";
-
+import { useScrollSection } from 'react-scroll-section';
 import { useRecoilState } from "recoil";
 import {
   modalPoolOpenState,
@@ -21,6 +20,11 @@ function Gnb({ connectWallet, account, onDisconnect }) {
   const [modalPool2Open, setModalPool2Open] = useRecoilState(
     modalPool2OpenState
   );
+
+  // const homeSection = useScrollSection('home');
+  // const aboutSection = useScrollSection('about');
+
+
 
   const listener = (e) => {
     if (window.scrollY > 0) {
@@ -46,7 +50,7 @@ function Gnb({ connectWallet, account, onDisconnect }) {
           : { backgroundColor: "#02051c" }
       }
     >
-      <Section>
+      <SubContainer>
         <Logo>
           <Link
             to={"/"}
@@ -76,11 +80,14 @@ function Gnb({ connectWallet, account, onDisconnect }) {
               </a>
             </div>
           </Link>
-          <Link to={"/about"}>
-            <div className="dropdown">
+          <div className="dropdown">
+            <Link to={"/about"}>
               <a
                 onClick={() => {
-                  window.scrollTo(0, 0);
+                  window.scroll({
+                    top: 0,
+                    behavior: 'smooth'
+                  });
                   setModalPoolOpen(false);
                   setModalPool2Open(false);
                   setModalSwapOpen(false);
@@ -88,58 +95,67 @@ function Gnb({ connectWallet, account, onDisconnect }) {
               >
                 About
               </a>
-              <div className="dropdownContent">
-                <Link
-                  to={"/about#aboutSection1"}
-                  onClick={() => {
-                    setModalPoolOpen(false);
-                    setModalPool2Open(false);
-                    setModalSwapOpen(false);
-                  }}
-                >
-                  <div>
-                    <a>Ecosystem</a>
-                  </div>
-                </Link>
-                <Link
-                  to={"/about#aboutSection2"}
-                  onClick={() => {
-                    setModalPoolOpen(false);
-                    setModalPool2Open(false);
-                    setModalSwapOpen(false);
-                  }}
-                >
-                  <div>
-                    <a>Recharge Virtuous Cycle</a>
-                  </div>
-                </Link>
-                <Link
-                  to={"/about#aboutSection3"}
-                  onClick={() => {
-                    setModalPoolOpen(false);
-                    setModalPool2Open(false);
-                    setModalSwapOpen(false);
-                  }}
-                >
-                  <div>
-                    <a>Team members</a>
-                  </div>
-                </Link>
-                <Link
-                  to={"/about#aboutSection4"}
-                  onClick={() => {
-                    setModalPoolOpen(false);
-                    setModalPool2Open(false);
-                    setModalSwapOpen(false);
-                  }}
-                >
-                  <div>
-                    <a>Recharge is on</a>
-                  </div>
-                </Link>
-              </div>
+            </Link>
+            <div className="dropdownContent">
+              <Link to={"/about#aboutSection1"}>
+                <div>
+                  <a
+                    onClick={() => {
+                      window.scroll({
+                        top: 0,
+                        behavior: 'smooth'
+                      });
+                      setModalPoolOpen(false);
+                      setModalPool2Open(false);
+                      setModalSwapOpen(false);
+                    }}
+                  >Ecosystem</a>
+                </div>
+              </Link>
+              <Link to={"/about#aboutSection2"}>
+                <div>
+                  <span
+                    onClick={() => {
+                      window.scroll({
+                        top: 1500,
+                        behavior: 'smooth'
+                      });
+                      setModalPoolOpen(false);
+                      setModalPool2Open(false);
+                      setModalSwapOpen(false);
+                    }}
+                  >Recharge Virtuous Cycle</span>
+                </div>
+              </Link>
+              <Link to={"/about#aboutSection3"}>
+                <div>
+                  <a
+                    onClick={() => {
+                      window.scroll({
+                        top: 2530,
+                        behavior: 'smooth'
+                      });
+                      setModalPoolOpen(false);
+                      setModalPool2Open(false);
+                      setModalSwapOpen(false);
+                    }}>Team members</a>
+                </div>
+              </Link>
+              <Link
+                to={"/about"}
+                onClick={() => {
+                  setModalPoolOpen(false);
+                  setModalPool2Open(false);
+                  setModalSwapOpen(false);
+                }}
+              >
+                <div>
+                  <a>Recharge is on</a>
+                </div>
+              </Link>
             </div>
-          </Link>
+          </div>
+
           <Link
             to={"/recharge"}
             onClick={() => {
@@ -309,8 +325,9 @@ function Gnb({ connectWallet, account, onDisconnect }) {
                   </a>
                 </div>
                 <Link
-                  to={"/docs/1"}
+                  to={"/docs/2"}
                   onClick={() => {
+                    window.scrollTo(0, 0);
                     setModalPoolOpen(false);
                     setModalPool2Open(false);
                     setModalSwapOpen(false);
@@ -323,6 +340,7 @@ function Gnb({ connectWallet, account, onDisconnect }) {
                 <Link
                   to={"/docs/3"}
                   onClick={() => {
+                    window.scrollTo(0, 0);
                     setModalPoolOpen(false);
                     setModalPool2Open(false);
                     setModalSwapOpen(false);
@@ -341,11 +359,11 @@ function Gnb({ connectWallet, account, onDisconnect }) {
           onClick={
             account
               ? () => {
-                  onDisconnect();
-                }
+                onDisconnect();
+              }
               : () => {
-                  connectWallet();
-                }
+                connectWallet();
+              }
           }
         >
           <span>
@@ -354,7 +372,7 @@ function Gnb({ connectWallet, account, onDisconnect }) {
               : "Wallet Connect"}
           </span>
         </ConnectWallet>
-      </Section>
+      </SubContainer>
     </Container>
   );
 }
@@ -372,7 +390,7 @@ const Container = styled.div`
     text-decoration: none;
   }
 `;
-const Section = styled.div`
+const SubContainer = styled.div`
   display: flex;
   width: 1080px;
   margin: auto auto;

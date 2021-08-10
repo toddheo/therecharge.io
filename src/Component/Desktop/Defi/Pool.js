@@ -332,13 +332,6 @@ function Pool({
     }
   }, [poolInfo, userInfo])
 
-  // useEffect(async () => {
-  //   if (account && chList[sel].address !== "0x00" && !poolMethods.isSet && userInfo.address !== "0x00") {
-  //     setOnLoading(false);
-  //   }
-  // }, [poolMethods])
-
-
   useEffect(async () => {
     setOnLoading(true);
     try {

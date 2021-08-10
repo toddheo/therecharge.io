@@ -803,7 +803,7 @@ function Pool({
                   style={
                     userInfo.balance > 0
                       ? {
-                        backgroundColor: "var(--gray-20)",
+                        backgroundColor: "var(--ultramarine-blue)",
                         cursor: "pointer",
                       }
                       : {
@@ -925,7 +925,7 @@ function Pool({
                     poolInfo.period[0] + poolInfo.period[1] <
                       new Date().getTime() / 1000 && userInfo.balance > 0
                       ? {
-                        backgroundColor: "var(--gray-20)",
+                        backgroundColor: "var(--ultramarine-blue)",
                         cursor: "pointer",
                       }
                       : {

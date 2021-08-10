@@ -21,6 +21,11 @@ function Gnb({ connectWallet, account, onDisconnect }) {
     modalPool2OpenState
   );
 
+  // const homeSection = useScrollSection('home');
+  // const aboutSection = useScrollSection('about');
+
+
+
   const listener = (e) => {
     if (window.scrollY > 0) {
       setBlack(true);

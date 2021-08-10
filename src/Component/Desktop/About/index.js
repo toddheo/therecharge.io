@@ -67,7 +67,7 @@ function About({ t }) {
       </Content>
       <Content id="aboutSection2">
         <div className="second">
-          <div className="theme text Roboto_50pt_Black">
+          <div className="theme Roboto_50pt_Black">
             Recharge Virtuous Cycle
           </div>
           <div className="content">

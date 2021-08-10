@@ -42,7 +42,7 @@ function ModalSwap({
     networkList: {
       // "Binance Smart Chain": "bnb",
       Ethereum: "eth",
-      "Huobi ECO Chain": "ht",
+      "Huobi ECO Chain": "hrc",
       PiggyCell: "piggy",
     },
   });
@@ -196,12 +196,32 @@ function ModalSwap({
           return (
             <div className="balance">
               <div className="logo">
-                <img
-                  src={"/swap_" + (rcg ? tokensInfo[rcg].logo : tokensInfo[token].logo) + ".svg"}
-                  style={{ width: "25px", height: "25px" }}
-                />
+                <span className="rapper">
+                  <img
+                    src={"/swap_" + (rcg ? tokensInfo[rcg].logo : tokensInfo[token].logo) + ".svg"}
+                    style={{ width: "25px", height: "25px" }}
+                  />
+                  {(rcg
+                    ? <img
+                      className="chain"
+                      src={"/swap_" +
+                        (token === "ERC RCG"
+                          ? "eth"
+                          : token === "HRC RCG"
+                            ? "hrc"
+                            : token === "BEP RCG"
+                              ? "bnb" : "")
+                        + ".svg"}
+                      style={{ width: "15px", height: "15px" }}
+                    />
+                    : "")}
+                </span>
                 <div className="symbol Roboto_20pt_Medium_L">
-                  {token}
+                  {(token === "ERC RCG" ||
+                    token === "HRC RCG" ||
+                    token === "BEP RCG")
+                    ? rcg
+                    : token}
                 </div>
               </div>
               <div className="amount Roboto_20pt_Light">
@@ -978,11 +998,19 @@ const Container = styled.div`
         justify-content: space-between;
         margin-bottom: 16px;
         
+        .rapper {
+          position: relative;
+        }
         .logo{
           display: flex;
           .symbol{
             margin-left: 8px;
           }
+        }
+        .chain {
+          position: absolute;
+          bottom: 0;
+          right: 0;
         }
       }
 

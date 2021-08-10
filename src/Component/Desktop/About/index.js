@@ -236,7 +236,6 @@ function About({ t }) {
 }
 const Container = styled.div`
   width: 100%;
-  margin-top: 100px;
   // padding: 0 416px;
   box-sizing: border-box;
 `;
@@ -253,6 +252,7 @@ const Content = styled.div`
     display: flex;
     flex-direction: column;
     margin: 0 auto;
+    margin-top: 100px;
 
     .theme {
       margin: 0 auto;

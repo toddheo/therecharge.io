@@ -27,7 +27,8 @@ function Docs({ match }) {
   }, []);
 
   useEffect(() => {
-    setViewNum(window.location.pathname.split("/")[2])
+    setViewNum(window.location.pathname.split("/")[2]);
+    window.scrollTo(0, 0);
   }, [window.location.pathname])
 
   return (

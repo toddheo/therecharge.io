@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import Language from "../../Components/Desktop/Language";
-import { useScrollSection } from 'react-scroll-section';
+import { HashLink } from 'react-router-hash-link';
 import { useRecoilState } from "recoil";
 import {
   modalPoolOpenState,
@@ -20,11 +20,6 @@ function Gnb({ connectWallet, account, onDisconnect }) {
   const [modalPool2Open, setModalPool2Open] = useRecoilState(
     modalPool2OpenState
   );
-
-  // const homeSection = useScrollSection('home');
-  // const aboutSection = useScrollSection('about');
-
-
 
   const listener = (e) => {
     if (window.scrollY > 0) {
@@ -52,7 +47,7 @@ function Gnb({ connectWallet, account, onDisconnect }) {
     >
       <SubContainer>
         <Logo>
-          <Link
+          <HashLink
             to={"/"}
             onClick={() => {
               window.scrollTo(0, 0);
@@ -62,11 +57,11 @@ function Gnb({ connectWallet, account, onDisconnect }) {
             }}
           >
             <img src="/logo.png" />
-          </Link>
+          </HashLink>
         </Logo>
 
         <Nav>
-          <Link to={"/"}>
+          <HashLink to={"/"}>
             <div className="dropdown">
               <a
                 onClick={() => {
@@ -79,9 +74,9 @@ function Gnb({ connectWallet, account, onDisconnect }) {
                 Home
               </a>
             </div>
-          </Link>
+          </HashLink>
           <div className="dropdown">
-            <Link to={"/about"}>
+            <HashLink to={"/about"}>
               <a
                 onClick={() => {
                   window.scroll({
@@ -95,54 +90,55 @@ function Gnb({ connectWallet, account, onDisconnect }) {
               >
                 About
               </a>
-            </Link>
+            </HashLink>
             <div className="dropdownContent">
-              <Link to={"/about#aboutSection1"}>
+              <HashLink smooth to={"/about"}>
                 <div>
                   <a
                     onClick={() => {
-                      window.scroll({
-                        top: 0,
-                        behavior: 'smooth'
-                      });
+                      // window.scroll({
+                      //   top: 0,
+                      //   behavior: 'smooth'
+                      // });
                       setModalPoolOpen(false);
                       setModalPool2Open(false);
                       setModalSwapOpen(false);
                     }}
                   >Ecosystem</a>
                 </div>
-              </Link>
-              <Link to={"/about#aboutSection2"}>
+              </HashLink>
+              <HashLink smooth to={"/about#aboutSection2"}>
                 <div>
                   <span
                     onClick={() => {
-                      window.scroll({
-                        top: 1500,
-                        behavior: 'smooth'
-                      });
+                      // window.scroll({
+                      //   top: 1500,
+                      //   behavior: 'smooth'
+                      // });
                       setModalPoolOpen(false);
                       setModalPool2Open(false);
                       setModalSwapOpen(false);
                     }}
                   >Recharge Virtuous Cycle</span>
                 </div>
-              </Link>
-              <Link to={"/about#aboutSection3"}>
+              </HashLink>
+              <HashLink smooth to={"/about#aboutSection3"}>
                 <div>
                   <a
                     onClick={() => {
-                      window.scroll({
-                        top: 2530,
-                        behavior: 'smooth'
-                      });
+                      // window.scroll({
+                      //   top: 2530,
+                      //   behavior: 'smooth'
+                      // });
                       setModalPoolOpen(false);
                       setModalPool2Open(false);
                       setModalSwapOpen(false);
                     }}>Team members</a>
                 </div>
-              </Link>
-              <Link
-                to={"/about"}
+              </HashLink>
+              <HashLink
+                smooth
+                to={"/about#aboutSection4"}
                 onClick={() => {
                   setModalPoolOpen(false);
                   setModalPool2Open(false);
@@ -152,7 +148,7 @@ function Gnb({ connectWallet, account, onDisconnect }) {
                 <div>
                   <a>Recharge is on</a>
                 </div>
-              </Link>
+              </HashLink>
             </div>
           </div>
 

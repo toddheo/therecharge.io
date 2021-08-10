@@ -51,7 +51,7 @@ let web3Modal = new Web3Modal({
 
 ReactDOM.render(
   <React.StrictMode>
-    <Main layout={false} scrollView={false} theme={false}>
+    <Main layout={false} scrollView={true} theme={false}>
       <ToastHub>
         <Toast>
           {(toast) => {

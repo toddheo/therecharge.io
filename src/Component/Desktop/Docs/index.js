@@ -26,6 +26,10 @@ function Docs({ match }) {
     setPageCount(commentList.length / perPage);
   }, []);
 
+  useEffect(() => {
+    setViewNum(window.location.pathname.split("/")[2])
+  }, [window.location.pathname])
+
   return (
     <Container>
       <div className="header">

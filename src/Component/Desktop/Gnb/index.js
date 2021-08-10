@@ -97,14 +97,10 @@ function Gnb({ connectWallet, account, onDisconnect }) {
               </a>
             </HashLink>
             <div className="dropdownContent">
-              <HashLink smooth to={"/about"}>
+              <HashLink to={"/about"}>
                 <div>
                   <a
                     onClick={() => {
-                      // window.scroll({
-                      //   top: 0,
-                      //   behavior: 'smooth'
-                      // });
                       setModalPoolOpen(false);
                       setModalPool2Open(false);
                       setModalSwapOpen(false);
@@ -112,14 +108,10 @@ function Gnb({ connectWallet, account, onDisconnect }) {
                   >Ecosystem</a>
                 </div>
               </HashLink>
-              <HashLink smooth to={"/about#aboutSection2"}>
+              <HashLink to={"/about#aboutSection2"}>
                 <div>
                   <span
                     onClick={() => {
-                      // window.scroll({
-                      //   top: 1500,
-                      //   behavior: 'smooth'
-                      // });
                       setModalPoolOpen(false);
                       setModalPool2Open(false);
                       setModalSwapOpen(false);
@@ -127,14 +119,10 @@ function Gnb({ connectWallet, account, onDisconnect }) {
                   >Recharge Virtuous Cycle</span>
                 </div>
               </HashLink>
-              <HashLink smooth to={"/about#aboutSection3"}>
+              <HashLink to={"/about#aboutSection3"}>
                 <div>
                   <a
                     onClick={() => {
-                      // window.scroll({
-                      //   top: 2530,
-                      //   behavior: 'smooth'
-                      // });
                       setModalPoolOpen(false);
                       setModalPool2Open(false);
                       setModalSwapOpen(false);
@@ -142,7 +130,6 @@ function Gnb({ connectWallet, account, onDisconnect }) {
                 </div>
               </HashLink>
               <HashLink
-                smooth
                 to={"/about#aboutSection4"}
                 onClick={() => {
                   setModalPoolOpen(false);
@@ -157,15 +144,15 @@ function Gnb({ connectWallet, account, onDisconnect }) {
             </div>
           </div>
 
-          <Link
-            to={"/recharge"}
-            onClick={() => {
-              setModalPoolOpen(false);
-              setModalPool2Open(false);
-              setModalSwapOpen(false);
-            }}
-          >
-            <div className="dropdown">
+          <div className="dropdown">
+            <HashLink
+              to={"/recharge"}
+              onClick={() => {
+                setModalPoolOpen(false);
+                setModalPool2Open(false);
+                setModalSwapOpen(false);
+              }}
+            >
               <a
                 href={"/recharge"}
                 onClick={() => {
@@ -177,60 +164,60 @@ function Gnb({ connectWallet, account, onDisconnect }) {
               >
                 Recharge Token
               </a>
-              <div className="dropdownContent">
-                <Link
-                  to={"/recharge#rechargeSection1"}
-                  onClick={() => {
-                    setModalPoolOpen(false);
-                    setModalPool2Open(false);
-                    setModalSwapOpen(false);
-                  }}
-                >
-                  <div>
-                    <a>Features</a>
-                  </div>
-                </Link>
-                <Link
-                  to={"/recharge#rechargeSection3"}
-                  onClick={() => {
-                    setModalPoolOpen(false);
-                    setModalPool2Open(false);
-                    setModalSwapOpen(false);
-                  }}
-                >
-                  <div>
-                    <a>Distribution</a>
-                  </div>
-                </Link>
-                <Link
-                  to={"/recharge#rechargeSection4"}
-                  onClick={() => {
-                    setModalPoolOpen(false);
-                    setModalPool2Open(false);
-                    setModalSwapOpen(false);
-                  }}
-                >
-                  <div>
-                    <a>Governance</a>
-                  </div>
-                </Link>
-                <Link
-                  to={"/recharge#rechargeSection5"}
-                  onClick={() => {
-                    setModalPoolOpen(false);
-                    setModalPool2Open(false);
-                    setModalSwapOpen(false);
-                  }}
-                >
-                  <div>
-                    <a>Exchanges</a>
-                  </div>
-                </Link>
-              </div>
+            </HashLink>
+            <div className="dropdownContent">
+              <HashLink
+                to={"/recharge#rechargeSection1"}
+                onClick={() => {
+                  setModalPoolOpen(false);
+                  setModalPool2Open(false);
+                  setModalSwapOpen(false);
+                }}
+              >
+                <div>
+                  <a>Features</a>
+                </div>
+              </HashLink>
+              <HashLink
+                to={"/recharge#rechargeSection3"}
+                onClick={() => {
+                  setModalPoolOpen(false);
+                  setModalPool2Open(false);
+                  setModalSwapOpen(false);
+                }}
+              >
+                <div>
+                  <a>Distribution</a>
+                </div>
+              </HashLink>
+              <HashLink
+                to={"/recharge#rechargeSection4"}
+                onClick={() => {
+                  setModalPoolOpen(false);
+                  setModalPool2Open(false);
+                  setModalSwapOpen(false);
+                }}
+              >
+                <div>
+                  <a>Governance</a>
+                </div>
+              </HashLink>
+              <HashLink
+                to={"/recharge#rechargeSection5"}
+                onClick={() => {
+                  setModalPoolOpen(false);
+                  setModalPool2Open(false);
+                  setModalSwapOpen(false);
+                }}
+              >
+                <div>
+                  <a>Exchanges</a>
+                </div>
+              </HashLink>
             </div>
-          </Link>
-          <Link to={"/defi"}>
-            <div className="dropdown">
+          </div>
+          <div className="dropdown">
+            <HashLink to={"/defi"}>
               <a
                 href={"/defi"}
                 onClick={() => {
@@ -242,48 +229,49 @@ function Gnb({ connectWallet, account, onDisconnect }) {
               >
                 De-Fi
               </a>
-              <div className="dropdownContent">
-                <Link
-                  to={"/defi#station"}
-                  onClick={() => {
-                    setModalPoolOpen(false);
-                    setModalPool2Open(false);
-                    setModalSwapOpen(false);
-                  }}
-                >
-                  <div>
-                    <a>Station</a>
-                  </div>
-                </Link>
-                <Link
-                  to={"/defi#mypools"}
-                  onClick={() => {
-                    setModalPoolOpen(false);
-                    setModalPool2Open(false);
-                    setModalSwapOpen(false);
-                  }}
-                >
-                  <div>
-                    <a>My pools</a>
-                  </div>
-                </Link>
-                <Link
-                  to={"/defi#analytics"}
-                  onClick={() => {
-                    setModalPoolOpen(false);
-                    setModalPool2Open(false);
-                    setModalSwapOpen(false);
-                  }}
-                >
-                  <div>
-                    <a>Analytics</a>
-                  </div>
-                </Link>
-              </div>
+            </HashLink>
+            <div className="dropdownContent">
+              <HashLink
+                to={"/defi#station"}
+                onClick={() => {
+                  setModalPoolOpen(false);
+                  setModalPool2Open(false);
+                  setModalSwapOpen(false);
+                }}
+              >
+                <div>
+                  <a>Station</a>
+                </div>
+              </HashLink>
+              <HashLink
+                to={"/defi#mypools"}
+                onClick={() => {
+                  setModalPoolOpen(false);
+                  setModalPool2Open(false);
+                  setModalSwapOpen(false);
+                }}
+              >
+                <div>
+                  <a>My pools</a>
+                </div>
+              </HashLink>
+              <HashLink
+                to={"/defi#analytics"}
+                onClick={() => {
+                  setModalPoolOpen(false);
+                  setModalPool2Open(false);
+                  setModalSwapOpen(false);
+                }}
+              >
+                <div>
+                  <a>Analytics</a>
+                </div>
+              </HashLink>
             </div>
-          </Link>
-          <Link to={"/docs/1"}>
-            <div className="dropdown">
+          </div>
+
+          <div className="dropdown">
+            <Link to={"/docs/1"}>
               <a
                 href={"/docs/1"}
                 onClick={() => {
@@ -295,65 +283,68 @@ function Gnb({ connectWallet, account, onDisconnect }) {
               >
                 Docs
               </a>
-              <div className="dropdownContent">
-                <Link
-                  to={"/docs/1"}
-                  onClick={() => {
-                    setModalPoolOpen(false);
-                    setModalPool2Open(false);
-                    setModalSwapOpen(false);
-                  }}
-                >
-                  <div>
-                    <a>WhitePaper</a>
-                  </div>
-                </Link>
-
-                <div className="unactive" style={{ cursor: "not-allowed" }}>
-                  Onepager
-                </div>
+            </Link>
+            <div className="dropdownContent">
+              <Link
+                to={"/docs/1"}
+              >
                 <div>
                   <a
-                    href="https://www.certik.org/projects/therecharge"
+                    href={"/docs/2"}
                     onClick={() => {
-                      window.scrollTo(0, 0);
                       setModalPoolOpen(false);
                       setModalPool2Open(false);
                       setModalSwapOpen(false);
                     }}
-                  >
-                    Token Audit
-                  </a>
+                  >WhitePaper</a>
                 </div>
-                <Link
-                  to={"/docs/2"}
-                  onClick={() => {
-                    window.scrollTo(0, 0);
-                    setModalPoolOpen(false);
-                    setModalPool2Open(false);
-                    setModalSwapOpen(false);
-                  }}
-                >
-                  <div>
-                    <a>Disclaimer</a>
-                  </div>
-                </Link>
-                <Link
-                  to={"/docs/3"}
-                  onClick={() => {
-                    window.scrollTo(0, 0);
-                    setModalPoolOpen(false);
-                    setModalPool2Open(false);
-                    setModalSwapOpen(false);
-                  }}
-                >
-                  <div>
-                    <a>CI Download</a>
-                  </div>
-                </Link>
+              </Link>
+
+              <div className="unactive" style={{ cursor: "not-allowed" }}>
+                Onepager
               </div>
+              <div>
+                <a
+                  href="https://www.certik.org/projects/therecharge"
+                  onClick={() => {
+                    window.scrollTo(0, 0);
+                    setModalPoolOpen(false);
+                    setModalPool2Open(false);
+                    setModalSwapOpen(false);
+                  }}
+                >
+                  Token Audit
+                </a>
+              </div>
+              <Link
+                to={"/docs/2"}
+                onClick={() => {
+                  window.scrollTo(0, 0);
+                  setModalPoolOpen(false);
+                  setModalPool2Open(false);
+                  setModalSwapOpen(false);
+                }}
+              >
+                <div>
+                  <a>Disclaimer</a>
+                </div>
+              </Link>
+              <Link
+                to={"/docs/3"}
+                onClick={() => {
+                  window.scrollTo(0, 0);
+                  setModalPoolOpen(false);
+                  setModalPool2Open(false);
+                  setModalSwapOpen(false);
+                }}
+              >
+                <div>
+                  <a>CI Download</a>
+                </div>
+              </Link>
             </div>
-          </Link>
+          </div>
+
         </Nav>
         <Language />
         <ConnectWallet

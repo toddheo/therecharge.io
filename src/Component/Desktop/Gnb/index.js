@@ -53,9 +53,8 @@ function Gnb({ connectWallet, account, onDisconnect }) {
       <SubContainer>
         <Logo>
           <HashLink
-            to={"/"}
+            to={"/#home"}
             onClick={() => {
-              window.scrollTo(0, 0);
               setModalPoolOpen(false);
               setModalPool2Open(false);
               setModalSwapOpen(false);
@@ -64,69 +63,65 @@ function Gnb({ connectWallet, account, onDisconnect }) {
             <img src="/logo.png" />
           </HashLink>
         </Logo>
-
         <Nav>
-          <HashLink to={"/"}>
+          <HashLink
+            to={"/#home"}
+            onClick={() => {
+              setModalPoolOpen(false);
+              setModalPool2Open(false);
+              setModalSwapOpen(false);
+            }}
+          >
             <div className="dropdown">
-              <a
-                onClick={() => {
-                  window.scrollTo(0, 0);
-                  setModalPoolOpen(false);
-                  setModalPool2Open(false);
-                  setModalSwapOpen(false);
-                }}
-              >
-                Home
-              </a>
+              <a>Home</a>
             </div>
           </HashLink>
           <div className="dropdown">
-            <HashLink to={"/about"}>
-              <a
+            <HashLink
+              to={"/about#aboutSection1"}
+              onClick={() => {
+                setModalPoolOpen(false);
+                setModalPool2Open(false);
+                setModalSwapOpen(false);
+              }}
+            >
+              <a>About</a>
+            </HashLink>
+            <div className="dropdownContent">
+              <HashLink
+                to={"/about#aboutSection1"}
                 onClick={() => {
-                  window.scroll({
-                    top: 0,
-                    behavior: 'smooth'
-                  });
                   setModalPoolOpen(false);
                   setModalPool2Open(false);
                   setModalSwapOpen(false);
                 }}
               >
-                About
-              </a>
-            </HashLink>
-            <div className="dropdownContent">
-              <HashLink to={"/about"}>
                 <div>
-                  <a
-                    onClick={() => {
-                      setModalPoolOpen(false);
-                      setModalPool2Open(false);
-                      setModalSwapOpen(false);
-                    }}
-                  >Ecosystem</a>
+                  <a>Ecosystem</a>
                 </div>
               </HashLink>
-              <HashLink to={"/about#aboutSection2"}>
+              <HashLink
+                to={"/about#aboutSection2"}
+                onClick={() => {
+                  setModalPoolOpen(false);
+                  setModalPool2Open(false);
+                  setModalSwapOpen(false);
+                }}
+              >
                 <div>
-                  <span
-                    onClick={() => {
-                      setModalPoolOpen(false);
-                      setModalPool2Open(false);
-                      setModalSwapOpen(false);
-                    }}
-                  >Recharge Virtuous Cycle</span>
+                  <span>Recharge Virtuous Cycle</span>
                 </div>
               </HashLink>
-              <HashLink to={"/about#aboutSection3"}>
+              <HashLink
+                to={"/about#aboutSection3"}
+                onClick={() => {
+                  setModalPoolOpen(false);
+                  setModalPool2Open(false);
+                  setModalSwapOpen(false);
+                }}
+              >
                 <div>
-                  <a
-                    onClick={() => {
-                      setModalPoolOpen(false);
-                      setModalPool2Open(false);
-                      setModalSwapOpen(false);
-                    }}>Team members</a>
+                  <a>Team members</a>
                 </div>
               </HashLink>
               <HashLink
@@ -143,27 +138,16 @@ function Gnb({ connectWallet, account, onDisconnect }) {
               </HashLink>
             </div>
           </div>
-
           <div className="dropdown">
             <HashLink
-              to={"/recharge"}
+              to={"/recharge#rechargeSection1"}
               onClick={() => {
                 setModalPoolOpen(false);
                 setModalPool2Open(false);
                 setModalSwapOpen(false);
               }}
             >
-              <a
-                href={"/recharge"}
-                onClick={() => {
-                  window.scrollTo(0, 0);
-                  setModalPoolOpen(false);
-                  setModalPool2Open(false);
-                  setModalSwapOpen(false);
-                }}
-              >
-                Recharge Token
-              </a>
+              <a>Recharge Token</a>
             </HashLink>
             <div className="dropdownContent">
               <HashLink
@@ -217,18 +201,15 @@ function Gnb({ connectWallet, account, onDisconnect }) {
             </div>
           </div>
           <div className="dropdown">
-            <HashLink to={"/defi"}>
-              <a
-                href={"/defi"}
-                onClick={() => {
-                  window.scrollTo(0, 0);
-                  setModalPoolOpen(false);
-                  setModalPool2Open(false);
-                  setModalSwapOpen(false);
-                }}
-              >
-                De-Fi
-              </a>
+            <HashLink
+              to={"/defi#station"}
+              onClick={() => {
+                setModalPoolOpen(false);
+                setModalPool2Open(false);
+                setModalSwapOpen(false);
+              }}
+            >
+              <a>De-Fi</a>
             </HashLink>
             <div className="dropdownContent">
               <HashLink
@@ -269,11 +250,9 @@ function Gnb({ connectWallet, account, onDisconnect }) {
               </HashLink>
             </div>
           </div>
-
           <div className="dropdown">
             <Link to={"/docs/1"}>
               <a
-                href={"/docs/1"}
                 onClick={() => {
                   window.scrollTo(0, 0);
                   setModalPoolOpen(false);
@@ -287,16 +266,14 @@ function Gnb({ connectWallet, account, onDisconnect }) {
             <div className="dropdownContent">
               <Link
                 to={"/docs/1"}
+                onClick={() => {
+                  setModalPoolOpen(false);
+                  setModalPool2Open(false);
+                  setModalSwapOpen(false);
+                }}
               >
                 <div>
-                  <a
-                    href={"/docs/2"}
-                    onClick={() => {
-                      setModalPoolOpen(false);
-                      setModalPool2Open(false);
-                      setModalSwapOpen(false);
-                    }}
-                  >WhitePaper</a>
+                  <a>WhitePaper</a>
                 </div>
               </Link>
 

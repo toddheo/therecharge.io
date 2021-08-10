@@ -41,12 +41,12 @@ const loadPoolPeriod = (startTime, duration) => {
 
 function Pool({
   web3,
-  handleModal2,
-  account,
-  chargerInfoList,
   connectWallet,
   onDisconnect,
+  handleModal2,
   params,
+  account,
+  chainId,
   toast
 }) {
   const [onLoading, setOnLoading] = useState(false);
@@ -276,15 +276,66 @@ function Pool({
     headerGroups,
     rows,
     prepareRow,
-  } = useTable({ columns, data, initialState }, useSortBy);
+  } = useTable({ columns, data, /*initialState*/ }, useSortBy);
 
-  useEffect(() => {
-    loadChargerList();
-    loadPoolInfo();
+  useEffect(async () => {
+    setOnLoading(true);
+    try {
+      if (chList[0].name === "Now Loading") await loadChargerList();
+    } catch (err) {
+      console.log(err);
+    }
   }, [params]);
+
+  useEffect(async () => {
+    try {
+      if (!account && chList[0].name !== "Now Loading") {
+        await loadPoolInfo();
+      } else if (account && chList[sel].address !== "0x00") {
+        let ret = await Promise.all([
+          loadPoolInfo(),
+          loadUserInfo(),
+        ]);
+        console.log("test ret :", ret)
+      }
+    } catch (err) {
+      console.log(err);
+    }
+  }, [chList])
+
+
+  useEffect(async () => {
+    if (!account) {
+      if (chList[sel].address !== "0x00") setOnLoading(false);
+      if (chList[sel].name === "No supplied pool") setOnLoading(false);
+    } else if (chList[sel].address !== "0x00") {
+      if (!poolMethods.isSet && userInfo.address !== "0x00") {
+        setOnLoading(false);
+      }
+      await loadMethods(poolInfo.token[0], poolInfo.token[1], chList[sel].address)
+    }
+  }, [poolInfo, userInfo])
+
+  useEffect(async () => {
+    setOnLoading(true);
+    try {
+      if (!account) {
+        await loadPoolInfo();
+      }
+      else if (chList[sel].address !== "0x00") {
+        await Promise.all([
+          loadPoolInfo(),
+          loadUserInfo()
+        ]);
+      }
+    } catch (err) {
+      console.log(err);
+    }
+  }, [sel]);
 
   useEffect(() => {
     if (!account) return;
+    if (chList[sel].address === "0x00") return;
     loadUserInfo();
     loadMethods(poolInfo.token[0], poolInfo.token[1], chList[sel].address);
   }, [account]);
@@ -310,15 +361,22 @@ function Pool({
   };
 
   const updateChargerInfoList = () => {
-    if (account) {
-      loadUserInfo();
-      loadMethods(poolInfo.token[0], poolInfo.token[1], chList[sel].address);
-    }
+    // if (account) {
+    //   loadUserInfo();
+    //   loadMethods(poolInfo.token[0], poolInfo.token[1], chList[sel].address);
+    // }
     loadChargerList();
-    loadPoolInfo();
+    // loadPoolInfo();
   };
 
   useInterval(() => updateChargerInfoList(), 5000);
+
+  useEffect(() => {
+    if (chainId === -1) return;
+    if (chainId !== 128) {
+      toast("MetaMask의 네트워크를 HECO 메인넷으로 변경해주세요.")
+    }
+  }, []);
 
   return (
     <Container>

@@ -39,7 +39,7 @@ function Home({ t }) {
   };
 
   return (
-    <Container>
+    <Container id="home">
       <Content>
         <div className="first">
           <div className="left">

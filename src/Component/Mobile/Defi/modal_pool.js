@@ -12,8 +12,6 @@ function ModalPool({
   connectWallet,
   onDisconnect,
   account,
-  chargerList,
-  chargerInfoList,
   modalPoolOpen,
   setModalPoolOpen,
   modalPool2Open,
@@ -21,6 +19,7 @@ function ModalPool({
   params,
   setParams,
   t,
+  chainId,
   toast
 }) {
   // const [modalPoolOpen, setModalPoolOpen] = useRecoilState(modalPoolOpenState);
@@ -178,9 +177,9 @@ function ModalPool({
                   setModalPool2Open(!modalPool2Open);
                 }}
                 account={account}
-                chargerInfoList={chargerInfoList}
                 setParams={setParams}
                 params={params}
+                chainId={chainId}
                 toast={toast}
               />
             </div>

@@ -293,10 +293,8 @@ const Mobile = React.memo(
             }
             .ToastHub___StyledAnimatedDiv-sc-1y0i8xl-1 {
               margin-top: 10px;
-            }
-            .ToastHub___StyledDiv2-sc-1y0i8xl-0 {
-              font-size: 15px;
-              height: 110%;
+            } 
+            .ToastHub___StyledDiv-sc-1y0i8xl-0 {
               padding: 5px 20px;
             }
           `}</style>

@@ -22,8 +22,9 @@ function ModalPool({
   toast,
 }) {
   const [modalPoolOpen, setModalPoolOpen] = useRecoilState(modalPoolOpenState);
-  const [modalPool2Open, setModalPool2Open] =
-    useRecoilState(modalPool2OpenState);
+  const [modalPool2Open, setModalPool2Open] = useRecoilState(
+    modalPool2OpenState
+  );
   const [sel, setSelCharger] = useRecoilState(selState);
   // const [modal2Open, setModal2Open] = useState(false);
   // const [params, setParams] = useState({
@@ -40,15 +41,15 @@ function ModalPool({
       <div className={modalPoolOpen ? "modalOn" : "modalOff"}>
         <div
           className="background"
-        // onClick={() => {
-        //   setModalPoolOpen(false);
-        //   setModalPool2Open(false);
-        // setParams({
-        //   type: "",
-        //   isLP: false,
-        // });
-        // setSelCharger(0);
-        // }}
+          // onClick={() => {
+          //   setModalPoolOpen(false);
+          //   setModalPool2Open(false);
+          // setParams({
+          //   type: "",
+          //   isLP: false,
+          // });
+          // setSelCharger(0);
+          // }}
         ></div>
         <div
           className="modalScroll"
@@ -95,7 +96,7 @@ function ModalPool({
                           address: "0x5419eB32938e33b5E333F185e32bdAd11d73a679",
                         });
                       }}
-                    // className="disable"
+                      // className="disable"
                     >
                       <div className="station">
                         <img
@@ -117,7 +118,7 @@ function ModalPool({
                           address: "0x5419eB32938e33b5E333F185e32bdAd11d73a679",
                         });
                       }}
-                    // className="disable"
+                      // className="disable"
                     >
                       <div className="station">
                         <img
@@ -183,7 +184,7 @@ function ModalPool({
               className="modal2"
               style={modalPool2Open ? { display: "flex" } : { display: "none" }}
             >
-              {modalPool2Open ?
+              {modalPool2Open ? (
                 <Pool
                   web3={web3}
                   connectWallet={connectWallet}
@@ -199,7 +200,9 @@ function ModalPool({
                   chainId={chainId}
                   toast={toast}
                 />
-                : <></>}
+              ) : (
+                <></>
+              )}
             </div>
           </div>
         </div>

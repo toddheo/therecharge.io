@@ -20,7 +20,7 @@ function ModalPool({
   setParams,
   t,
   chainId,
-  toast
+  toast,
 }) {
   // const [modalPoolOpen, setModalPoolOpen] = useRecoilState(modalPoolOpenState);
   // const [modalPool2Open, setModalPool2Open] =
@@ -31,18 +31,18 @@ function ModalPool({
 
   return (
     <Container>
-      <div className={modalPoolOpen === true ? "modalOn" : "modalOff"}>
+      <div className={modalPoolOpen ? "modalOn" : "modalOff"}>
         <Link to="/defi">
           <div
             className="background"
-            onClick={() => {
-              setModalPoolOpen(!modalPoolOpen);
-              setModalPool2Open(!modalPool2Open);
-              setParams({
-                type: "",
-                isLP: false,
-              });
-            }}
+            // onClick={() => {
+            //   setModalPoolOpen(!modalPoolOpen);
+            //   setModalPool2Open(!modalPool2Open);
+            //   setParams({
+            //     type: "",
+            //     isLP: false,
+            //   });
+            // }}
           ></div>
         </Link>
         <div

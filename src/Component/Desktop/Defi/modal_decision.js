@@ -38,9 +38,12 @@ function ModalDecision({
   // const handleModal2 = () => {
   //   setModal2Open(!modal2Open);
   // };
+  const [btnName, setBtnName] = useState("");
 
   useEffect(() => {
     console.log("Im changed!", btnInfo);
+    // setBtnName(btnInfo)
+    console.log("Im ", btnName)
   }, [btnInfo]);
 
   return (
@@ -48,28 +51,21 @@ function ModalDecision({
       <div className={modalDecisionOpen ? "modalOn" : "modalOff"}>
         <div
           className="background"
-          onClick={() => {
-            setModalDecisionOpen(false);
-            // setParams({
-            //   type: "",
-            //   isLP: false,
-            // });
-            // setSelCharger(0);
-          }}
+          onClick={() => { setModalDecisionOpen(false) }}
         ></div>
         <div
           className="modalScroll"
           style={{
             display: "flex",
             marginTop: "100px",
-            // height: "90%",
-            // width: "100%",
             overflow: "scroll",
             padding: "50px",
           }}
         >
           <div className="decision">
-            <div className="theme Roboto_30pt_Black">{`dddd${btnInfo}`}</div>
+            <div className="theme Roboto_30pt_Black">
+              {btnInfo}0000000{btnName}
+            </div>
             <div className="desc Roboto_20pt_Regular">
               Do you want to proceed?
             </div>
@@ -78,40 +74,40 @@ function ModalDecision({
                 className="ok Roboto_20pt_Black"
                 onClick={async () => {
                   console.log(btnInfo);
-                  handleDecision();
-                  // if (btnInfo === "Deposit") {
-                  //   console.log(plAmount, poolMethods, userInfo);
-                  //   await poolMethods.stake(plAmount);
-                  //   await toast(
-                  //     userInfo.allowance > 0
-                  //       ? 'Please approve "PLUG-IN" in your private wallet'
-                  //       : 'Please approve "Transfer Limit" in your private wallet'
-                  //   );
-                  //   setPlAmount("0");
-                  //   setModalDecisionOpen(false);
-                  // } else if (btnInfo === "Get Reward") {
-                  //   await poolMethods.earn();
-                  //   await toast(
-                  //     'Please approve "GET FILLED" in your private wallet'
-                  //   );
-                  //   setPlAmount("0");
-                  //   setModalDecisionOpen(false);
-                  // } else if (btnInfo === "Withdrawal") {
-                  //   await poolMethods.exit();
-                  //   await toast(
-                  //     'Please approve "UNPLUG" in your private wallet'
-                  //   );
-                  //   setPlAmount("0");
-                  //   setModalDecisionOpen(false);
-                  // } else if (btnInfo === "Swap") {
-                  //   await toast(
-                  //     // poolMethods.allowance > 0
-                  //     'Please approve "SWAP" in your private wallet'
-                  //     // : "Approve 처리 중이에요. 잠시만 기다려주세요."
-                  //   );
-                  //   await poolMethods.swap(poolMethods, swapAmount);
-                  //   setModalDecisionOpen(false);
-                  // }
+                  // handleDecision();
+                  if (btnInfo === "Deposit") {
+                    console.log(plAmount, poolMethods, userInfo);
+                    await poolMethods.stake(plAmount);
+                    await toast(
+                      userInfo.allowance > 0
+                        ? 'Please approve "PLUG-IN" in your private wallet'
+                        : 'Please approve "Transfer Limit" in your private wallet'
+                    );
+                    setPlAmount("0");
+                    setModalDecisionOpen(false);
+                  } else if (btnInfo === "Get Reward") {
+                    await poolMethods.earn();
+                    await toast(
+                      'Please approve "GET FILLED" in your private wallet'
+                    );
+                    setPlAmount("0");
+                    setModalDecisionOpen(false);
+                  } else if (btnInfo === "Withdrawal") {
+                    await poolMethods.exit();
+                    await toast(
+                      'Please approve "UNPLUG" in your private wallet'
+                    );
+                    setPlAmount("0");
+                    setModalDecisionOpen(false);
+                  } else if (btnInfo === "Swap") {
+                    await toast(
+                      // poolMethods.allowance > 0
+                      'Please approve "SWAP" in your private wallet'
+                      // : "Approve 처리 중이에요. 잠시만 기다려주세요."
+                    );
+                    await poolMethods.swap(poolMethods, swapAmount);
+                    setModalDecisionOpen(false);
+                  }
                 }}
               >
                 OK

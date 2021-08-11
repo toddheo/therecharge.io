@@ -258,30 +258,6 @@ function Pool({
     setPlAmount((poolMethods.available / 100) * x);
   };
 
-  const handleDecision = async () => {
-    if (btnInfo === "Deposit") {
-      console.log(plAmount, poolMethods, userInfo);
-      await poolMethods.stake(plAmount);
-      await toast(
-        userInfo.allowance > 0
-          ? 'Please approve "PLUG-IN" in your private wallet'
-          : 'Please approve "Transfer Limit" in your private wallet'
-      );
-      setPlAmount("0");
-      setModalDecisionOpen(false);
-    } else if (btnInfo === "Get Reward") {
-      await poolMethods.earn();
-      await toast('Please approve "GET FILLED" in your private wallet');
-      setPlAmount("0");
-      setModalDecisionOpen(false);
-    } else if (btnInfo === "Withdrawal") {
-      await poolMethods.exit();
-      await toast('Please approve "UNPLUG" in your private wallet');
-      setPlAmount("0");
-      setModalDecisionOpen(false);
-    }
-  };
-
   const color = (number, i) => {
     if (typeof number === "undefined") return "var(--gray-20)";
     //i가 홀수인 경우
@@ -466,11 +442,11 @@ function Pool({
             onClick={
               account
                 ? async () => {
-                    await onDisconnect();
-                  }
+                  await onDisconnect();
+                }
                 : async () => {
-                    await connectWallet();
-                  }
+                  await connectWallet();
+                }
             }
           >
             <p>
@@ -563,7 +539,7 @@ function Pool({
             <img
               src={
                 poolInfo.period[0] + poolInfo.period[1] >=
-                new Date().getTime() / 1000
+                  new Date().getTime() / 1000
                   ? !poolInfo.limit || poolInfo.limit > poolInfo.tvl
                     ? "/ic_logo_defi_active.svg"
                     : "/ic_logo_defi_close.svg"
@@ -575,7 +551,7 @@ function Pool({
               className="sign Roboto_20pt_Black_L"
               style={
                 poolInfo.period[0] + poolInfo.period[1] >=
-                new Date().getTime() / 1000
+                  new Date().getTime() / 1000
                   ? !poolInfo.limit || poolInfo.limit > poolInfo.tvl
                     ? { color: "#0eef6d" }
                     : { color: "#d62828" }
@@ -583,7 +559,7 @@ function Pool({
               }
             >
               {poolInfo.period[0] + poolInfo.period[1] >=
-              new Date().getTime() / 1000
+                new Date().getTime() / 1000
                 ? !poolInfo.limit || poolInfo.limit > poolInfo.tvl
                   ? "Active"
                   : "Close"
@@ -631,9 +607,8 @@ function Pool({
                 {userInfo.share.toFixed(4).toString().substr(0, 8)}%
               </div>
               <div className="detail">
-                {`${makeNum(weiToEther(userInfo.reward), 6)} ${
-                  poolInfo.symbol[1]
-                }`}
+                {`${makeNum(weiToEther(userInfo.reward), 6)} ${poolInfo.symbol[1]
+                  }`}
               </div>
             </div>
           </div>
@@ -648,9 +623,8 @@ function Pool({
               <div className="left Roboto_30pt_Black_R">STAKING</div>
               <div className="right Roboto_20pt_Regular">
                 Available:{" "}
-                {`${makeNum((poolMethods.available - plAmount).toString())} ${
-                  poolInfo.symbol[0]
-                }`}
+                {`${makeNum((poolMethods.available - plAmount).toString())} ${poolInfo.symbol[0]
+                  }`}
               </div>
             </div>
             <div className="inputBox">
@@ -708,7 +682,7 @@ function Pool({
                     if (
                       poolInfo.period[0] > new Date().getTime() / 1000 ||
                       poolInfo.period[0] + poolInfo.period[1] <
-                        new Date().getTime() / 1000
+                      new Date().getTime() / 1000
                     ) {
                       toast("This pool is inactive");
                     } else if (!account) {
@@ -744,19 +718,19 @@ function Pool({
                   }
                   style={
                     poolInfo.period[0] > new Date().getTime() / 1000 ||
-                    poolInfo.period[0] + poolInfo.period[1] <
+                      poolInfo.period[0] + poolInfo.period[1] <
                       new Date().getTime() / 1000
                       ? {
-                          backgroundColor: "var(--gray-30)",
-                          color: "var(--gray-20)",
-                          cursor: "not-allowed",
-                        }
+                        backgroundColor: "var(--gray-30)",
+                        color: "var(--gray-20)",
+                        cursor: "not-allowed",
+                      }
                       : !poolInfo.limit || poolInfo.limit > poolInfo.tvl
-                      ? {
+                        ? {
                           backgroundColor: "var(--purple)",
                           cursor: "pointer",
                         }
-                      : {
+                        : {
                           backgroundColor: "var(--gray-30)",
                           color: "var(--gray-20)",
                           cursor: "not-allowed",
@@ -775,7 +749,7 @@ function Pool({
                     if (
                       poolInfo.period[0] > new Date().getTime() / 1000 ||
                       poolInfo.period[0] + poolInfo.period[1] <
-                        new Date().getTime() / 1000
+                      new Date().getTime() / 1000
                     ) {
                       toast("This pool is inactive");
                     } else if (!account) {
@@ -796,17 +770,17 @@ function Pool({
                   }
                   style={
                     poolInfo.period[0] > new Date().getTime() / 1000 ||
-                    poolInfo.period[0] + poolInfo.period[1] <
+                      poolInfo.period[0] + poolInfo.period[1] <
                       new Date().getTime() / 1000
                       ? {
-                          backgroundColor: "var(--gray-30)",
-                          color: "var(--gray-20)",
-                          cursor: "not-allowed",
-                        }
+                        backgroundColor: "var(--gray-30)",
+                        color: "var(--gray-20)",
+                        cursor: "not-allowed",
+                      }
                       : {
-                          backgroundColor: "var(--yellow)",
-                          cursor: "pointer",
-                        }
+                        backgroundColor: "var(--yellow)",
+                        cursor: "pointer",
+                      }
                   }
                 >
                   <span
@@ -841,14 +815,14 @@ function Pool({
                   style={
                     userInfo.balance > 0
                       ? {
-                          backgroundColor: "var(--ultramarine-blue)",
-                          cursor: "pointer",
-                        }
+                        backgroundColor: "var(--ultramarine-blue)",
+                        cursor: "pointer",
+                      }
                       : {
-                          backgroundColor: "var(--gray-30)",
-                          color: "var(--gray-20)",
-                          cursor: "not-allowed",
-                        }
+                        backgroundColor: "var(--gray-30)",
+                        color: "var(--gray-20)",
+                        cursor: "not-allowed",
+                      }
                   }
                 >
                   <span>UNPLUG</span>
@@ -862,7 +836,7 @@ function Pool({
                     if (
                       poolInfo.period[0] > new Date().getTime() / 1000 ||
                       poolInfo.period[0] + poolInfo.period[1] <
-                        new Date().getTime() / 1000
+                      new Date().getTime() / 1000
                     ) {
                       toast("This pool is inactive");
                     }
@@ -882,7 +856,6 @@ function Pool({
                           if (plAmount) {
                             setBtnInfo("Deposit");
                             setModalDecisionOpen(!modalDecisionOpen);
-                            console.log(btnInfo);
                             // await poolMethods.stake(plAmount);
                             // await toast(
                             //   userInfo.allowance != "0"
@@ -903,19 +876,19 @@ function Pool({
                   }
                   style={
                     (poolInfo.period[0] > new Date().getTime() / 1000) |
-                    (poolInfo.period[0] + poolInfo.period[1] <
-                      new Date().getTime() / 1000)
+                      (poolInfo.period[0] + poolInfo.period[1] <
+                        new Date().getTime() / 1000)
                       ? {
-                          backgroundColor: "var(--gray-30)",
-                          color: "var(--gray-20)",
-                          cursor: "not-allowed",
-                        }
+                        backgroundColor: "var(--gray-30)",
+                        color: "var(--gray-20)",
+                        cursor: "not-allowed",
+                      }
                       : !poolInfo.limit || poolInfo.limit > poolInfo.tvl
-                      ? {
+                        ? {
                           backgroundColor: "var(--purple)",
                           cursor: "pointer",
                         }
-                      : {
+                        : {
                           backgroundColor: "var(--gray-30)",
                           color: "var(--gray-20)",
                           cursor: "not-allowed",
@@ -962,14 +935,14 @@ function Pool({
                     poolInfo.period[0] + poolInfo.period[1] <
                       new Date().getTime() / 1000 && userInfo.balance > 0
                       ? {
-                          backgroundColor: "var(--ultramarine-blue)",
-                          cursor: "pointer",
-                        }
+                        backgroundColor: "var(--ultramarine-blue)",
+                        cursor: "pointer",
+                      }
                       : {
-                          backgroundColor: "var(--gray-30)",
-                          color: "var(--gray-20)",
-                          cursor: "not-allowed",
-                        }
+                        backgroundColor: "var(--gray-30)",
+                        color: "var(--gray-20)",
+                        cursor: "not-allowed",
+                      }
                   }
                 >
                   <span>UNPLUG</span>
@@ -1022,25 +995,73 @@ function Pool({
           <div className="text Roboto_30pt_Black">Loading…</div>
         </div>
       </Loading>
-      <ModalDecision
-        modalDecisionOpen={modalDecisionOpen}
-        setModalDecisionOpen={setModalDecisionOpen}
-        btnInfo={btnInfo}
-        web3={web3}
-        connectWallet={connectWallet}
-        onDisconnect={onDisconnect}
-        params={params}
-        account={account}
-        setSelCharger={setSelCharger}
-        sel={sel}
-        chainId={chainId}
-        toast={toast}
-        plAmount={plAmount}
-        setPlAmount={setPlAmount}
-        poolMethods={poolMethods}
-        userInfo={userInfo}
-        handleDecision={handleDecision}
-      />
+      {modalDecisionOpen ?
+        (<div className={modalDecisionOpen ? "modalOn" : "modalOff"}>
+          <div
+            className="background"
+            onClick={() => { setModalDecisionOpen(false) }}
+          ></div>
+          <div
+            className="modalScroll"
+            style={{
+              display: "flex",
+              marginTop: "100px",
+              overflow: "scroll",
+              padding: "50px",
+            }}
+          >
+            <div className="decision">
+              <div className="theme Roboto_30pt_Black">
+                {btnInfo}
+              </div>
+              <div className="desc Roboto_20pt_Regular">
+                Do you want to proceed?
+              </div>
+              <div className="buttons">
+                <div
+                  className="ok Roboto_20pt_Black"
+                  onClick={async () => {
+                    // handleDecision();
+                    if (btnInfo === "Deposit") {
+                      await poolMethods.stake(plAmount);
+                      await toast(
+                        userInfo.allowance > 0
+                          ? 'Please approve "PLUG-IN" in your private wallet'
+                          : 'Please approve "Transfer Limit" in your private wallet'
+                      );
+                      setPlAmount("0");
+                      setModalDecisionOpen(false);
+                    } else if (btnInfo === "Get Reward") {
+                      await poolMethods.earn();
+                      await toast(
+                        'Please approve "GET FILLED" in your private wallet'
+                      );
+                      setPlAmount("0");
+                      setModalDecisionOpen(false);
+                    } else if (btnInfo === "Withdrawal") {
+                      await poolMethods.exit();
+                      await toast(
+                        'Please approve "UNPLUG" in your private wallet'
+                      );
+                      setPlAmount("0");
+                      setModalDecisionOpen(false);
+                    }
+                  }}
+                >
+                  OK
+                </div>
+                <div
+                  className="cancel Roboto_20pt_Black"
+                  onClick={() => {
+                    setModalDecisionOpen(false);
+                  }}
+                >
+                  Cancel
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>) : <></>}
     </Container>
   );
 }
@@ -1267,6 +1288,92 @@ const Container = styled.div`
       // opacity: 0.5;
     }
   }
+
+
+  .modalOff {
+    display: none;
+  }
+
+  .modalOn {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+  
+
+  .background {
+    position: absolute;
+    background-color: var(--midnight);
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+  }
+
+  .modalScroll {
+    // background-color: white;
+  }
+
+  .modalScroll::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera*/
+  }
+
+  .decision {
+    display: flex;
+    flex-direction: column;
+    width: 600px;
+    height: 255px;
+    object-fit: contain;
+    border-radius: 20px;
+    background-color: rgba(0, 0, 0, 1);
+    align-items: center;
+    z-index: 2;
+    display: flex;
+
+    .theme {
+      margin-top: 40px;
+    }
+
+    .desc {
+      margin: 40px 0;
+    }
+
+    .buttons {
+      display: flex;
+      margin-bottom: 40px;
+
+      .ok {
+        width: 100px;
+        height: 30px;
+        margin-right: 40px;
+        border-radius: 10px;
+        background-color: var(--purple);
+        cursor: pointer;
+
+        &:hover {
+          box-shadow: 0 0 10px 0 rgba(255, 255, 255, 0.5);
+        }
+      }
+
+      .cancel {
+        width: 100px;
+        height: 30px;
+        border-radius: 10px;
+        background-color: var(--gray-20);
+        cursor: pointer;
+
+        &:hover {
+          box-shadow: 0 0 10px 0 rgba(255, 255, 255, 0.5);
+        }
+      }
+    }
+  }
+}
 `;
 
 const PercentBtns = styled.div`

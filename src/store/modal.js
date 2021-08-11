@@ -13,3 +13,8 @@ export const modalSwapOpenState = atom({
   key: "modalSwapState",
   default: false,
 });
+
+export const modalDecisionOpenState = atom({
+  key: "modalDecisionState",
+  default: false,
+});

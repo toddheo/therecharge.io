@@ -68,5 +68,12 @@
   "De-Fi/Station/MyPool/no-pool": "There is no staking pool participated",
   "De-Fi/Station/Charger/content": "Maximize your RCG by choosing a right charger Locked options generally provide higher yield than the other options due to its inflexibility",
   "De-Fi/Station/Recharge/content": "Recharge swap is a cross chain gateway for Frequent Use Point as well as major blockchain protocols. We aim to provide a simple and easy swap experience for Recharge Token. Recharge Swap is compatible with ERC 20, HRC20, and BEP20.",
+  "Footer/sns/github": "https://github.com/therecharge",
+  "Footer/sns/medium": "https://medium.com/therecharge",
+  "Footer/sns/naver": "https://blog.naver.com/therecharge",
+  "Footer/sns/twitter": "https://twitter.com/TheRecharge_ad",
+  "Footer/sns/telegram": "https://t.me/therecharge_official",
+  "Footer/sns/etherscan": "https://etherscan.io/token/0xe74bE071f3b62f6A4aC23cA68E5E2A39797A3c30",
+  "Footer/sns/hecoinfo": "https://hecoinfo.com/token/0xbddC276CACC18E9177B2f5CFb3BFb6eef491799b",
   "end": "end"
 }

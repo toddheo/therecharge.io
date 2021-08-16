@@ -609,7 +609,7 @@ function Pool({
                 value={plAmount}
                 onChange={(e) => {
                   if (poolMethods.available - e.target.value >= 0)
-                    return setPlAmount(e.target.value);
+                    return setPlAmount(makeNum(e.target.value, 8))
                   setPlAmount(poolMethods.available);
                 }}
                 placeholder="Enter the amount of stake"

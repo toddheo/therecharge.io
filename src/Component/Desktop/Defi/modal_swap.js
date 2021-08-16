@@ -894,6 +894,10 @@ function ModalSwap({
                         // : "Approve 처리 중이에요. 잠시만 기다려주세요."
                       );
                       await poolMethods.swap(poolMethods, recipe.swapAmount);
+                      setRecipe({
+                        ...recipe,
+                        swapAmount: "0",
+                      });
                       setModalDecisionOpen(false);
                     }
                   }}

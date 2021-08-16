@@ -21,6 +21,10 @@ function Docs({ match }) {
     });
   };
 
+  const setLocation = () => {
+    window.history.replaceState({}, '', '/doc/1');
+  };
+
   useEffect(() => {
     setViewNum(match.params.viewNum);
     setPageCount(commentList.length / perPage);
@@ -28,7 +32,9 @@ function Docs({ match }) {
 
   useEffect(() => {
     setViewNum(window.location.pathname.split("/")[2]);
-    window.scrollTo(0, 0);
+    if (window.location.href.includes("#")) {
+      setCurrentPage(0);
+    }
   }, [window.location.pathname])
 
   return (
@@ -47,7 +53,7 @@ function Docs({ match }) {
                 className="Roboto_30pt_Black_L "
                 onClick={() => {
                   setViewNum(1);
-                  window.scrollTo(0, 0);
+                  setLocation();
                   setCurrentPage(0);
                 }}
               >
@@ -63,7 +69,7 @@ function Docs({ match }) {
                     style={{ textDecoration: "none" }}
                     onClick={() => {
                       setViewNum(1);
-                      window.scrollTo(0, 0);
+                      setLocation();
                       setCurrentPage(0);
                     }}
                   >
@@ -76,7 +82,7 @@ function Docs({ match }) {
                     style={{ textDecoration: "none" }}
                     onClick={() => {
                       setViewNum(1);
-                      window.scrollTo(0, 0);
+                      setLocation();
                       setCurrentPage(1);
                     }}
                   >
@@ -89,7 +95,7 @@ function Docs({ match }) {
                     style={{ textDecoration: "none" }}
                     onClick={() => {
                       setViewNum(1);
-                      window.scrollTo(0, 0);
+                      setLocation();
                       setCurrentPage(2);
                     }}
                   >
@@ -102,7 +108,7 @@ function Docs({ match }) {
                     style={{ textDecoration: "none" }}
                     onClick={() => {
                       setViewNum(1);
-                      window.scrollTo(0, 0);
+                      setLocation();
                       setCurrentPage(3);
                     }}
                   >
@@ -115,7 +121,7 @@ function Docs({ match }) {
                     style={{ textDecoration: "none" }}
                     onClick={() => {
                       setViewNum(1);
-                      window.scrollTo(0, 0);
+                      setLocation();
                       setCurrentPage(4);
                     }}
                   >
@@ -128,7 +134,7 @@ function Docs({ match }) {
                     style={{ textDecoration: "none" }}
                     onClick={() => {
                       setViewNum(1);
-                      window.scrollTo(0, 0);
+                      setLocation();
                       setCurrentPage(5);
                     }}
                   >
@@ -279,7 +285,7 @@ function Docs({ match }) {
             </div>
           </Section>
 
-          <Section id="docsSection2">
+          <Section id="cidownload">
             <div className={viewNum == 3 ? "active" : "hide"}>
               <div className="ciContent">
                 <div className="theme Roboto_50pt_Black_L">CI Download</div>
@@ -471,7 +477,7 @@ const Line = styled.div`
 
 const Content = styled.div`
   z-index: 3;
-  margin-top: 306px;
+  // margin-top: 306px;
   margin-left: 60px;
   color: #ffffff;
 
@@ -519,6 +525,9 @@ const Section = styled.div`
   flex-direction: column;
   .desc .active {
     display: block;
+  }
+  .active{
+    margin-top: 300px;
   }
   .hide {
     display: none;

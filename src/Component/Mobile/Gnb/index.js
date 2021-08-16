@@ -2,7 +2,7 @@ import styled from "styled-components";
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { ToastHub, Toast } from "@aragon/ui";
-import { useTranslation } from "react-i18next";
+import { useTranslation, withTranslation } from "react-i18next";
 
 function Gnb({
   connectWallet,
@@ -117,6 +117,18 @@ function Gnb({
             )}
           </Toast>
         </ToastHub>
+        <div className="dropdown">
+          <div className={sidemenuOpen.about ? "Roboto_35pt_Black" : "Roboto_35pt_Nomal"}>
+            <a
+              href={"/"}
+              onClick={() => {
+                setMenuOpen(false);
+              }}
+            >
+              Home
+            </a>
+          </div>
+        </div>
         <div className="dropdown">
           <Link
             // to={"/about"}
@@ -418,7 +430,9 @@ function Gnb({
               <div
                 className="logo"
                 onClick={() => {
-                  window.open("https://medium.com/therecharge", "_blank");
+                  window.open(i18n.language == "en"
+                    ? "https://medium.com/therecharge"
+                    : "https://medium.com/therecharge-kr", "_blank");
                 }}
               >
                 <img src="/footer2.png" />

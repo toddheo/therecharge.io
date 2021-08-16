@@ -251,7 +251,7 @@ function Gnb({ connectWallet, account, onDisconnect }) {
             </div>
           </div>
           <div className="dropdown">
-            <Link to={"/docs/1"}>
+            <HashLink to={"/docs/1#whitepaper"}>
               <a
                 onClick={() => {
                   window.scrollTo(0, 0);
@@ -262,10 +262,10 @@ function Gnb({ connectWallet, account, onDisconnect }) {
               >
                 Docs
               </a>
-            </Link>
+            </HashLink>
             <div className="dropdownContent">
-              <Link
-                to={"/docs/1"}
+              <HashLink
+                to={"/docs/1#whitepaper"}
                 onClick={() => {
                   setModalPoolOpen(false);
                   setModalPool2Open(false);
@@ -275,16 +275,16 @@ function Gnb({ connectWallet, account, onDisconnect }) {
                 <div>
                   <a>WhitePaper</a>
                 </div>
-              </Link>
+              </HashLink>
 
               <div className="unactive" style={{ cursor: "not-allowed" }}>
                 Onepager
               </div>
               <div>
                 <a
-                  href="https://www.certik.org/projects/therecharge"
+                  style={{ cursor: "pointer" }}
                   onClick={() => {
-                    window.scrollTo(0, 0);
+                    window.open("https://www.certik.org/projects/therecharge", "_blank")
                     setModalPoolOpen(false);
                     setModalPool2Open(false);
                     setModalSwapOpen(false);
@@ -293,8 +293,8 @@ function Gnb({ connectWallet, account, onDisconnect }) {
                   Token Audit
                 </a>
               </div>
-              <Link
-                to={"/docs/2"}
+              <HashLink
+                to={"/docs/2#disclaimer"}
                 onClick={() => {
                   window.scrollTo(0, 0);
                   setModalPoolOpen(false);
@@ -305,9 +305,9 @@ function Gnb({ connectWallet, account, onDisconnect }) {
                 <div>
                   <a>Disclaimer</a>
                 </div>
-              </Link>
-              <Link
-                to={"/docs/3"}
+              </HashLink>
+              <HashLink
+                to={"/docs/3#cidownload"}
                 onClick={() => {
                   window.scrollTo(0, 0);
                   setModalPoolOpen(false);
@@ -318,7 +318,7 @@ function Gnb({ connectWallet, account, onDisconnect }) {
                 <div>
                   <a>CI Download</a>
                 </div>
-              </Link>
+              </HashLink>
             </div>
           </div>
 

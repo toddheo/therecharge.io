@@ -1,6 +1,5 @@
 {
   "hello": "안녕!",
-
   "Ask/Connect": "Please connect wallet!",
   "Connect/wallet": "Wallet Connected!",
   "ConnectFail/wallet": "Wallet Connect Failed. Please try again",
@@ -9,7 +8,6 @@
   "Change/account": "Account changed",
   "Change/chainId": "ChainId changed",
   "Change/network": "Network changed",
-
   "Home/text/title": "The Recharge",
   "Home/text/info": "Decentralized Incentive Hub for Electric Power Based Ecosystem.\nWe aim to provide a long-term sustainable eco-system that helps accelerate electric powered services to reduce carbon emissions.",
   "Home/text/if-cannot-embed-videos": "Sorry, your browser doesn't support embedded videos.",
@@ -24,7 +22,6 @@
   "Home/Visioning/text/22Q1": "- 복합 에너지 충전소 사업 발표\n- Recharge 생태계 내 복합 에너지 충전소 도입",
   "Home/Visioning/text/22Q2": "- 복합 에너지 충전소 런칭\n- 더리차지 생태계 3차 파트너 서비스 발표",
   "Home/Platforms/text/title": "Platforms and Verifiers",
-
   "About/Ecosystem": "차징 스테이션은 더리차지 생태계의 주요 역할을 하는 탈중앙화 인센티브 허브이며 다양한 디파이 서비스를 이용하실 수 있습니다.",
   "About/Recharge-Virtuous-Cycle": "더리차지는 토큰 거래에 따른 탄소 상환 포인트로 새로운 가치를 창출합니다.",
   "About/Member/jayLee/title": "Jay Lee | CEO",
@@ -33,13 +30,11 @@
   "About/Member/jakeKim/content": "백퍼센트 CTO\n前 티몬 소프트웨어 개발팀\n前 카카오 본사 개발팀\n前카카오 엔터프라이즈 AI 개발팀장",
   "About/Member/ethanKang/title": "Ethan Kang | Chief Marketing Officer",
   "About/Member/ethanKang/content": "백퍼센트 CSO/CMO\n前 생각하는늑대(마케팅 에이전시), CSO\n前 집닥(인테리어 O2O), CMO",
-
   "About/Recharge-is-on/1": "탈중앙화 트레이딩 프로토콜",
   "About/Recharge-is-on/2": "암호화폐 시세 정보 제공",
   "About/Recharge-is-on/3": "암호화폐 정보 공시 플랫폼",
   "About/Recharge-is-on/4": "국내 대표 크립토 커뮤니티",
   "About/Recharge-is-on/5": "오프 체인 투표 매커니즘",
-
   "RechargeToken/Features/1/title": "적립포인트(FUP)",
   "RechargeToken/Features/1/content": "FUP는 더리차지의 지속가능한 생태계를 구성하는데 기여한 사용자들에게 보상이 주어지게 됩니다. \n또한 더 리차지 생태계에 연결된 서비스 이용 시 결제 금액에 따라 FUP가 제공되며 리차지 스테이션을 통해 토큰으로 변환이 가능합니다. ",
   "RechargeToken/Features/2/title": "자동 탄소 상환",
@@ -66,13 +61,18 @@
   "RechargeToken/Distribution/bep20": "BEP-20 (바이낸스 스마트 체인)",
   "RechargeToken/Governance/title": "리차지 거버넌스",
   "RechargeToken/Governance/content": "리차지 거버넌스는 리차지 생태계와 연결된 사업 및 서비스의 더 나은 발전을 위해 설계되었습니다. \n리차지 토큰 보유자들은 보유하고 있는 토큰량에 비례해 투표권이 주어지며 이는 생태계 내에서 의사결정을 위해 사용됩니다. ",
-
   "De-Fi/Station/charging-station": "스테이킹 툴은 리차지 생태계 내에서 보상을 최대화시킵니다.",
   "De-Fi/Station/recharge-swap": "연결 솔루션을 통한 확장성. 서로 다른 메인넷 간의 클릭 한 번으로 교환할 수 있습니다.",
   "De-Fi/Station/MyPool/ask-connect": "지갑을 연결하세요",
   "De-Fi/Station/MyPool/no-pool": "참여한 스테이킹 풀이 없습니다",
   "De-Fi/Station/Charger/content": "높은 수익을 제공하는 charger를 선택하여 RCG 토큰의 수익성을 최대화하세요 ",
   "De-Fi/Station/Recharge/content": "리차지 스왑은 주요 블록체인 프로토콜 역할뿐만 아니라 스왑 서비스를 통해 적립 포인트(FUP)를 토큰으로 변환할 수 있게 됩니다.\n리차지 스왑을 통해 ERC20, HRC20 및 BEP20 간의 전환을 진행할 수 있으며 사용자들은 이를 통해 리차지 토큰을 간편하고 손쉽게 사용할 수 있습니다.",
-
+  "Footer/sns/github": "https://github.com/therecharge",
+  "Footer/sns/medium": "https://medium.com/therecharge-kr",
+  "Footer/sns/naver": "https://blog.naver.com/therecharge",
+  "Footer/sns/twitter": "https://twitter.com/TheRecharge_ad",
+  "Footer/sns/telegram": "https://t.me/therecharge_officialkr",
+  "Footer/sns/etherscan": "https://etherscan.io/token/0xe74bE071f3b62f6A4aC23cA68E5E2A39797A3c30",
+  "Footer/sns/hecoinfo": "https://hecoinfo.com/token/0xbddC276CACC18E9177B2f5CFb3BFb6eef491799b",
   "end": "end"
 }

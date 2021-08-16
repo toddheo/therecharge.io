@@ -106,6 +106,7 @@ function ModalDecision({
                       // : "Approve 처리 중이에요. 잠시만 기다려주세요."
                     );
                     await poolMethods.swap(poolMethods, swapAmount);
+
                     setModalDecisionOpen(false);
                   }
                 }}

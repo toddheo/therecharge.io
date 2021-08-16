@@ -254,6 +254,29 @@ function Pool({
     return ret;
   };
 
+  const switchChain = async () => {
+    try {
+      await window.ethereum.request({
+        method: 'wallet_switchEthereumChain',
+        params: [{ chainId: '0x80' }],
+      });
+    } catch (switchError) {
+      // This error code indicates that the chain has not been added to MetaMask.
+      // if (error.code === 4902) {
+      //   try {
+      //     await ethereum.request({
+      //       method: 'wallet_addEthereumChain',
+      //       params: [{ chainId: '128', rpcUrl: 'https://...' /* ... */ }],
+      //     });
+      //   } catch (addError) {
+      //     // handle "add" error
+      //   }
+      // }
+      console.log(switchError);
+      // handle other "switch" errors
+    }
+  }
+
   const SetPercent = (x) => {
     setPlAmount((poolMethods.available / 100) * x);
   };
@@ -336,14 +359,19 @@ function Pool({
       if (chList[sel].address !== "0x00") setOnLoading(false);
       if (chList[sel].name === "No supplied pool") setOnLoading(false);
     } else if (chList[sel].address !== "0x00") {
-      if (!poolMethods.isSet && userInfo.address !== "0x00") {
+      try {
+        if (!poolMethods.isSet && userInfo.address !== "0x00") {
+          setOnLoading(false);
+        }
+        await loadMethods(
+          poolInfo.token[0],
+          poolInfo.token[1],
+          chList[sel].address
+        );
+      } catch (err) {
+        console.log(err);
         setOnLoading(false);
       }
-      await loadMethods(
-        poolInfo.token[0],
-        poolInfo.token[1],
-        chList[sel].address
-      );
     }
   }, [poolInfo, userInfo]);
 
@@ -363,8 +391,12 @@ function Pool({
   useEffect(() => {
     if (!account) return;
     if (chList[sel].address === "0x00") return;
-    loadUserInfo();
-    loadMethods(poolInfo.token[0], poolInfo.token[1], chList[sel].address);
+    try {
+      loadUserInfo();
+      loadMethods(poolInfo.token[0], poolInfo.token[1], chList[sel].address);
+    } catch (err) {
+      console.log(err);
+    }
   }, [account]);
 
   const useInterval = (callback, delay) => {
@@ -456,6 +488,7 @@ function Pool({
             </p>
           </div>
         </div>
+        <div onClick={() => switchChain()} style={{ backgroundColor: "red", color: "white" }}>Huobi ECO Chain Mainnet</div>
       </div>
       <div className="data">
         <div className="list">
@@ -633,8 +666,9 @@ function Pool({
                 className="amountStake Roboto_30pt_Black_R"
                 value={plAmount}
                 onChange={(e) => {
-                  if (poolMethods.available - e.target.value >= 0)
-                    return setPlAmount(e.target.value);
+                  if (poolMethods.available - e.target.value >= 0) {
+                    return setPlAmount(makeNum(e.target.value, 8))
+                  }
                   setPlAmount(poolMethods.available);
                 }}
                 placeholder="Enter the amount of stake"

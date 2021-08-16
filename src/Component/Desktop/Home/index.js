@@ -43,8 +43,10 @@ function Home({ t }) {
       <Content>
         <div className="first">
           <div className="left">
-            <div className="theme Roboto_80pt_Black">
+            <div className="theme Roboto_80pt_Black"
+              onClick={() => console.log(t("Home/text/title"))}>
               {t("Home/text/title")}
+
             </div>
             <div className="text Roboto_20pt_Regular_L">
               {t("Home/text/info")}

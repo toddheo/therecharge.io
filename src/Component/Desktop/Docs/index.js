@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import ReactPaginate from "react-paginate";
 import commentList from "./commentList/index";
+import { HashLink } from 'react-router-hash-link';
 import Footer from "../../Components/Desktop/Footer";
 
 function Docs({ match }) {
@@ -149,33 +150,32 @@ function Docs({ match }) {
             </div>
             <div className="topic Roboto_30pt_Black_L unactive">
               <a
-                href="https://www.certik.org/projects/therecharge"
+                onClick={() => window.open("https://www.certik.org/projects/therecharge", "_blank")}
                 style={{ textDecoration: "none", color: "white" }}
               >
                 Token Audit
               </a>
             </div>
-            <div
-              className="topic Roboto_30pt_Black_L active"
-              onClick={() => {
-                setViewNum(2);
-                window.scrollTo(0, 0);
-              }}
-            >
-              <a style={{ textDecoration: "none", color: "white" }}>
-                Disclaimer
-              </a>
+            <div className="topic Roboto_30pt_Black_L active">
+              <HashLink
+                to={"/docs/2#disclaimer"}
+                style={{ textDecoration: "none", color: "white" }}
+              >
+                <a>
+                  Disclaimer
+                </a>
+              </HashLink>
             </div>
-            <div
-              className="topic Roboto_30pt_Black_L active"
-              onClick={() => {
-                setViewNum(3);
-                window.scrollTo(0, 0);
-              }}
-            >
-              <a style={{ textDecoration: "none", color: "#ffffff" }}>
-                CI Download
-              </a>
+            <div className="topic Roboto_30pt_Black_L active">
+              <HashLink
+                to={"/docs/3#cidownload"}
+                className="topic Roboto_30pt_Black_L active"
+                style={{ textDecoration: "none", color: "white" }}
+              >
+                <a>
+                  CI Download
+                </a>
+              </HashLink>
             </div>
           </div>
         </Subnav>

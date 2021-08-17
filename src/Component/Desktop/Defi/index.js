@@ -244,8 +244,8 @@ function Defi({
           : {}
       }
     >
-      <Content>
-        <div className="first" id="station" style={{ paddingTop: "100px" }}>
+      <Content id="station">
+        <div className="first">
           <div className="theme Roboto_50pt_Black">Station</div>
           <div className="contents">
             <div className="content">
@@ -269,8 +269,8 @@ function Defi({
           </div>
         </div>
       </Content>
-      <Content>
-        <div className="second" id="mypools" style={{ paddingTop: "100px" }}>
+      <Content id="mypools">
+        <div className="second">
           <div className="theme Roboto_50pt_Black">My pools</div>
           {!account ? (
             <div className="contents">
@@ -380,8 +380,8 @@ function Defi({
           )}
         </div>
       </Content>
-      <Content>
-        <div className="third" id="analytics" style={{ paddingTop: "100px" }}>
+      <Content id="analytics">
+        <div className="third">
           <div className="theme Roboto_50pt_Black">Analytics</div>
           <div className="subTheme Roboto_30pt_Medium">
             Overview of Recharge Ecosystem
@@ -648,30 +648,31 @@ function Defi({
 
 const Container = styled.div`
   margin: auto auto;
-  margin-top: 105px;
   display: flex;
   flex-direction: column;
   min-width: 1088px;
   width: 100%;
-`;
+  `;
 const Content = styled.div`
   display: flex;
   margin: auto auto;
   margin-bottom: 20px;
   width: 1088px;
-
+  
   height: fit-content; // 조정 필요
-
+  
   color: var(--white);
-
+  
   .first {
     display: flex;
     flex-direction: column;
     margin: auto;
+    margin-top: 100px;
     width: 1088px;
-
+    
     .theme {
       margin: auto auto;
+      margin-top: 60px;
       margin-bottom: 80px;
       text-shadow: 0 0 1px white, 0 0 15px white;
     }
@@ -726,6 +727,7 @@ const Content = styled.div`
     display: flex;
     flex-direction: column;
     margin: auto;
+    margin-top: 100px;
 
     .theme {
       margin: auto auto;
@@ -767,6 +769,7 @@ const Content = styled.div`
     display: flex;
     flex-direction: column;
     margin: auto;
+    margin-top: 100px;
 
     .theme {
       margin: auto;

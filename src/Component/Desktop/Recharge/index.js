@@ -222,7 +222,7 @@ const Content = styled.div`
     display: flex;
     flex-direction: column;
     margin: 0 auto;
-    margin-top: 180px;
+    margin-top: 160px;
     margin-bottom: 120px;
     .theme {
       margin-bottom: 40px;
